@@ -1,0 +1,2354 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"prod",
+				"produitToRemove"
+			],
+			[
+				"arraymer",
+				"array_merge"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"op",
+				"option"
+			],
+			[
+				"utf8_",
+				"utf8_encode"
+			],
+			[
+				"prestations",
+				"prestationsURLs"
+			],
+			[
+				"err",
+				"error"
+			],
+			[
+				"taux",
+				"taux"
+			],
+			[
+				"produ",
+				"produits"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"array",
+				"array_merge"
+			],
+			[
+				"col",
+				"columns"
+			],
+			[
+				"requ",
+				"requete"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"prev",
+				"prevar	prevar"
+			],
+			[
+				"utf",
+				"utf8_encode"
+			],
+			[
+				"_BAS",
+				"_BASE_REP_INTRA_"
+			],
+			[
+				"size",
+				"sizeof"
+			],
+			[
+				"fichi",
+				"fichier_envoye2"
+			],
+			[
+				"fic",
+				"fichier_envoye1"
+			],
+			[
+				"varia",
+				"variables_to_set"
+			],
+			[
+				"vd",
+				"var_dump"
+			],
+			[
+				"en",
+				"envelope"
+			],
+			[
+				"html",
+				"html_head"
+			],
+			[
+				"sess",
+				"session_start"
+			],
+			[
+				"utc",
+				"utf8_encode"
+			],
+			[
+				"ht",
+				"htmlspecialchars"
+			],
+			[
+				"obs",
+				"obseques"
+			],
+			[
+				"preg",
+				"preg_match"
+			],
+			[
+				"var",
+				"var_dump"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/config/config.php",
+			"settings":
+			{
+				"buffer_size": 715,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/ControllerBase.php",
+			"settings":
+			{
+				"buffer_size": 981,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/ConcoursJoueurs.php",
+			"settings":
+			{
+				"buffer_size": 568,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/Concours.php",
+			"settings":
+			{
+				"buffer_size": 665,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/Joueur.php",
+			"settings":
+			{
+				"buffer_size": 563,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/index/index.volt",
+			"settings":
+			{
+				"buffer_size": 1368,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/ConnexionController.php",
+			"settings":
+			{
+				"buffer_size": 1380,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/InscriptionController.php",
+			"settings":
+			{
+				"buffer_size": 1382,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/css/main.css",
+			"settings":
+			{
+				"buffer_size": 7298,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/index.volt",
+			"settings":
+			{
+				"buffer_size": 614,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 35.0,
+		"selected_items":
+		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"instalpac",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"conv",
+				"Reg Replace: convert to HTML entities"
+			],
+			[
+				"conver",
+				"Reg Replace: convert to HTML entities"
+			],
+			[
+				"total",
+				"Reg Replace: Total Clean Up"
+			],
+			[
+				"clean",
+				"Reg Replace: Total Clean Up"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"conve",
+				"Reg Replace: convert to HTML entities"
+			],
+			[
+				"cleanhtml",
+				"Reg Replace: Clean HTML"
+			],
+			[
+				"reg replace",
+				"Reg Replace: trailing"
+			],
+			[
+				"reg replace co",
+				"Reg Replace: Correct Tabs"
+			],
+			[
+				"indne",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"tot",
+				"Reg Replace: Total Clean Up"
+			],
+			[
+				"cl",
+				"Reg Replace: Clean HTML"
+			],
+			[
+				"reg replaceo",
+				"Reg Replace: Correct Tabs"
+			],
+			[
+				"cleanup",
+				"Reg Replace: Clean Up"
+			],
+			[
+				"inden",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"syntajavasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"converth",
+				"Reg Replace: convert to HTML entities"
+			],
+			[
+				"convert to html",
+				"Reg Replace: convert to HTML entities"
+			],
+			[
+				"cleanhtm",
+				"Reg Replace: Clean HTML"
+			],
+			[
+				"cleanht",
+				"Reg Replace: Clean HTML"
+			],
+			[
+				"indent",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"corre",
+				"Reg Replace: Correct Tabs"
+			],
+			[
+				"correct",
+				"Reg Replace: Correct Tabs"
+			],
+			[
+				"correc",
+				"Reg Replace: Correct Tabs"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"con",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"cleanu",
+				"Reg Replace: Clean Up"
+			],
+			[
+				"cleantml",
+				"Reg Replace: Clean HTML"
+			],
+			[
+				"cleanh",
+				"Reg Replace: Clean HTML"
+			],
+			[
+				"clea",
+				"Reg Replace: Clean Up"
+			],
+			[
+				"regrepl",
+				"Preferences: Reg Replace Commands – Default"
+			],
+			[
+				"regreplace",
+				"Preferences: Reg Replace Settings – Default"
+			],
+			[
+				"clan",
+				"Reg Replace: Clean HTML"
+			],
+			[
+				"regrepla",
+				"Preferences: Reg Replace Commands – Default"
+			],
+			[
+				"iden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"in",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"reindn",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"indentabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"convta",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"inen",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"idnen",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"setting",
+				"Preferences: Settings - User"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"alignm",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"alignment",
+				"Preferences: Alignment File Settings – User"
+			],
+			[
+				"aligne",
+				"Preferences: Alignment File Settings – Default"
+			],
+			[
+				"align",
+				"Preferences: Alignment File Settings – User"
+			],
+			[
+				"setuser",
+				"Preferences: Settings - User"
+			],
+			[
+				"instalpack",
+				"Package Control: Install Package"
+			],
+			[
+				"binduse",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"bindus",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"key bin",
+				"Preferences: Key Bindings - User"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/playtanque/app/views/index.volt",
+		"/C/wamp/www/playtanque/app/library/Header.php",
+		"/C/wamp/www/playtanque/app/views/play/index.volt",
+		"/C/wamp/www/playtanque/app/controllers/IndexController.php",
+		"/C/wamp/www/playtanque/app/config/services.php",
+		"/C/wamp/www/playtanque/app/controllers/PlayController.php",
+		"/C/wamp/www/playtanque/app/config/loader.php",
+		"/C/wamp/www/playtanque/app/library/Elements.php",
+		"/C/Users/mc/Documents/Playtanque/www/index.html",
+		"/C/wamp/logs/playtanque-access.log",
+		"/C/Users/mc/AppData/Local/Temp/scp52430/home/dev-colas/includes/config.php",
+		"/C/Users/mc/AppData/Local/Temp/scp32433/home/dev-preprod/includes/config.php",
+		"/C/wamp/www/playtanque/app/models/ConcoursJoueurs.php",
+		"/C/Users/mc/Documents/invo/schemas/invo.sql",
+		"/C/wamp/www/playtanque/index.html",
+		"/C/Users/mc/Documents/phalcon/devtools/ide/1.3.4/Phalcon/Tag.php",
+		"/C/Users/mc/Documents/phalcon/app/controllers/ControllerBase.php",
+		"/C/Users/mc/Documents/phalcon/public/css/bootstrap.css",
+		"/C/Users/mc/Documents/phalcon/public/js/mktg.js",
+		"/C/Users/mc/Documents/phalcon/public/css/main.css",
+		"/C/Users/mc/Documents/phalcon/app/library/Elements.php",
+		"/C/Users/mc/Documents/phalcon/public/js/bootstrap.min.js",
+		"/C/Users/mc/Documents/phalcon/app/config/loader.php",
+		"/C/Users/mc/Documents/phalcon/app/config/services.php",
+		"/C/Users/mc/Documents/invo/app/library/Elements.php",
+		"/C/Users/mc/Documents/phalcon/app/views/layouts/main.phtml",
+		"/C/Users/mc/Documents/invo/app/config/config.ini",
+		"/C/Users/mc/Documents/phalcon/app/views/layouts/mktg.phtml",
+		"/C/Users/mc/Documents/phalcon/app/views/layouts/mktg_produit.phtml",
+		"/C/Users/mc/Documents/phalcon/app/views/layouts/mktg_rubrique.phtml",
+		"/C/Users/mc/Documents/invo/app/controllers/ControllerBase.php",
+		"/C/Users/mc/Documents/invo/app/views/layouts/main.volt",
+		"/C/Users/mc/Documents/phalcon/public/css/bootstrap-theme.css",
+		"/C/Users/mc/Documents/invo/app/views/index/index.volt",
+		"/C/Users/mc/Documents/phalcon/devtools/ide/1.3.4/Phalcon/Flash.php",
+		"/C/Users/mc/Documents/phalcon/devtools/ide/1.3.4/Phalcon/Flash/Session.php",
+		"/C/Users/mc/Documents/phalcon/app/views/mktg_rubrique/index.phtml",
+		"/C/Users/mc/Documents/phalcon/app/views/mktg_produit/new.phtml",
+		"/C/Users/mc/Documents/phalcon/app/views/mktg_rubrique/new.phtml",
+		"/C/Users/mc/Documents/phalcon/app/views/mktg_produit/index.phtml",
+		"/C/Users/mc/Documents/phalcon/app/views/produit/index.phtml",
+		"/C/Users/mc/Documents/phalcon/app/views/produit/new.phtml",
+		"/C/Users/mc/Documents/phalcon/app/controllers/ProduitController.php",
+		"/C/Users/mc/Documents/phalcon/app/models/Produit.php",
+		"/C/Users/mc/Documents/phalcon/app/models/MktgRubrique.php",
+		"/C/Users/mc/Documents/phalcon/app/views/index.volt",
+		"/C/Users/mc/Documents/phalcon/app/views/produit/search.phtml",
+		"/C/Users/mc/Documents/phalcon/app/controllers/CommandeController.php",
+		"/C/Users/mc/Documents/phalcon/devtools/ide/1.3.4/Phalcon/Mvc/Model/Relation.php",
+		"/C/Users/mc/Documents/restapi/app/models/Produit.php",
+		"/C/Users/mc/Documents/invo/app/forms/ProductsForm.php",
+		"/C/Users/mc/Documents/invo/app/controllers/ProductsController.php",
+		"/C/wamp/bin/apache/apache2.4.9/conf/extra/httpd-vhosts.conf",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Users/mc/Documents/restapi/app/config/config.php",
+		"/C/Users/mc/Documents/phalcon/.htaccess",
+		"/C/Users/mc/Documents/invo/.htaccess",
+		"/C/Users/mc/Documents/phalcon/devtools/phalcon.bat",
+		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/phalcon.bat",
+		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/phalcon.php",
+		"/C/Users/mc/Documents/invo/public/index.php",
+		"/C/Users/mc/Documents/phalcon/public/index.php",
+		"/C/Users/mc/Documents/phalcon/app/models/Panier.php",
+		"/C/Users/mc/AppData/Roaming/Sublime Text 2/Packages/User/SublimeCodeIntel.sublime-settings",
+		"/C/Users/mc/Documents/phalcon/app/views/index/index.phtml",
+		"/C/Users/mc/Documents/phalcon/app/controllers/SignupController.php",
+		"/C/Users/mc/Documents/phalcon/app/views/signup/index.phtml",
+		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/1.2.4/Phalcon/Mvc/Model.php",
+		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/0.5.0/Phalcon/Tag.php",
+		"/C/Users/mc/Documents/phalcon/app/controllers/IndexController.php",
+		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/1.3.4/Phalcon/Mvc/Model/Exception.php",
+		"/C/Users/mc/Documents/phalcon/public/.htaccess",
+		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/0.8.0/Phalcon/Tag.php",
+		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/2.0.0/Phalcon/Tag.php",
+		"/C/Users/mc/Documents/phalcon/composer.json",
+		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/composer.json",
+		"/C/Users/mc/Documents/phalcon/vendor/autoload.php",
+		"/C/wamp/bin/apache/apache2.4.9/bin/php.ini",
+		"/C/wamp/bin/php/php5.5.12/php.ini",
+		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/Entity/Gamme.php",
+		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/Resources/public/css/style.css",
+		"/C/Users/mc/Documents/symfony/app/config/config_dev.yml",
+		"/C/Users/mc/AppData/Roaming/Sublime Text 2/Packages/Emmet/Default (Windows).sublime-keymap",
+		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/Resources/config/routing.yml",
+		"/C/Users/mc/Documents/symfony/app/config/routing.yml",
+		"/C/Users/mc/Documents/symfony/app/Resources/views/base.html.twig",
+		"/C/Users/mc/Documents/symfony/composer.json",
+		"/C/Users/mc/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/mc/AppData/Roaming/Sublime Text 2/Packages/Emmet/Emmet.sublime-settings",
+		"/C/Users/mc/Downloads/tmp/Avis de premier acompte - Impôt sur le revenu et ou prélèvements sociaux - 2015.html",
+		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/EnsTestBundle.php",
+		"/C/Users/mc/Documents/symfony/src/AppBundle/Controller/DefaultController.php",
+		"/C/wamp/logs/symfony-access.log",
+		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/Entity/ProductRepository.php",
+		"/C/Users/mc/Documents/symfony/app/config/parameters.yml",
+		"/C/wamp/logs/symfony-error.log",
+		"/C/wamp/www/s2/app/config/routing_dev.yml",
+		"/C/Users/mc/Documents/symfony/app/config/config.yml",
+		"/C/wamp/bin/mysql/mysql5.6.17/my.ini",
+		"/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
+		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/t/Produit.php",
+		"/C/wamp/bin/mysql/mysql5.6.17/Produit.php",
+		"/C/wamp/wampmanager.conf",
+		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/Resources/views/Default/index.html.twig",
+		"/C/wamp/wampmanager.ini",
+		"/C/wamp/logs/apache_error.log",
+		"/C/Users/mc/AppData/Local/Temp/scp55382/home/giepssite/portefeuille/index_portefeuille.php",
+		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/ajax/ajax_elliance.php",
+		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/ajax/ajax.php",
+		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/adherent/backoffice/template/faq.html",
+		"/C/Users/mc/AppData/Local/Temp/scp15964/home/giepssite/modules/querybox/etats/courtier/gestionprojet/documents/generepdf.php",
+		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/ajax/onglet_elliance.php",
+		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/ajax/adhesion.php",
+		"/C/Users/mc/Documents/giepssite/Extranet/home/giepssite/includes/communication_courtier/nouveaux_tarifs_osalyssen.php",
+		"/C/Users/mc/AppData/Local/Temp/scp52962/home/dev-preprod/includes/communication_courtier/consultationSerenovaElliance.php",
+		"/C/Users/mc/Documents/giepssite/Extranet/home/giepssite/includes/communication_courtier/consultationSerenovaElliance.php",
+		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/includes/communication_courtier/focusTNS.php",
+		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/querybox/etats/courtier/courtier01/accueil.php",
+		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/includes/telecharger/telecharger_elliance.php",
+		"/C/Users/mc/Documents/giepssite/1.1.1-CoLas/home/giepssite/portefeuille/index_portefeuille.php",
+		"/C/Users/mc/Documents/giepssite/Extranet/home/giepssite/includes/communication_courtier/eSouscription.php",
+		"/C/Users/mc/AppData/Local/Temp/scp44074/home/dev-preprod/modules/querybox/etats/courtier/courtier01/initquerybox.txt",
+		"/C/Users/mc/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/classes/LatexToPdf.php",
+		"/C/Users/mc/AppData/Local/Temp/scp34312/home/dev-preprod/modules/querybox/etats/demo/gestionprojet/documents/generepdf.php",
+		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/querybox/etats/demo/gestionprojet/documents/generepdf.php",
+		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/querybox/etats/courtier/gestionprojet/documents/generepdf.php",
+		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/classes/Document.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Users\\mc\\Documents\\invo",
+			"C:\\Users\\mc\\Documents\\invo, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif, -*.txt, -*.csv, -*.ps, -*.xml, -*.pak, -*.map",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif, -*.csv, -*.ps, -*.xml, -*.pak, -*.map",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif, -*.txt, -*.csv, -*.ps, -*.xml, -*.pak, -*.map",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif, -*.txt, -*.csv, -*.ps, -*.xml, -*.pak, -*.map",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif, -*.txt, -*.csv, -*.ps, -*.xml, -*.pak, -*.map",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\, *.js",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif, -*.txt, -*.csv, -*.ps, -*.xml, -*.pak, -*.css, -*.js, -*.map",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif, -*.txt, -*.csv, -*.ps, -*.xml, -*.pak, -*.css, -*.js",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif, -*.txt, -*.csv, -*.ps, -*.xml, -*.pak, -*.css",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif, -*.txt, -*.csv, -*.ps, -*.xml",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif, -*.txt",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\modules\\querybox\\etats\\courtier\\portefeuille, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\modules\\querybox\\etats\\courtier\\gestionprojet\\, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\modules\\etats\\courtier\\gestionprojet\\, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\modules\\etats\\courtier\\gestionprojet, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\modules\\ajax, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent\\backoffice, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\modules\\, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent\\, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -*.jpg, -*.png, -*.pdf",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\intra",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent\\*",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent\\",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent\\*",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\modules\\querybox\\etats\\courtier\\gestionprojet",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\modules\\querybox\\etats\\courtier\\gestionprojet\\nouveau",
+			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite\\adherent\\*",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\adherent",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\webservice",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\tmp",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\temp",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\task",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\redirect",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\menu",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\lib",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\js",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\html",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\documents",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\documents\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\documents",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\concours",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\communication_adherent",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\commande",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\ope_co",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\includes",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\classes",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\modules\\querybox\\etats\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\modules\\querybox\\etats\\courtier",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\modules",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\modules\\ajax\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\modules\\querybox\\etats\\gestion\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\modules\\etats\\querybox\\gestion\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\modules\\querybox\\etats\\gestion\\comptes\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\intra",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\",
+			"C:\\Users\\mc\\AppData\\Roaming\\Sublime Text 2\\Packages",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\modules\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\js",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\modules\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\html\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\includes\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\.*.php",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\adherent\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika\\giepssite\\modules\\querybox\\etats\\accueil",
+			"Z:\\Echanges AB\\ERIK\\Dev\\workspace\\dev-mika",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Connexion",
+			"#connexion",
+			"S",
+			" ?>",
+			"array(",
+			"<?php echo Tag::textField",
+			"shadow",
+			"app-title",
+			"'",
+			"css",
+			"false",
+			"\"",
+			"main",
+			"}}",
+			"{{",
+			"Session",
+			"session",
+			"successMessage",
+			"produit",
+			"td",
+			"Produit",
+			"rubrique",
+			"MktgProduit",
+			"MktgRubrique",
+			"mktg_rubrique",
+			"produit",
+			"$produit",
+			"produit",
+			"Produit::",
+			"produit",
+			"produit/",
+			"\");\n",
+			"rubrique",
+			"parent",
+			"protected",
+			"$produits",
+			"$produit",
+			"produit/",
+			"d",
+			"ORDRE",
+			"ordre",
+			"ORDRE",
+			"$position",
+			"string",
+			"protected",
+			"10",
+			";",
+			"bootstrap.min.css",
+			"phalcon",
+			"Phalcon\\Tag",
+			"email",
+			"user",
+			"Users",
+			"ci",
+			"$produitToRemove",
+			"$produitToRemove ",
+			");\n",
+			"data",
+			"request",
+			"ctrl+e",
+			"Expand",
+			"Expand Abbreviation",
+			"Jobeet",
+			"category",
+			"Name",
+			"Category",
+			"category",
+			"Category",
+			"category",
+			"Category",
+			"category",
+			"Category",
+			"category",
+			"product",
+			"Product",
+			"product",
+			"Product",
+			"product",
+			"Product",
+			"product",
+			"Product",
+			"int",
+			"\\",
+			"mysqld",
+			"\"C:\\mes progammes\\FirefoxPortable 28.0\\FirefoxPortable.exe\"",
+			"chrome",
+			"firefo",
+			"max_nesting_level",
+			"accelerato",
+			"xdebug.max_nesting_level",
+			"<Directory",
+			"httpd-vhosts",
+			"listen",
+			"affiche_obseque",
+			"is_gav",
+			"recup_infos_banque",
+			"variable pour savoir",
+			"CIIJH",
+			"keys",
+			"pdfToJoin",
+			"$code =",
+			"getCodeOption",
+			"nummdt",
+			"pdfToJoin",
+			"contratresp",
+			"Options IJH ",
+			"css",
+			"Output",
+			"ajouteFichier",
+			"elliance.js",
+			"ajax_elliance",
+			"AjaxElliance",
+			"__WSDL__",
+			"on montre",
+			"homepage_focusTNS",
+			"compteoptions",
+			"_extraction.php",
+			"josiane.php",
+			"supp_extraction",
+			"nouvelle",
+			"codePrestations",
+			"PDFDOCS",
+			" I V E A U",
+			"b{2cm}>{\\raggedleft} b{3cm}>{\\raggedleft} b{3cm}>{\\raggedleft} b{5.5cm}>",
+			"b{2cm}>{\\raggedleft} b{3cm}>{\\raggedleft}",
+			"b{2cm}>{\\raggedleft} b{3cm}>{\\raggedleft} b{3cm}>{\\raggedleft} b{5.5cm}>",
+			"index_marketing.html",
+			"file"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Gamme",
+			"gamme",
+			"background_noel.jpg",
+			"<strong>",
+			"</strong>",
+			"<strong>",
+			"</strong>",
+			"<strong>",
+			"_DOC_UP_MKG_COMMUNICATION_",
+			".backoffice",
+			"Slide",
+			"slide",
+			"",
+			"association",
+			"Association",
+			"Slides",
+			"slides",
+			"Slides",
+			"Slider",
+			"\\u00E9",
+			"cr\\c3a9ation",
+			"\\n$1",
+			" ",
+			"&eacute;",
+			"&ccedil;",
+			"&acirc;",
+			"&agrave;",
+			"&egrave;",
+			"&eacute;",
+			"'",
+			"	",
+			"",
+			"	",
+			"",
+			"	",
+			"",
+			"	",
+			"		",
+			"",
+			"	",
+			"} else {",
+			"	",
+			"if(",
+			"	",
+			"$1$2 $3;",
+			"$1$2 $3",
+			"$1 $2",
+			"<br/><br/>",
+			"		",
+			"<br/>",
+			"$1$2$3\\n$1$4",
+			"$1$2$3\\n$1$4\\n",
+			"		break;",
+			"<br/>\\n$1<br/>",
+			"\\n",
+			"<br/>",
+			"		case ",
+			"		case",
+			"\\n",
+			"$1\\n$2$3$2$5",
+			"$1\\n$2$3$2$4",
+			"$1\\n			$file ",
+			"explode('\\\\n\\\\r'",
+			"explode('\\n\\r'",
+			"$1px",
+			"28px",
+			"} else {",
+			"<br/>",
+			"} else {",
+			"$1$2\\n$1$2\\n",
+			"<br/>",
+			"\"/>",
+			"<br/>",
+			"&egrave;",
+			"&eacute;",
+			"			",
+			"		",
+			"			",
+			"	",
+			"include$1 $2",
+			"include $1",
+			"",
+			"			",
+			"		",
+			"	",
+			"$this->codeDistributeur",
+			"$this->codeOffre",
+			"$this->pwd",
+			"$this->user",
+			"				",
+			"			",
+			"	",
+			"		",
+			"	",
+			"è",
+			"à",
+			"é",
+			"'",
+			"é",
+			"à",
+			"â",
+			"è",
+			"â",
+			"à",
+			"é",
+			"'",
+			"'._ABS_PATH_._DOC_TEX_.'",
+			"document/$1pdf=<?php echo _DOC_REF_MKG_;?>",
+			"document/",
+			"'._ABS_PATH_._DOC_TEX_.'",
+			"_DOC_TEX_.\"",
+			"'._ABS_PATH_._DOC_TEX_.'",
+			"(_DOC_TEX_.\"",
+			"\"<?php echo _DOC_TEX_;?>",
+			"document/tex/",
+			"'._ABS_PATH_._DOC_TEX_.'",
+			"= _ABS_PATH_.'",
+			"\\n	",
+			"\\n",
+			"}\\n\\n/",
+			"}\\n\\nfunction",
+			"}\\nfunction",
+			"function$1\\n",
+			"^function$1\\n",
+			"amiliale",
+			"familiale",
+			"	",
+			"\\n	"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/config/config.php",
+					"settings":
+					{
+						"buffer_size": 715,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								236,
+								236
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/ControllerBase.php",
+					"settings":
+					{
+						"buffer_size": 981,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								738,
+								738
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/models/ConcoursJoueurs.php",
+					"settings":
+					{
+						"buffer_size": 568,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								193,
+								193
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/models/Concours.php",
+					"settings":
+					{
+						"buffer_size": 665,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								172,
+								172
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/models/Joueur.php",
+					"settings":
+					{
+						"buffer_size": 563,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								453,
+								453
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/index/index.volt",
+					"settings":
+					{
+						"buffer_size": 1368,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								861,
+								861
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/controllers/ConnexionController.php",
+					"settings":
+					{
+						"buffer_size": 1380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								269,
+								269
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/controllers/InscriptionController.php",
+					"settings":
+					{
+						"buffer_size": 1382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								285,
+								285
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "public/css/main.css",
+					"settings":
+					{
+						"buffer_size": 7298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3541,
+								3541
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2277.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/views/index.volt",
+					"settings":
+					{
+						"buffer_size": 614,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								519,
+								519
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 94.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"maincss",
+				"public/css/main.css"
+			],
+			[
+				"produitj",
+				"phalcon/public/js/produit.js"
+			],
+			[
+				"ctrlbase",
+				"phalcon/app/controllers/ControllerBase.php"
+			],
+			[
+				"boot",
+				"phalcon/public/css/bootstrap.css"
+			],
+			[
+				"tag",
+				"phalcon/devtools/ide/1.3.4/Phalcon/Tag.php"
+			],
+			[
+				"mkjs",
+				"phalcon/public/js/mktg.js"
+			],
+			[
+				"bootjs",
+				"phalcon/public/js/bootstrap.min.js"
+			],
+			[
+				"mktgjs",
+				"phalcon/public/js/mktg.js"
+			],
+			[
+				"bootstra",
+				"phalcon/public/css/bootstrap-theme.css"
+			],
+			[
+				"flash",
+				"phalcon/devtools/ide/1.3.4/Phalcon/Flash.php"
+			],
+			[
+				"session",
+				"phalcon/devtools/ide/1.3.4/Phalcon/Flash/Session.php"
+			],
+			[
+				"flashsess",
+				"devtools/ide/1.3.4/Phalcon/Flash/Session.php"
+			],
+			[
+				"ctrba",
+				"app/controllers/ControllerBase.php"
+			],
+			[
+				"relation",
+				"devtools/ide/1.3.4/Phalcon/Mvc/Model/Relation.php"
+			],
+			[
+				"phalcontag",
+				"vendor/phalcon/devtools/ide/2.0.0/Phalcon/Tag.php"
+			],
+			[
+				"phalcon/mvc/model",
+				"vendor/phalcon/devtools/ide/1.2.4/Phalcon/Mvc/Model.php"
+			],
+			[
+				"entityrepository",
+				"vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php"
+			],
+			[
+				"compos",
+				"composer.json"
+			],
+			[
+				"faq",
+				"home/giepssite/adherent/backoffice/template/faq.html"
+			],
+			[
+				"courtiergenerepdf",
+				"home/giepssite/modules/querybox/etats/courtier/gestionprojet/documents/generepdf.php"
+			],
+			[
+				"demogenerepdf",
+				"home/giepssite/modules/querybox/etats/demo/gestionprojet/documents/generepdf.php"
+			],
+			[
+				"config",
+				"home/giepssite/includes/config.php"
+			],
+			[
+				"classelliance",
+				"home/giepssite/classes/AjaxElliance.php"
+			],
+			[
+				"elliance",
+				"home/giepssite/classes/Elliance.php"
+			],
+			[
+				"focustn",
+				"home/giepssite/includes/communication_courtier/focusTNS.php"
+			],
+			[
+				"fonctionpdf",
+				"home/giepssite/includes/fonctionsPDF.php"
+			],
+			[
+				"latextopdf",
+				"home/giepssite/classes/LatexToPdf.php"
+			],
+			[
+				"courtiergenrepdf",
+				"home/giepssite/modules/querybox/etats/courtier/gestionprojet/documents/generepdf.php"
+			],
+			[
+				"ajaxphp",
+				"home/giepssite/modules/ajax/ajax.php"
+			],
+			[
+				"adhesionphp",
+				"home/giepssite/modules/ajax/adhesion.php"
+			],
+			[
+				"genredoclate",
+				"home/giepssite/includes/genere_documents_latex.php"
+			],
+			[
+				"classdoc",
+				"home/giepssite/classes/Document.php"
+			],
+			[
+				"devisobs",
+				"home/giepssite/classes/DevisObseques.php"
+			],
+			[
+				"devissante",
+				"home/giepssite/classes/DevisSante.php"
+			],
+			[
+				"render",
+				"home/giepssite/classes/classe_Render_LateX.php"
+			],
+			[
+				"indexmarketin",
+				"home/giepssite/modules/querybox/etats/courtier/marketing/index_marketing.php"
+			],
+			[
+				"indexmarketingphp",
+				"home/giepssite/modules/querybox/etats/courtier/marketing/index_marketing.php"
+			],
+			[
+				"courtiermarketinginit",
+				"home/giepssite/modules/querybox/etats/courtier/marketing/initquerybox.txt"
+			],
+			[
+				"adhesion_header.tex",
+				"home/giepssite/document/tex/adhesion_header.tex"
+			],
+			[
+				"genredoc",
+				"home/giepssite/includes/genere_documents_latex.php"
+			],
+			[
+				"classedocument",
+				"home/giepssite/classes/Document.php"
+			],
+			[
+				"demogenerpdf",
+				"home/giepssite/modules/querybox/etats/demo/gestionprojet/documents/generepdf.php"
+			],
+			[
+				"libmail",
+				"home/giepssite/classes/libmail.php"
+			],
+			[
+				"ajaxfaq",
+				"home/giepssite/modules/ajax/ajax_faq.php"
+			],
+			[
+				"adhesiphp",
+				"home/giepssite/modules/ajax/adhesion.php"
+			],
+			[
+				"generedocla",
+				"home/giepssite/includes/genere_documents_latex.php"
+			],
+			[
+				"genrepdf",
+				"home/giepssite/modules/querybox/etats/courtier/gestionprojet/documents/generepdf.php"
+			],
+			[
+				"projec",
+				"home/giepssite/classes/project.php"
+			],
+			[
+				"etats/demo/gestionprojet/tarificationini",
+				"home/giepssite/modules/querybox/etats/demo/gestionprojet/tarification/initquerybox.txt"
+			],
+			[
+				"etats/courtier/gestionprojet/tarificationini",
+				"home/giepssite/modules/querybox/etats/courtier/gestionprojet/tarification/initquerybox.txt"
+			],
+			[
+				"tabtarifsereno",
+				"home/giepssite/modules/ajax/tableautarifsserenova.php"
+			],
+			[
+				"tabtarsere",
+				"home/giepssite/modules/ajax/tableautarifsserenova2.php"
+			],
+			[
+				"indexmateri",
+				"home/giepssite/modules/querybox/etats/gestion/materiel/index_materiel.php"
+			],
+			[
+				"imprimcomm",
+				"home/giepssite/modules/querybox/etats/gestion/materiel/imprim_commande.php"
+			],
+			[
+				"calcul",
+				"home/giepssite/includes/calculs_tarifs_gieps.php"
+			],
+			[
+				"select",
+				"home/giepssite/includes/ficheproduit/selections_tarifs_gieps.php"
+			],
+			[
+				"generepdf",
+				"home/giepssite/modules/querybox/etats/courtier/gestionprojet/documents/generepdf.php"
+			],
+			[
+				"recapcommande",
+				"home/giepssite/modules/querybox/etats/gestion/materiel/recap_commande.php"
+			],
+			[
+				"divpanier",
+				"home/giepssite/modules/querybox/etats/gestion/materiel/div_panier.php"
+			],
+			[
+				"gestionmaterielcomm",
+				"home/giepssite/modules/querybox/etats/gestion/materiel/commande2.php"
+			],
+			[
+				"marketingcomman",
+				"home/giepssite/modules/querybox/etats/courtier/marketing/commande4.php"
+			],
+			[
+				"commanderdi",
+				"home/giepssite/includes/commander/commander_divers.php"
+			],
+			[
+				"commanderpje",
+				"home/giepssite/includes/commander/commander_pje.php"
+			],
+			[
+				"fonction",
+				"home/giepssite/js/fonctions.js"
+			],
+			[
+				"courtiermarketingcom",
+				"home/giepssite/modules/querybox/etats/courtier/marketing/commande4.php"
+			],
+			[
+				"gestionmaterielcomma",
+				"home/giepssite/modules/querybox/etats/gestion/materiel/commande2.php"
+			],
+			[
+				"gestionmaterielin",
+				"home/giepssite/modules/querybox/etats/gestion/materiel/index_materiel.php"
+			],
+			[
+				"fonctions",
+				"home/giepssite/js/fonctions.js"
+			],
+			[
+				"tarif2",
+				"home/giepssite/includes/commander/commander_tarif2.php"
+			],
+			[
+				"recap",
+				"home/giepssite/modules/querybox/etats/courtier/marketing/recap_commande.php"
+			],
+			[
+				"devisi",
+				"home/giepssite/classes/DevisIJH.php"
+			],
+			[
+				"devisij",
+				"home/giepssite/classes/DevisIJH.php"
+			],
+			[
+				"t86",
+				"home/giepssite/sql/t86.sql"
+			],
+			[
+				"selecttauxgav",
+				"home/giepssite/modules/ajax/select_taux_gav.php"
+			],
+			[
+				"opecogav",
+				"home/giepssite/modules/ajax/ope_co_gav.php"
+			],
+			[
+				"classdevi",
+				"home/giepssite/classes/Devis.php"
+			],
+			[
+				"gestion/materielpanierphp",
+				"home/giepssite/modules/querybox/etats/gestion/materiel/panier.php"
+			],
+			[
+				"imprcomm",
+				"home/giepssite/modules/querybox/etats/gestion/materiel/imprim_commande.php"
+			],
+			[
+				"backofffaq",
+				"home/giepssite/adherent/backoffice/template/faq.html"
+			],
+			[
+				"faq.js",
+				"home/giepssite/js/faq.js"
+			],
+			[
+				"generedocu",
+				"home/giepssite/includes/genere_documents_latex.php"
+			],
+			[
+				"demogenrepdf",
+				"home/giepssite/modules/querybox/etats/demo/gestionprojet/documents/generepdf.php"
+			],
+			[
+				"videlog",
+				"home/giepssite/task/vide_log.php"
+			],
+			[
+				"vide",
+				"home/giepssite/task/vide_cache.php"
+			],
+			[
+				"courtierprofilinit",
+				"home/giepssite/modules/querybox/etats/courtier/profil/initquerybox.txt"
+			],
+			[
+				"classe_querybox.php",
+				"home/giepssite/classes/classe_QueryBox.php"
+			],
+			[
+				"portefeuille_intra.php",
+				"home/giepssite/modules/querybox/etats/courtier/portefeuille/portefeuille_intra.php"
+			],
+			[
+				"courtierportefeinit",
+				"home/giepssite/modules/querybox/etats/courtier/portefeuille/initquerybox.txt"
+			],
+			[
+				"courtierportefeuilleportphp",
+				"home/giepssite/modules/querybox/etats/courtier/portefeuille/index_portefeuille.php"
+			],
+			[
+				"vos_projets",
+				"home/giepssite/modules/querybox/etats/courtier/gestionprojet/vos_projets.php"
+			],
+			[
+				"projecthel",
+				"home/giepssite/classes/project_helper.php"
+			],
+			[
+				"confex",
+				"home/giepssite/_conf_exec.txt"
+			],
+			[
+				"videcac",
+				"home/giepssite/task/vide_cache.php"
+			],
+			[
+				"task/mailing_cgpi.php",
+				"home/giepssite/task/mailing_cgpi.php"
+			],
+			[
+				"mailing_aprs/mailing.php",
+				"home/giepssite/task/mailing_APRS/mailing.php"
+			],
+			[
+				"screen",
+				"home/giepssite/css/screen.css"
+			],
+			[
+				"adfaqhtml",
+				"home/giepssite/adherent/backoffice/template/faq.html"
+			],
+			[
+				"itemhtml",
+				"home/giepssite/adherent/backoffice/template/item.html"
+			],
+			[
+				"item",
+				"home/giepssite/adherent/backoffice/item.php"
+			],
+			[
+				"mainphp",
+				"home/giepssite/modules/querybox/etats/accueil/main.php"
+			],
+			[
+				"setasso",
+				"home/giepssite/includes/setassociation.php"
+			],
+			[
+				"adherfaqhtml",
+				"home/giepssite/adherent/backoffice/template/faq.html"
+			],
+			[
+				"ajax.php",
+				"home/giepssite/modules/ajax/ajax.php"
+			],
+			[
+				"soapcli",
+				"home/giepssite/adherent/includes/soapclient.php"
+			],
+			[
+				"configph",
+				"home/giepssite/includes/config.php"
+			],
+			[
+				"ongletob",
+				"home/giepssite/modules/ajax/onglet_obseques.php"
+			],
+			[
+				"adherbackfaq",
+				"home/giepssite/adherent/backoffice/template/faq.html"
+			],
+			[
+				"faqphp",
+				"home/giepssite/adherent/faq.php"
+			],
+			[
+				"adherentgestionfaq",
+				"home/giepssite/adherent/backoffice/template/gestionFaq.html"
+			],
+			[
+				"classes/",
+				"home/giepssite/classes/classe_Render_LateX.php"
+			],
+			[
+				"nouveaute",
+				"home/giepssite/communication_adherent/14/201412-nouveautes.html"
+			],
+			[
+				"confort",
+				"home/giepssite/communication_adherent/14/201412-confort2015-asaf-afps.html"
+			],
+			[
+				"comm14/",
+				"home/giepssite/communication_adherent/14/201412-nouveautes.html"
+			],
+			[
+				"servicemail",
+				"home/giepssite/webservice/service_mail.php"
+			],
+			[
+				"service_atps_adh",
+				"home/giepssite/webservice/service_atps_adh.php"
+			],
+			[
+				"defaultie",
+				"home/giepssite/css/default_ie.css"
+			],
+			[
+				"defaultcs",
+				"home/giepssite/css/default.css"
+			],
+			[
+				"css/defaut",
+				"home/giepssite/adherent/css/default_acbs.css"
+			],
+			[
+				"defaul",
+				"home/giepssite/css/default.css"
+			],
+			[
+				"bxslider",
+				"home/giepssite/js/bxslider/jquery.bxslider.js"
+			],
+			[
+				"bxslid",
+				"home/giepssite/js/bxslider/jquery.bxslider.css"
+			],
+			[
+				"accueilheader",
+				"home/giepssite/modules/querybox/etats/accueil/header.html"
+			],
+			[
+				"livrai",
+				"home/giepssite/communication_adherent/livraison201412.sql"
+			],
+			[
+				"css/",
+				"home/giepssite/css/default.css"
+			],
+			[
+				"livraiso",
+				"home/giepssite/communication_adherent/livraison201409.sql"
+			],
+			[
+				"listeactualite",
+				"home/giepssite/adherent/liste_actualite.php"
+			],
+			[
+				"actualite",
+				"home/giepssite/adherent/actualite.php"
+			],
+			[
+				"setass",
+				"home/giepssite/includes/setassociation.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 248.0,
+	"status_bar_visible": true
+}

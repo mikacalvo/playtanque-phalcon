@@ -1,0 +1,22 @@
+@media (max-width:480px){
+  header {
+    width: 50px;
+  }
+  #content {
+    left: 50px;
+  }
+}
+@media (max-width:480px){
+  .icon-input input {
+    width: 0px;
+    padding: 0px!important;
+  }
+  .icon-input i.fa {
+    right: 5px;
+  }
+}
+@media (max-width:480px){
+  .w200p {
+    width: 100px!important;
+  }
+}
