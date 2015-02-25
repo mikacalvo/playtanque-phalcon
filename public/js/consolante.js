@@ -98,10 +98,10 @@ function Consolante($element)
       tournoiA[i]   = [];
       tournoiB[i]   = [];
       $divA.append(
-        '<section class="tour w200p pam mas scroll-v" data-id="' + i + '" style="background:' + colorTour(i, 120) + ';"></section>'
+        '<div class="tour w200p pam scroll-v" data-id="' + i + '" style="background:' + colorTour(i, 120) + ';"></div>'
       );
       $divB.append(
-        '<section class="tour w200p pam mas scroll-v" data-id="' + i + '" style="background:' + colorTour(i, 0) + ';"></section>'
+        '<div class="tour w200p pam scroll-v" data-id="' + i + '" style="background:' + colorTour(i, 0) + ';"></div>'
       );
     }
   }

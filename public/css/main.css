@@ -1,3 +1,125 @@
+/********************* CHARTE GRAPHIQUE *********************/
+.light-blue {
+	color: rgb(0, 142, 242);
+}
+.blue {
+	color: rgb(10, 98, 160);
+}
+.light-green {
+	color: rgb(100, 176, 88);
+}
+.green {
+	color: rgb(30, 105, 18);
+}
+.lighter-gray {
+	color: rgb(211, 215, 218);
+}
+.light-gray {
+	color: rgb(157, 163, 169);
+}
+.gray {
+	color: rgb(128, 133, 136);
+}
+.dark-gray {
+	color: rgb(51, 50, 55);
+}
+.darker-gray {
+	color: rgb(22, 24, 25);
+}
+.black {
+	color: rgb(8, 8, 8);
+}
+.light-yellow {
+	color: rgb(255, 255, 153);
+}
+.yellow {
+	color: rgb(255, 237, 57);
+}
+.red {
+	color: rgb(202, 60, 60);
+}
+.dark-red {
+	color: rgb(145, 0, 0);
+}
+.white {
+	color: #fff;
+}
+
+
+.b-light-blue {
+	background-color: rgb(0, 142, 242);
+}
+.b-blue {
+	background-color: rgb(10, 98, 160);
+}
+.b-light-green {
+	background-color: rgb(100, 176, 88);
+}
+.b-green {
+	background-color: rgb(30, 105, 18);
+}
+.b-lighter-gray {
+	background-color: rgb(211, 215, 218);
+}
+.b-light-gray {
+	background-color: rgb(157, 163, 169);
+}
+.b-gray {
+	background-color: rgb(128, 133, 136);
+}
+.b-dark-gray {
+	background-color: rgb(51, 50, 55);
+}
+.b-darker-gray {
+	background-color: rgb(22, 24, 25);
+}
+.b-black {
+	background-color: rgb(8, 8, 8);
+}
+.b-light-yellow {
+	background-color: rgb(255, 255, 153);
+}
+.b-yellow {
+	background-color: rgb(255, 237, 57);
+}
+.b-red {
+	background-color: rgb(202, 60, 60);
+}
+.b-dark-red {
+	background-color: rgb(145, 0, 0);
+}
+.b-white {
+	background-color: #fff;
+}
+
+
+a {
+  color: rgb(22, 24, 25);
+}
+.black-hover:hover,.black-hover:focus,.black-hover:active{
+	color: black;
+}
+.white-hover:hover,.white-hover:focus,.white-hover:active{
+	color: white;
+}
+.shadow-hover:hover,.shadow-hover:focus,.shadow-hover:active{
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.58);
+}
+.glow-hover:hover,.glow-hover:focus,.glow-hover:active{
+	text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.58);
+}
+.b-shadow-hover:hover,.shadow-hover:focus,.shadow-hover:active{
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.58);
+}
+.b-glow-hover:hover,.glow-hover:focus,.glow-hover:active{
+	box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.58);
+}
+a.b-light-gray:hover {
+    background-color: rgb(211, 215, 218);
+}
+/********************* CHARTE GRAPHIQUE *********************/
+
+
 html {
   height: 100%;
 }
@@ -6,94 +128,35 @@ body {
   background: #fff;
   height: 100%;
 }
-
-header {
-  background-color: #444;
-  width: 200px;
-  z-index: 200;
-  display: block;
+body::after {
+	content: "";
+	background: url("http://www.masdesanguilles.com/site/images/normal/Fotolia_42982968_Subscription_XXL.jpg");
+	opacity: 0.3;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1; 
 }
-
 a {
   cursor: pointer;
+  text-decoration: none;
+}
+#content>div.flex {
+  height: 100%;
+  width: 100%;
+}
+#content-body {
+  height: 100%;
+  width: 100%;
+}
+div.full {
+  position: relative;
+  height: 100%
 }
 
-@media print
-{
-  * {
-    font-size: 8px;
-  }
-  section {
-    width: auto!important;
-    padding: 0!important;
-    margin: 0!important;
-  }
-  #repartition {
-    width: 320px!important;
-  }
-  #repartition {
-    width: 320px!important;
-  }
-  .tour {
-    width: 90px!important;
-    padding: 0!important;
-    margin: 0!important;
-  }
-  .no-print, .no-print *
-  {
-    display: none !important;
-  }
-  .on-print
-  {
-    display: inline-block !important;
-  }
-  #content {
-    left: 0px!important;
-  }
-  #liste label {
-    width: 100px!important;
-  }
-  #consolante label {
-    width: 50px!important;
-  }
-  .scroll-h {
-    overflow-x: hidden!important;
-  }
-  .scroll-v {
-    overflow-y: hidden!important;
-  }
-}
 
-.application {
-  min-width: 320px;
-  overflow: hidden;
-}
-#teamManagement {
-  height: 70%;
-}
-#content {
-  margin-left: 0;
-  position: absolute;
-  left: 200px;
-  bottom: 0;
-  right: 0;
-  top: 0;
-}
-#content::after {
-  content: "";
-  background: url("http://www.masdesanguilles.com/site/images/normal/Fotolia_42982968_Subscription_XXL.jpg");
-  opacity: 0.3;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
-}
-#content section {
-  background: #999999;
-  opacity: 0.9;
-}
 .concours {
   display: none;
   padding-bottom: 4px;
@@ -107,22 +170,13 @@ a {
   display: inline-block;
   height: 100%;
   overflow: hidden;
-  border-radius: 0;
+  /*border: solid white;*/
   position: relative;
   z-index: 1;
 }
 .mid {
-  display: inline-block;
-  position: absolute;
-  height: 49%;
+  height: 50%;
 }
-.mid.up {
-  top: 0;
-}
-.mid.down {
-  bottom: 0;
-}
-
 .zero {
   position: absolute;
   bottom: 0;
@@ -135,34 +189,15 @@ a {
 	box-shadow: 0px 0px 20px 10px rgba(255,255,255,1);
 	opacity: 0.7;
 }
-.sharp {
+.frame {
 	box-shadow: 
 		0px 0px 0px 10px rgba(255,255,255,1), 
 		1px 11px 15px 10px rgba(0,0,0,0.4);
-	z-index: 100;	
-	opacity: 1;
 }
-#loginBox {
-	background-image: url("http://www.bonjourdumonde.com/blog/grece/11/wp-content/uploads/2013/01/petanque4-1024x671.png");
-	background-color: #b6aba9;
-    background-size: cover;
-    border-radius: 6px;
-    box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.3);
-    left: 50%;
-    margin-left: -358px;
-    margin-top: -292px;
-    max-height: 445px;
-    min-height: 445px;
-    position: absolute;
-    top: 50%;
-    width: 716px;
-    z-index: 1;
-    text-align: center!important;
-}
-#loginBox section {
+.centerBox section {
 	background: none;
 }
-#loginBox section .grid2 div {
+.centerBox section .grid2 div {
 	height: 250px;
 }
 #start button, #start a {
@@ -170,11 +205,35 @@ a {
     margin: 5px;
     width: 200px;
 }
-.light {
-	color: #fff;
-}
-.light .shadow {
+.shadow {
 	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.58);
+}
+.glow {
+	text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.58);
+}
+.boxshadow {
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.58);
+}
+.inboxshadow {
+	box-shadow: 0 1px 1px rgba(17, 17, 17, 0.5) inset;
+}
+.round {
+    border-radius: 4px;
+}
+.rounder {
+	border-radius: 6px;
+}
+.rounder, .pure-button.round {
+    border-radius: 4px;
+}
+.rounder, .pure-button.rounder {
+	border-radius: 6px;
+}
+.pure-button.smaller {
+	padding: 5px;
+}
+.pure-button.border {
+	border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .form1 {
@@ -201,13 +260,12 @@ a {
 
 .app-title {
   font-family: 'Give You Glory', cursive;
-  color: #ffffff;
   margin-bottom: 0;
   margin-left: 20px;
   text-shadow: 5px 2px 4px rgba(0, 0, 0, 1);
   font-size: 3.2rem;
 }
-#loginBox .app-title {
+.centerBox .app-title {
   margin-bottom: 0;
   font-size: 5rem;
   margin-left: 310px;
@@ -217,20 +275,15 @@ a {
 .tagline {
   font-size: 1.1em;
   font-family: 'Calligraffitti', cursive;
-  color: #111;
   position: relative;
   left: 1.6em;
   text-align: left;
   margin: 0;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
 }
-#loginBox .tagline {
+.centerBox .tagline {
   font-size: 1.1em;
   left: 480px;
-}
-#loginBox a {
-	color: rgba(255, 255, 255, 1);
-	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
 }
 .layer {
   position: relative;
@@ -243,31 +296,8 @@ a {
   right: 0;
 }
 
-header section {
-  color: #aaa;
-}
-
-.navspan {
-  cursor: pointer;
-  margin: auto;
-}
-.navspan:hover {
-  color: #ffffff;
-}
-.navspan.active {
-  color: #ffffff;
-}
-
 i.fa {
   cursor: pointer;
-}
-
-.footer {
-  background-color: #aaa;
-  position: absolute;
-  bottom: 0;
-  width: inherit;
-  text-align: center;
 }
 
 #commands {
@@ -293,37 +323,7 @@ i.fa {
 #show {
   display: none;
 }
-div.reduced header {
-  width: 50px;
-}
-div.reduced header * {
-  display: none;
-}
-div.reduced header #show {
-  display: block;
-}
-div.reduced header #show>* {
-  display: block;
-}
-div.reduced #content {
-  left: 50px;
-}
-#teams {
-  padding-left: 10px;
-  height: 80%;
-}
-#teams .scroll-v {
-  height: 100%;
-}
-#teamlist {
-  height: 100%;
-}
-#teamlist li i {
-  margin: 0 15px 0 0;
-}
-#teamlist .editable {
-  width: 125px;
-}
+
 input.editable {
   display: none;
 }
@@ -359,19 +359,16 @@ input.editable {
 .pass {
   padding: 5px;
 }
+.pals {
+  padding-left: 10px !important;
+}
 .icon-input {
   position: relative;
   height: 40px;
 }
-.dark {
-  color: #aaa;
-}
-input.dark {
-  background-color: #333;
-  color: inherit;
+.sharp {
   border: medium none;
   border-radius: 0;
-  box-shadow: 0 1px 1px rgba(17, 17, 17, 0.5) inset;
   outline: medium none;
 }
 .icon-input input {
@@ -402,7 +399,9 @@ input.dark {
 .bottom-offset {
     bottom: 4px;
 }
-
+.underline {
+	text-decoration: underline;
+}
 #repartition {
   max-height: 100%;
   width: 600px;
@@ -470,32 +469,62 @@ input.dark {
   display: none;
 }
 
-.yellow {
-	background-color: #FCDF4E!important;
-	color: #000!important;
+.mcenter {
+	margin: 0 auto;
+}
+
+.datalist label {
+	overflow: hidden;
+}
+
+.hover-a a {
+	display: none;
+}
+.hover-a:hover a {
+	display: inline-block;
 }
 
 
-/********************* PURECSS *********************/
-.pure-button.button-login {
-	background: rgb(202, 60, 60);
+/********************* BOX *********************/
+.centerBox {
+	background-color: #b6aba9;
+    box-shadow: 0 -5px 8px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    text-align: center!important;
 }
-.pure-button.button-register {
-	background: rgb(28, 184, 65);
+#loginBox {
+	background-image: url("http://www.bonjourdumonde.com/blog/grece/11/wp-content/uploads/2013/01/petanque4-1024x671.png");
+    background-size: cover;
+    margin-left: -350px;
+    margin-top: -225px;
+    height: 450px;
+    width: 700px;
 }
-.pure-button.button-success {
-    background: rgb(28, 184, 65); /* this is a green */
+.errorBox {
+	/*background-image: url("http://www.avignon-et-provence.com/tourisme/petanque-provence/img/femme-petanque.jpg");*/
+	/*background-image: url("http://www.avignon-et-provence.com/tourisme/petanque-provence/img/tirer.jpg");*/
 }
-.pure-button.button-error {
-    background: rgb(202, 60, 60); /* this is a maroon */
+.errorBox.interdit {
+	background-image: url("http://www.avignon-et-provence.com/tourisme/petanque-provence/img/garcon-boules.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 327px;
+    width: 250px;
+    margin-left: -125px;
+    margin-top: -164px;
 }
-.pure-button.button-warning {
-    background: rgb(223, 117, 20); /* this is an orange */
+.errorBox.introuvable {
+	background-image: url("http://www.avignon-et-provence.com/tourisme/petanque-provence/img/femme-petanque.jpg");
+    background-size: cover;
+    height: 400px;
+    width: 760px;
+    margin-left: -380px;
+    margin-top: -200px;
 }
-.pure-button.button-secondary {
-    background: rgb(66, 184, 221); /* this is a light blue */
-}
-/********************* PURECSS *********************/
+/********************* BOX *********************/
 
 
 .notification {
@@ -504,7 +533,6 @@ input.dark {
   margin: 0 10px;
 }
 .notification i {
-  color: red;
   margin-right: 10px;
   margin-left: 5px;
 }
@@ -522,6 +550,15 @@ input.dark {
   padding: 15px;
   border: 1px solid transparent;
   border-radius: 4px;
+}
+.container .alert {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	z-index: 10000;
+	height: 30px;
+	padding: 5px;
+	margin: 2px;
 }
 .alert h4 {
   margin-top: 0;
@@ -593,3 +630,243 @@ input.dark {
   color: #843534;
 }
 /********************* BOOTSTRAP *********************/
+
+
+
+/********************* HEADER *********************/
+header {
+  position: relative;
+  z-index: 9000;
+  /*height: 35px;*/
+  flex: 0 1 35px;
+  width: 100%;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  overflow: visible;
+  padding: 5px 0;
+}
+header>*, header div {
+  height: 25px;
+}
+
+.navspan {
+  cursor: pointer;
+  margin: auto;
+}
+.navspan:hover {
+  color: #ffffff;
+}
+.navspan.active {
+  color: #ffffff;
+}
+
+.userbar {
+	text-align: center;
+}
+.userbar .pure-button {
+	padding: 0 1em;
+}
+/********************* HEADER *********************/
+
+
+/********************* MENUS **********************/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown button {
+	height: 100%;
+}
+.dropdown .dropdown-menu {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 100%;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+header .dropdown .dropdown-menu {
+	left: 0;
+    width: 100%;
+    z-index: 200;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown a {
+    display: block;
+    padding: 0.2em 0.8em;
+}
+
+.dropdown:hover .dropdown-trigger {
+	border-bottom-right-radius: 0 0;
+	border-bottom-left-radius: 0 0;
+}
+.dropdown-trigger .fa.fa-caret-up {
+	display: none;
+}
+.dropdown-trigger .fa.fa-caret-down {
+	display: inline-block;
+}
+.dropdown:hover .dropdown-trigger .fa.fa-caret-down {
+	display: none;
+}
+.dropdown:hover .dropdown-trigger .fa.fa-caret-up {
+	display: inline-block;
+}
+/********************* MENUS **********************/
+
+
+/********************* TOOLBAR **********************/
+.toolbar {
+    width: 220px;
+    height: 100%;
+}
+.toolbar #teams {
+	padding-left: 10px;
+}
+div.reduced .toolbar {
+  width: 40px;
+}
+div.reduced .toolbar * {
+  display: none;
+}
+div.reduced .toolbar nav {
+  display: block;
+}
+div.reduced .toolbar #show {
+  display: block;
+}
+div.reduced .toolbar #show>* {
+  display: block;
+}
+#nbEquipes {
+	margin-right: 3px;
+}
+#nbEquipes span {
+	font-size: 0.8em;
+}
+#startConcours {
+	display: none;
+}
+#teams {
+  padding-left: 10px;
+}
+#teamManagement .scroll-v {
+  /*height: 100%;*/
+}
+#teamlist li i {
+  margin: 0 15px 0 0;
+}
+#teamlist .editable {
+  width: 125px;
+}
+/********************* TOOLBAR **********************/
+
+
+/********************* MEDIA **********************/
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside   { order: 1; }
+  .main    { order: 2; }
+}
+/********************* MEDIA **********************/
+
+/********************* PRINT **********************/
+@media print
+{
+  * {
+    font-size: 8px;
+    overflow:hidden !important;
+  }
+  section {
+    width: auto!important;
+    padding: 0!important;
+    margin: 0!important;
+  }
+  #repartition {
+    width: 320px!important;
+  }
+  #repartition {
+    width: 320px!important;
+  }
+  .tour {
+    width: 90px!important;
+    padding: 0!important;
+    margin: 0!important;
+  }
+  #tour0 {
+  	height: auto!important;
+  }
+  .tournoi {
+  	height: auto!important;
+  }
+  .no-print, .no-print *
+  {
+    display: none !important;
+  }
+  .on-print
+  {
+    display: inline-block !important;
+  }
+  #liste label {
+    width: 100px!important;
+  }
+  #consolante label {
+    width: 50px!important;
+  }
+}
+/********************* PRINT **********************/
+
+
+/********************* FLEX **********************/
+.flex>div {
+	text-align: center;
+}
+.flex .right {
+	margin-left: auto;
+}
+.wrap {
+	flex-wrap: wrap;
+}
+
+
+/********************* ROUND-BUTTON **********************/
+.round-button-circle {
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.round-button-circle>a {
+    display: block;
+	padding-top: 40%;
+    padding-bottom: 40%;
+	line-height: 1em;
+	margin-top: -0.5em;
+	text-align: center;
+}
+/********************* ROUND-BUTTON **********************/
+
+/********************* FORM **********************/
+.formstd>div {
+	margin: 0 auto;
+}
+.formstd label {
+	text-align: right;
+	width: 45%;
+}
+.form200 label {
+	width: 200px;
+}
+.form300 label {
+	width: 300px;
+}
+/********************* FORM **********************/

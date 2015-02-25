@@ -6,7 +6,6 @@ use Phalcon\Mvc\Model\Validator\InclusionIn,
 
 class Users extends \Phalcon\Mvc\Model
 {
-
     /**
      *
      * @var integer
@@ -82,4 +81,8 @@ class Users extends \Phalcon\Mvc\Model
         );
     }
 
+    public function initialize()
+    {
+        $this->hasMany("id", "UsersConcours", "user_id");
+    }
 }

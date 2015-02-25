@@ -25,6 +25,11 @@ try {
     $application = new \Phalcon\Mvc\Application($di);
 
     echo $application->handle()->getContent();
+    
+    $di->set('dispatcher', function() use ($di) {
+	    $dispatcher = new Phalcon\Mvc\Dispatcher();
+	    return $dispatcher;
+	});
 
 } catch (\Exception $e) {
     echo $e->getMessage();

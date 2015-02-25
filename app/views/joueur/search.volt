@@ -1,51 +1,35 @@
 
 {{ content() }}
-
-<table width="100%">
-    <tr>
-        <td align="left">
-            {{ link_to("joueur/index", "Go Back") }}
-        </td>
-        <td align="right">
-            {{ link_to("joueur/new", "Create ") }}
-        </td>
-    </tr>
-</table>
-
-<table class="browse" align="center">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Label</th>
-            <th>Poste</th>
-         </tr>
-    </thead>
-    <tbody>
-    {% if page.items is defined %}
-    {% for joueur in page.items %}
-        <tr>
-            <td>{{ joueur.id }}</td>
-            <td>{{ joueur.label }}</td>
-            <td>{{ joueur.poste }}</td>
-            <td>{{ link_to("joueur/edit/"~joueur.id, "Edit") }}</td>
-            <td>{{ link_to("joueur/delete/"~joueur.id, "Delete") }}</td>
-        </tr>
-    {% endfor %}
-    {% endif %}
-    </tbody>
-    <tbody>
-        <tr>
-            <td colspan="2" align="right">
-                <table align="center">
-                    <tr>
-                        <td>{{ link_to("joueur/search", "First") }}</td>
-                        <td>{{ link_to("joueur/search?page="~page.before, "Previous") }}</td>
-                        <td>{{ link_to("joueur/search?page="~page.next, "Next") }}</td>
-                        <td>{{ link_to("joueur/search?page="~page.last, "Last") }}</td>
-                        <td>{{ page.current~"/"~page.total_pages }}</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="txtleft">
+	<div class="inbl light-blue" style="width: 200px; height: 50px;"><strong>light-blue</strong></div>
+	<div class="inbl blue" style="width: 200px; height: 50px;"><strong>blue</strong></div>
+	<div class="inbl light-green" style="width: 200px; height: 50px;"><strong>light-green</strong></div>
+	<div class="inbl green" style="width: 200px; height: 50px;"><strong>green</strong></div>
+	<div class="inbl light-yellow" style="width: 200px; height: 50px;"><strong>light-yellow</strong></div>
+	<div class="inbl yellow" style="width: 200px; height: 50px;"><strong>yellow</strong></div>
+	<div class="inbl red" style="width: 200px; height: 50px;"><strong>red</strong></div>
+	<div class="inbl dark-red" style="width: 200px; height: 50px;"><strong>dark-red</strong></div>
+	<br/>
+	<div class="inbl lighter-gray" style="width: 200px; height: 50px;"><strong>lighter-gray</strong></div>
+	<div class="inbl light-gray" style="width: 200px; height: 50px;"><strong>light-gray</strong></div>
+	<div class="inbl gray" style="width: 200px; height: 50px;"><strong>gray</strong></div>
+	<div class="inbl dark-gray" style="width: 200px; height: 50px;"><strong>dark-gray</strong></div>
+	<div class="inbl darker-gray" style="width: 200px; height: 50px;"><strong>darker-gray</strong></div>
+	<div class="inbl black" style="width: 200px; height: 50px;"><strong>black</strong></div>
+	<br/>
+	<div class="inbl b-light-blue" style="width: 200px; height: 50px;"></div>
+	<div class="inbl b-blue" style="width: 200px; height: 50px;"></div>
+	<div class="inbl b-light-green" style="width: 200px; height: 50px;"></div>
+	<div class="inbl b-green" style="width: 200px; height: 50px;"></div>
+	<div class="inbl b-light-yellow" style="width: 200px; height: 50px;"></div>
+	<div class="inbl b-yellow" style="width: 200px; height: 50px;"></div>
+	<div class="inbl b-red" style="width: 200px; height: 50px;"></div>
+	<div class="inbl b-dark-red" style="width: 200px; height: 50px;"></div>
+	<br/>
+	<div class="inbl b-lighter-gray" style="width: 200px; height: 50px;"></div>
+	<div class="inbl b-light-gray" style="width: 200px; height: 50px;"></div>
+	<div class="inbl b-gray" style="width: 200px; height: 50px;"></div>
+	<div class="inbl b-dark-gray" style="width: 200px; height: 50px;"></div>
+	<div class="inbl b-darker-gray" style="width: 200px; height: 50px;"></div>
+	<div class="inbl b-black" style="width: 200px; height: 50px;"></div>
+</div>

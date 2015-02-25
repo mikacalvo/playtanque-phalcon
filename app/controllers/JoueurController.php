@@ -5,52 +5,21 @@ use Phalcon\Paginator\Adapter\Model as Paginator;
 
 class JoueurController extends ControllerBase
 {
-
+    /**
+     *
+     */
+    public function initialize()
+    {
+        parent::initialize();
+        $this->view->setTemplateAfter('app');
+    }
     /**
      * Index action
      */
     public function indexAction()
     {
-        $this->persistent->parameters = null;
-    }
-
-    /**
-     * Searches for joueur
-     */
-    public function searchAction()
-    {
-
-        $numberPage = 1;
-        if ($this->request->isPost()) {
-            $query = Criteria::fromInput($this->di, "Joueur", $_POST);
-            $this->persistent->parameters = $query->getParams();
-        } else {
-            $numberPage = $this->request->getQuery("page", "int");
-        }
-
-        $parameters = $this->persistent->parameters;
-        if (!is_array($parameters)) {
-            $parameters = array();
-        }
-        $parameters["order"] = "id";
-
-        $joueur = Joueur::find($parameters);
-        if (count($joueur) == 0) {
-            $this->flash->notice("The search did not find any joueur");
-
-            return $this->dispatcher->forward(array(
-                "controller" => "joueur",
-                "action" => "index"
-            ));
-        }
-
-        $paginator = new Paginator(array(
-            "data" => $joueur,
-            "limit"=> 10,
-            "page" => $numberPage
-        ));
-
-        $this->view->page = $paginator->getPaginate();
+        $user = Users::findFirstByid($this->session->get('auth')['id']);
+        $this->view->userConcours = $user->usersConcours;
     }
 
     /**

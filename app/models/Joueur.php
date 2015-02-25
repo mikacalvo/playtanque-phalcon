@@ -12,13 +12,13 @@ class Joueur extends \Phalcon\Mvc\Model
      *
      * @var string
      */
-    public $label;
+    public $nom;
 
     /**
      *
-     * @var integer
+     * @var string
      */
-    public $poste;
+    public $options;
 
     /**
      * Independent Column Mapping.
@@ -27,7 +27,7 @@ class Joueur extends \Phalcon\Mvc\Model
     {
         return array(
             'id' => 'id', 
-            'label' => 'label', 
+            'nom' => 'nom', 
             'poste' => 'poste'
         );
     }
@@ -35,5 +35,17 @@ class Joueur extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->hasMany("id", "ConcoursJoueurs", "joueur_id");
+    }
+    
+    public function beforeSave()
+    {
+        //Convert the array into a string
+        $this->options = json_encode($this->options);
+    }
+
+    public function afterFetch()
+    {
+        //Convert the string to an array
+        $this->options = json_decode($this->options);
     }
 }

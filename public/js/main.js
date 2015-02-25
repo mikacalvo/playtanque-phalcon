@@ -59,9 +59,7 @@ function appendScoreList(element) {
 
 
 $('.navspan').on('click', function(event) {
-  if($(this).hasClass("active")) {
-    $(this).toggleClass("active");
-  } else {
+  if(!$(this).hasClass("active")) {
     $('.navspan').each(function() {
       $(this).removeClass('active');
     });
@@ -79,6 +77,7 @@ $('#startConcours').on('click', function (event) {
   } else {
     $(".concours").hide();
     $('#'+div).show();
+    console.log("ici");
     try {
       concours = window[Type.charAt(0).toLowerCase() + Type.slice(1)];
       concours.clear();
@@ -91,11 +90,11 @@ $('#startConcours').on('click', function (event) {
 });
 
 $('#hide').on('click', function (event) {
-  $('.application').addClass("reduced");
+  $('.container').addClass("reduced");
 });
 
 $('#show').on('click', function (event) {
-  $('.application').removeClass("reduced");
+  $('.container').removeClass("reduced");
 });
 
 $('#genereTeams').on('click', function (event) {
@@ -164,4 +163,11 @@ $(document).ready(function() {
 			sortList: [[5,1]]
 		}
 	);
+});
+
+$('div.activate .pure-button').on('click', function (event) {
+	if (!$(this).hasClass('pure-button-active')) {
+		$(this).parent().find('.pure-button-active').removeClass('pure-button-active');
+		$(this).addClass('pure-button-active');
+	}
 });

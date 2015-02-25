@@ -4,18 +4,14 @@
     font-family: inherit;
     font-size: 100%;
     padding: 0.5em 1em;
-    color: #444; /* rgba not supported (IE 8) */
-    color: rgba(0, 0, 0, 0.80); /* rgba supported */
     border: 1px solid #999;  /*IE 6/7/8*/
     border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
-    background-color: #E6E6E6;
     text-decoration: none;
     border-radius: 2px;
 }
 
 .pure-button-hover,
-.pure-button:hover,
-.pure-button:focus {
+.pure-button:hover {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
     background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
@@ -34,8 +30,7 @@
 
 .pure-button[disabled],
 .pure-button-disabled,
-.pure-button-disabled:hover,
-.pure-button-disabled:focus,
+.pure-button-disabled:hover
 .pure-button-disabled:active {
     border: none;
     background-image: none;
@@ -64,15 +59,4 @@ a.pure-button-primary,
 a.pure-button-selected {
     background-color: rgb(0, 120, 231);
     color: #fff;
-}
-
-.button-bis {
-    color: white;
-    border-radius: 4px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-.button-ter {
-    color: black;
-    border-radius: 4px;
-    text-shadow: none;
 }

@@ -1,18 +1,68 @@
-{{ header.getHeader(1) }}
-
-<div id="content">
-	<div class="zero scroll-h">
+<div class="flex flex-h">
+	<nav id="teamManagement" class="toolbar b-darker-gray light-gray top-border no-print">
+	    <a id="show" class="pas">
+			<i class="fa fa-chevron-right fa-2x inbl"></i>
+	    </a>
+		<div class="full">
+	        <div class="zero scroll-v">
+			    <a id="hide" class="tiny-hidden row pals">
+					<i class="fa fa-angle-double-left inbl"></i>
+			    </a>
+			    <div id="typeTournoi" class="col pals">
+			      <div class="mod">
+			        <span id="Consolante" data-div="consolante" class="navspan h5-like restart">
+			          <i class="fa fa-sitemap mash"></i>
+			          <strong class="small-hidden tiny-hidden">Consolante</strong>
+			        </span>
+			      </div>
+			      <div class="mod">
+			        <span id="Inter" data-div="inter" class="navspan h5-like dynamic">
+			          <i class="fa fa-users mash"></i>
+			          <strong class="small-hidden tiny-hidden">Mêlée</strong>
+			        </span>
+			      </div>
+			      <div class="mod">
+			        <span id="Point" data-div="inter" class="navspan h5-like">
+			          <i class="fa fa-flag mash"></i>
+			          <strong class="small-hidden tiny-hidden">Points</strong>
+			        </span>
+			      </div>
+			    </div>
+		        <div class="icon-input dark-gray mas" style="margin-bottom:0;">
+		          <input type="text" id="teaminput" class="sharp inboxshadow b-dark-gray pas par" placeholder="Ajouter des joueurs" />
+		          <i class="fa fa-plus fa-2x tiny-hidden" id="addteam"></i>
+		          <i class="fa fa-plus fa-2x small-hidden medium-hidden large-hidden" id="addteam-mobile"></i>
+		        </div>
+		        <div class="row tiny-hidden">
+		          <span id="nbEquipes" class="bold right">0 <span>équipes</span></span>
+		        </div>
+		        <div id="teams" class="pals">
+		          <ul id="teamlist" class="unstyled pan datalist"></ul>
+		        </div>
+	        </div>
+	    </div>
+	    <a id="startConcours" class="row">
+	      <i class="fa fa-random fa-2x inbl"></i>
+	      <label class="tiny-hidden man inbl">Tirage</label>
+	    </a>
+	</nav>
+	<article id="content-body">
 		{{ flashSession.output() }}
-		<div id="consolante" class="concours">
-			<section id="tour0" class="tour w200p pam mas scroll-v" data-id="0"></section>
-			<div id="tournoiA" class="tournoi mid up" data-id="A"></div>
-			<div id="tournoiB" class="tournoi mid down" data-id="B"></div>
+		<div id="consolante" class="full concours">
+			<div class="zero scroll-v">
+				<div id="tour0" class="tour w200p pam scroll-v left gray" data-id="0"></div>
+				<p class="on-print bold"> | Tournoi A | </p>
+				<div id="tournoiA" class="tournoi mid inbl" data-id="A"></div>
+				<br/>
+				<p class="on-print bold">| Tournoi B| </p>
+				<div id="tournoiB" class="tournoi mid inbl" data-id="B" style="margin-top"></div>
+			</div>
 		</div>
 
-		<div id="inter" class="concours">
+		<div id="inter" class="full concours">
 			<input type="hidden" id="typeInter"/>
 			<div class="inbl" style="height:100%;">
-				<section id="repartition" class="pam mas scroll-v">
+				<div id="repartition" class="pam mas scroll-v">
 					<table id="tableauRepartition" class="striped" summary="Répartition des joueurs">
 						<thead>
 							<tr>
@@ -48,9 +98,9 @@
 					</select>
 					<button class="inbl genere no-print">Générer</button>
 					<div id="liste"></div>
-				</section>
+				</div>
 			</div>
-			<section id="scores" class="w400p pam mas inbl scroll-v">
+			<div id="scores" class="w400p pam mas inbl scroll-v">
 				<table id="classementIS" class="striped tablesorter" summary="Scores des joueurs" style="table-layout:auto;">
 					<thead>
 						<tr>
@@ -82,16 +132,7 @@
 						</tr>
 					</tbody>
 				</table>
-			</section>
+			</div>
 		</div>
-	</div>
-</div>
-
-<div id="sections">
-
-	<section id="matchManagement" class="view matchView" style="display:none;">
-		<span id="randomize" class="glyphicon glyphicon-random" aria-hidden="true"></span>
-		<pre></pre>
-	</section>
-
+	</article>
 </div>

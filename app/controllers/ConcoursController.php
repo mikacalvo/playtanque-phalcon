@@ -5,52 +5,22 @@ use Phalcon\Paginator\Adapter\Model as Paginator;
 
 class ConcoursController extends ControllerBase
 {
-
+    /**
+     *
+     */
+    public function initialize()
+    {
+        parent::initialize();
+        $this->view->setTemplateAfter('app');
+    }
+    
     /**
      * Index action
      */
     public function indexAction()
     {
-        $this->persistent->parameters = null;
-    }
-
-    /**
-     * Searches for concours
-     */
-    public function searchAction()
-    {
-
-        $numberPage = 1;
-        if ($this->request->isPost()) {
-            $query = Criteria::fromInput($this->di, "Concours", $_POST);
-            $this->persistent->parameters = $query->getParams();
-        } else {
-            $numberPage = $this->request->getQuery("page", "int");
-        }
-
-        $parameters = $this->persistent->parameters;
-        if (!is_array($parameters)) {
-            $parameters = array();
-        }
-        $parameters["order"] = "id";
-
-        $concours = Concours::find($parameters);
-        if (count($concours) == 0) {
-            $this->flash->notice("The search did not find any concours");
-
-            return $this->dispatcher->forward(array(
-                "controller" => "concours",
-                "action" => "index"
-            ));
-        }
-
-        $paginator = new Paginator(array(
-            "data" => $concours,
-            "limit"=> 10,
-            "page" => $numberPage
-        ));
-
-        $this->view->page = $paginator->getPaginate();
+        $user = Users::findFirstByid($this->session->get('auth')['id']);
+        $this->view->userConcours = $user->usersConcours;
     }
 
     /**
@@ -58,22 +28,19 @@ class ConcoursController extends ControllerBase
      */
     public function newAction()
     {
-
     }
 
     /**
-     * Edits a concour
+     * Edits a concours
      *
      * @param string $id
      */
     public function editAction($id)
     {
-
         if (!$this->request->isPost()) {
-
-            $concour = Concours::findFirstByid($id);
-            if (!$concour) {
-                $this->flash->error("concour was not found");
+            $concours = Concours::findFirstByid($id);
+            if (!$concours) {
+                $this->flashSession->error("Concours introuvable");
 
                 return $this->dispatcher->forward(array(
                     "controller" => "concours",
@@ -81,63 +48,47 @@ class ConcoursController extends ControllerBase
                 ));
             }
 
-            $this->view->id = $concour->id;
+            $this->view->id = $concours->id;
 
-            $this->tag->setDefault("id", $concour->id);
-            $this->tag->setDefault("label", $concour->label);
-            $this->tag->setDefault("date", $concour->date);
-            $this->tag->setDefault("options", $concour->options);
-            
+            $this->tag->setDefault("id", $concours->id);
+            $this->tag->setDefault("label", $concours->label);
+            $this->tag->setDefault("date", $concours->date);
+            $this->tag->setDefault("options", $concours->options);
         }
     }
 
     /**
-     * Creates a new concour
+     * Creates a new concours
      */
     public function createAction()
     {
+        // if ($this->request->isPost()) {
+	        $concours = new Concours();
+			$concours->label = $this->request->getPost("label");
+			$concours->date  = $this->request->getPost("date");
 
-        if (!$this->request->isPost()) {
-            return $this->dispatcher->forward(array(
-                "controller" => "concours",
-                "action" => "index"
-            ));
-        }
-
-        $concour = new Concours();
-
-        $concour->label = $this->request->getPost("label");
-        $concour->date = $this->request->getPost("date");
-        $concour->options = $this->request->getPost("options");
-        
-
-        if (!$concour->save()) {
-            foreach ($concour->getMessages() as $message) {
-                $this->flash->error($message);
-            }
-
-            return $this->dispatcher->forward(array(
-                "controller" => "concours",
-                "action" => "new"
-            ));
-        }
-
-        $this->flash->success("concour was created successfully");
-
-        return $this->dispatcher->forward(array(
-            "controller" => "concours",
-            "action" => "index"
-        ));
-
+	        if (!$concours->save()) {
+	            foreach ($concours->getMessages() as $message) {
+	                $this->flashSession->error($message);
+	            }
+	        } else {
+	        	$this->flashSession->success('Concours ajouté');
+	        }
+	        $this->response->redirect('concours/new');
+			$this->view->disable();
+			return;
+   //      } else {
+	  //       $this->response->redirect('concours/new');
+			// $this->view->disable();
+   //      }
     }
 
     /**
-     * Saves a concour edited
+     * Saves a concours edited
      *
      */
     public function saveAction()
     {
-
         if (!$this->request->isPost()) {
             return $this->dispatcher->forward(array(
                 "controller" => "concours",
@@ -147,9 +98,9 @@ class ConcoursController extends ControllerBase
 
         $id = $this->request->getPost("id");
 
-        $concour = Concours::findFirstByid($id);
-        if (!$concour) {
-            $this->flash->error("concour does not exist " . $id);
+        $concours = Concours::findFirstByid($id);
+        if (!$concours) {
+            $this->flashSession->error("Concours introuvable");
 
             return $this->dispatcher->forward(array(
                 "controller" => "concours",
@@ -157,44 +108,41 @@ class ConcoursController extends ControllerBase
             ));
         }
 
-        $concour->label = $this->request->getPost("label");
-        $concour->date = $this->request->getPost("date");
-        $concour->options = $this->request->getPost("options");
+		$concours->label   = $this->request->getPost("label");
+		$concours->date    = $this->request->getPost("date");
+		$concours->options = $this->request->getPost("options");
         
 
-        if (!$concour->save()) {
-
-            foreach ($concour->getMessages() as $message) {
-                $this->flash->error($message);
+        if (!$concours->save()) {
+            foreach ($concours->getMessages() as $message) {
+                $this->flashSession->error($message);
             }
 
             return $this->dispatcher->forward(array(
                 "controller" => "concours",
                 "action" => "edit",
-                "params" => array($concour->id)
+                "params" => array($concours->id)
             ));
         }
 
-        $this->flash->success("concour was updated successfully");
+        $this->flashSession->success("Concours modifié");
 
         return $this->dispatcher->forward(array(
             "controller" => "concours",
             "action" => "index"
         ));
-
     }
 
     /**
-     * Deletes a concour
+     * Deletes a concours
      *
      * @param string $id
      */
     public function deleteAction($id)
     {
-
-        $concour = Concours::findFirstByid($id);
-        if (!$concour) {
-            $this->flash->error("concour was not found");
+        $concours = Concours::findFirstByid($id);
+        if (!$concours) {
+            $this->flashSession->error("Concours introuvable");
 
             return $this->dispatcher->forward(array(
                 "controller" => "concours",
@@ -202,10 +150,9 @@ class ConcoursController extends ControllerBase
             ));
         }
 
-        if (!$concour->delete()) {
-
-            foreach ($concour->getMessages() as $message) {
-                $this->flash->error($message);
+        if (!$concours->delete()) {
+            foreach ($concours->getMessages() as $message) {
+                $this->flashSession->error($message);
             }
 
             return $this->dispatcher->forward(array(
@@ -214,12 +161,10 @@ class ConcoursController extends ControllerBase
             ));
         }
 
-        $this->flash->success("concour was deleted successfully");
-
-        return $this->dispatcher->forward(array(
-            "controller" => "concours",
-            "action" => "index"
-        ));
+        $this->flashSession->success("Concours supprimé");
+        $this->response->redirect('concours');
+		$this->view->disable();
+		return;
     }
 
 }

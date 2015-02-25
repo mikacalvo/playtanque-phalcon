@@ -13,6 +13,7 @@ class ControllerBase extends Controller
         	->addJs('js/vendor/jquery-2.1.0.min.js', true)
         	->addJs('js/vendor/jquery-ui-1.11.2.custom/jquery-ui.min.js', true)
         	->addJs('js/vendor/jquery.tablesorter.js', true)
+        	->addJs('js/vendor/noty/packaged/jquery.noty.packaged.min.js', true)
         	->addJs('js/concours.js', true)
         	->addJs('js/consolante.js', true)
         	->addJs('js/inter.js', true)
@@ -29,5 +30,6 @@ class ControllerBase extends Controller
         	->addCss('js/vendor/jquery-ui-1.11.2.custom/jquery-ui.min.css', true);
         	
         // $this->view->setTemplateAfter('main');
+        $this->tag->setTitle("Playtanque : organisez vos tournois de pétanque en un clic !");
     }
 }

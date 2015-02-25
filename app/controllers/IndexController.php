@@ -14,7 +14,11 @@ class IndexController extends ControllerBase
 
     public function indexAction()
     {
-
+        $auth = $this->session->get('auth');
+        if (!$auth) {
+	        $this->response->redirect("login");
+	        return $this->view->disable();
+	    }
     }
 
 }

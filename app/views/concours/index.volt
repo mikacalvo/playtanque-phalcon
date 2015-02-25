@@ -1,54 +1,18 @@
+<article id="content" class="main flex flex-h wrap">
+	<div class="flex-start mas pas w200p">
+		{{ link_to("concours/new", "<i class='fa fa-plus-circle fa-5x'></i>", "class":"light-blue glow-hover w100", "title":"Ajouter un concours") }}
+	</div>
 
-{{ content() }}
-
-<div align="right">
-    {{ link_to("concours/new", "Create concours") }}
-</div>
-
-{{ form("concours/search", "method":"post", "autocomplete" : "off") }}
-
-<div align="center">
-    <h1>Search concours</h1>
-</div>
-
-<table>
-    <tr>
-        <td align="right">
-            <label for="id">Id</label>
-        </td>
-        <td align="left">
-            {{ text_field("id", "type" : "numeric") }}
-        </td>
-    </tr>
-    <tr>
-        <td align="right">
-            <label for="label">Label</label>
-        </td>
-        <td align="left">
-            {{ text_field("label", "size" : 30) }}
-        </td>
-    </tr>
-    <tr>
-        <td align="right">
-            <label for="date">Date</label>
-        </td>
-        <td align="left">
-                {{ text_field("date", "type" : "date") }}
-        </td>
-    </tr>
-    <tr>
-        <td align="right">
-            <label for="options">Options</label>
-        </td>
-        <td align="left">
-                {{ text_field("options", "type" : "date") }}
-        </td>
-    </tr>
-
-    <tr>
-        <td></td>
-        <td>{{ submit_button("Search") }}</td>
-    </tr>
-</table>
-
-</form>
+	{% for concours in userConcours %}
+		<div class="mas pas">
+			<button onclick="location.href='concours/show/{{ concours.concours.id }}'" class="pure-button border round b-light-yellow b-shadow-hover hover-a" title="Voir le concours">
+				<h3 class="h5-like">{{ concours.concours.label }}</h3>
+				<div class="txtleft" style="line-height:26px">
+					<span class="smaller"><i class='fa fa-calendar'></i> {{ concours.concours.date }}</span>
+					{{ link_to("concours/delete/" ~ concours.concours.id, '<i class="fa fa-trash"></i>', "class":"right pure-button b-red border rounder smaller", "title":"Supprimer le concours") }}
+					{{ link_to("concours/edit/" ~ concours.concours.id, '<i class="fa fa-pencil"></i>', "class":"right pure-button b-light-green border rounder smaller", "style":"margin-right:3px;", "title":"Modifier le concours") }}
+				</div>
+			</button>
+		</div>
+	{% endfor  %}
+</article>

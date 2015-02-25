@@ -1,47 +1,23 @@
-{{ content() }}
-{{ form("concours/save", "method":"post") }}
 
-<table width="100%">
-    <tr>
-        <td align="left">{{ link_to("concours", "Go Back") }}</td>
-        <td align="right">{{ submit_button("Save") }}</td>
-    </tr>
-</table>
+<article id="content" class="main flex flex-h">
+	<nav class="w100p">
+		{{ link_to("concours", '<i class="fa fa-chevron-circle-left"></i> Retour', "class":"pure-button b-light-blue white mas") }}
+	</nav>
+	{{ form("concours/save", "method":"post", "style": "width:100%") }}
 
-<div align="center">
-    <h1>Edit concours</h1>
-</div>
+		{{ content() }}
 
-<table>
-    <tr>
-        <td align="right">
-            <label for="label">Label</label>
-        </td>
-        <td align="left">
-            {{ text_field("label", "size" : 30) }}
-        </td>
-    </tr>
-    <tr>
-        <td align="right">
-            <label for="date">Date</label>
-        </td>
-        <td align="left">
-                {{ text_field("date", "type" : "date") }}
-        </td>
-    </tr>
-    <tr>
-        <td align="right">
-            <label for="options">Options</label>
-        </td>
-        <td align="left">
-                {{ text_field("options", "type" : "date") }}
-        </td>
-    </tr>
+		<div align="center">
+		    <h1>Modifier le concours</h1>
+		    {{ hidden_field("id") }}
+		    <label for="label" class="bold mas">Label</label>
+		    {{ text_field("label", "size" : 30) }}
+		    <br/><br/>
+		    <label for="date" class="bold mas">Date</label>
+		    {{ date_field("date") }}
+		    <br/><br/>
+		    {{ submit_button("OK", "class": "pure-button b-light-green white mas bold") }}
+		</div>
 
-    <tr>
-        <td>{{ hidden_field("id") }}</td>
-        <td>{{ submit_button("Save") }}</td>
-    </tr>
-</table>
-
-</form>
+	{{ end_form() }}
+</article>

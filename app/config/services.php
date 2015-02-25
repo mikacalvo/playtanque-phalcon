@@ -20,6 +20,29 @@ use Phalcon\Mvc\Model\Metadata\Memory as MetaDataAdapter;
 $di = new FactoryDefault();
 
 /**
+ * We register the events manager
+ */
+$di->set('dispatcher', function() use ($di) {
+
+	$eventsManager = new EventsManager;
+
+	/**
+	 * Check if the user is allowed to access certain action using the SecurityPlugin
+	 */
+	$eventsManager->attach('dispatch:beforeDispatch', new SecurityPlugin);
+
+	/**
+	 * Handle exceptions and not-found exceptions using NotFoundPlugin
+	 */
+	$eventsManager->attach('dispatch:beforeException', new NotFoundPlugin);
+
+	$dispatcher = new Dispatcher;
+	$dispatcher->setEventsManager($eventsManager);
+
+	return $dispatcher;
+});
+
+/**
  * The URL component is used to generate all kind of urls in the application
  */
 $di->set('url', function () use ($config) {
@@ -81,8 +104,9 @@ $di->set('modelsMetadata', function () {
  */
 $di->set('session', function () {
     $session = new SessionAdapter();
-    $session->start();
-
+    if (!isset($_SESSION)) {
+        $session->start();
+    }
     return $session;
 });
 
@@ -109,6 +133,7 @@ $di->set('flashSession', function(){
 /**
  * Register a user component
  */
-$di->set('header', function(){
-	return new Header();
+$di->set('elements', function(){
+	return new Elements();
 });
+

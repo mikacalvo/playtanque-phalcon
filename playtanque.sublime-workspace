@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"blo",
+				"inline-block"
+			],
+			[
+				"res",
+				"resources"
+			],
+			[
 				"paddin",
 				"padding-left"
 			],
@@ -140,34 +148,50 @@
 	"buffers":
 	[
 		{
-			"file": "app/config/config.php",
+			"file": "public/css/main.css",
 			"settings":
 			{
-				"buffer_size": 715,
+				"buffer_size": 14617,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/css/mobile.css",
+			"settings":
+			{
+				"buffer_size": 214,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/ControllerBase.php",
+			"file": "public/css/vendor/buttons.css",
 			"settings":
 			{
-				"buffer_size": 981,
+				"buffer_size": 1845,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/ConcoursJoueurs.php",
+			"file": "public/css/vendor/knacss.css",
 			"settings":
 			{
-				"buffer_size": 568,
+				"buffer_size": 16579,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/ConcoursController.php",
+			"settings":
+			{
+				"buffer_size": 4439,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/Concours.php",
+			"file": "app/controllers/JoueurController.php",
 			"settings":
 			{
-				"buffer_size": 665,
+				"buffer_size": 4527,
 				"line_ending": "Unix"
 			}
 		},
@@ -175,47 +199,57 @@
 			"file": "app/models/Joueur.php",
 			"settings":
 			{
-				"buffer_size": 563,
+				"buffer_size": 845,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/index/index.volt",
+			"file": "app/models/Concours.php",
 			"settings":
 			{
-				"buffer_size": 1368,
+				"buffer_size": 1361,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/ConnexionController.php",
+			"file": "app/models/Club.php",
 			"settings":
 			{
-				"buffer_size": 1380,
+				"buffer_size": 452,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/InscriptionController.php",
+			"file": "app/controllers/SettingsController.php",
 			"settings":
 			{
-				"buffer_size": 1382,
+				"buffer_size": 1027,
+				"line_ending": "Unix",
+				"name": "SettingsController.php"
+			}
+		},
+		{
+			"file": "app/views/settings/index.volt",
+			"settings":
+			{
+				"buffer_size": 2038,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/css/main.css",
+			"file": "app/views/settings/club.volt",
 			"settings":
 			{
-				"buffer_size": 7298,
-				"line_ending": "Windows"
+				"buffer_size": 2038,
+				"line_ending": "Unix",
+				"name": "club.volt"
 			}
 		},
 		{
-			"file": "app/views/index.volt",
+			"file": "app/plugins/SecurityPlugin.php",
 			"settings":
 			{
-				"buffer_size": 614,
+				"buffer_size": 3088,
 				"line_ending": "Unix"
 			}
 		}
@@ -223,7 +257,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 35.0,
+		"height": 265.0,
 		"selected_items":
 		[
 			[
@@ -231,8 +265,16 @@
 				"Set Syntax: HTML"
 			],
 			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
 				"rein",
 				"Indentation: Reindent Lines"
+			],
+			[
+				"syntahtml",
+				"Set Syntax: HTML"
 			],
 			[
 				"instalpac",
@@ -341,10 +383,6 @@
 			[
 				"correc",
 				"Reg Replace: Correct Tabs"
-			],
-			[
-				"reinde",
-				"Indentation: Reindent Lines"
 			],
 			[
 				"con",
@@ -496,19 +534,76 @@
 	},
 	"file_history":
 	[
-		"/C/wamp/www/playtanque/app/views/index.volt",
-		"/C/wamp/www/playtanque/app/library/Header.php",
-		"/C/wamp/www/playtanque/app/views/play/index.volt",
-		"/C/wamp/www/playtanque/app/controllers/IndexController.php",
-		"/C/wamp/www/playtanque/app/config/services.php",
+		"/C/wamp/www/playtanque/app/plugins/SecurityPlugin.php",
+		"/C/wamp/www/playtanque/app/views/errors/show404.volt",
+		"/C/wamp/www/playtanque/app/views/errors/show401.volt",
+		"/C/wamp/www/playtanque/app/controllers/ErrorsController.php",
+		"/C/wamp/www/playtanque/app/controllers/ControllerBase.php",
 		"/C/wamp/www/playtanque/app/controllers/PlayController.php",
-		"/C/wamp/www/playtanque/app/config/loader.php",
 		"/C/wamp/www/playtanque/app/library/Elements.php",
+		"/C/wamp/www/playtanque/app/views/concours/edit.volt",
+		"/C/wamp/www/playtanque/app/views/concours/new.volt",
+		"/C/wamp/www/playtanque/app/controllers/ConcoursController.php",
+		"/C/wamp/www/playtanque/app/views/concours/index.volt",
+		"/C/wamp/www/playtanque/app/views/index.volt",
+		"/C/wamp/www/playtanque/app/views/errors/show500.volt",
+		"/C/wamp/www/playtanque/app/views/layouts/errors.volt",
+		"/C/wamp/www/playtanque/app/config/services.php",
+		"/C/wamp/www/playtanque/public/js/vendor/noty/packaged/jquery.noty.packaged.js",
+		"/C/wamp/www/playtanque/public/js/vendor/noty/packaged/jquery.noty.packaged.min.js",
+		"/C/wamp/www/playtanque/public/js/vendor/noty/layouts/topRight.js",
+		"/C/wamp/www/playtanque/app/views/joueur/search.volt",
+		"/C/wamp/www/playtanque/app/controllers/JoueurController.php",
+		"/C/wamp/www/playtanque/app/views/joueur/index.volt",
+		"/C/wamp/www/playtanque/app/views/layouts/app.volt",
+		"/C/wamp/www/playtanque/public/css/vendor/knacss.css",
+		"/C/wamp/www/playtanque/app/views/play/index.volt",
+		"/C/wamp/www/playtanque/app/views/login/index.volt",
+		"/C/wamp/www/playtanque/app/cache/c__wamp_www_playtanque_app_views_concours_index.volt.php",
+		"/C/wamp/www/playtanque/app/models/Concours.php",
+		"/C/wamp/www/playtanque/app/models/Users.php",
+		"/C/wamp/www/playtanque/app/controllers/LoginController.php",
+		"/C/wamp/www/playtanque/app/cache/c__wamp_www_playtanque_app_views_login_index.volt.php",
+		"/C/wamp/www/playtanque/app/models/UsersConcours.php",
+		"/C/wamp/www/playtanque/public/css/vendor/buttons.css",
+		"/C/wamp/www/playtanque/app/plugins/NotFoundPlugin.php",
+		"/C/wamp/www/playtanque/app/config/loader.php",
+		"/C/wamp/www/playtanque/public/css/main.css",
+		"/C/wamp/www/playtanque/app/controllers/InscriptionController.php",
+		"/C/wamp/www/playtanque/app/controllers/LogoutController.php",
+		"/C/wamp/www/playtanque/app/controllers/IndexController.php",
+		"/C/wamp/www/playtanque/app/config/config.php",
+		"/C/wamp/www/playtanque/app/models/Joueur.php",
+		"/C/wamp/www/playtanque/app/views/templates/errors.volt",
+		"/C/wamp/www/playtanque/app/views/index/index.volt",
+		"/C/wamp/www/playtanque/public/js/main.js",
+		"/C/wamp/www/playtanque/public/js/consolante.js",
+		"/C/wamp/www/playtanque/app/library/Header.php",
+		"/C/wamp/www/playtanque/public/js/vendor/foundation.dropdown.js",
+		"/C/wamp/www/playtanque/public/js/vendor/foundation.js",
+		"/C/wamp/www/playtanque/public/css/vendor/foundation.css",
+		"/C/Users/mc/Downloads/foundation-5.5.1.custom/js/foundation/foundation.dropdown.js",
+		"/C/Users/mc/Downloads/foundation-5.5.1.custom/css/normalize.css",
+		"/C/Users/mc/Downloads/foundation-5.5.1.custom/index.html",
+		"/C/Users/mc/Downloads/foundation-5.5.1.custom/js/foundation.min.js",
+		"/C/Users/mc/Downloads/foundation-5.5.1.custom/js/vendor/fastclick.js",
+		"/C/Users/mc/Downloads/foundation-5.5.1.custom/js/vendor/jquery.cookie.js",
+		"/C/Users/mc/Downloads/foundation-5.5.1.custom/js/vendor/jquery.js",
+		"/C/Users/mc/Downloads/foundation-5.5.1.custom/js/vendor/modernizr.js",
+		"/C/Users/mc/Downloads/foundation-5.5.1.custom/js/vendor/placeholder.js",
+		"/C/wamp/www/playtanque/public/index.php",
+		"/C/wamp/www/playtanque/public/js/index.js",
+		"/C/wamp/www/playtanque/app/models/ConcoursJoueurs.php",
+		"/C/Users/mc/Downloads/foundation-5.5.1.custom/css/foundation.css",
+		"/C/Users/mc/Downloads/foundation-5.5.1.custom/js/foundation/foundation.js",
+		"/C/Users/mc/Downloads/main.css",
+		"/C/Users/mc/Downloads/main.js",
+		"/C/Users/mc/Downloads/index.html",
+		"/C/wamp/www/playtanque/public/css/vendor/buttons-core.css",
 		"/C/Users/mc/Documents/Playtanque/www/index.html",
 		"/C/wamp/logs/playtanque-access.log",
 		"/C/Users/mc/AppData/Local/Temp/scp52430/home/dev-colas/includes/config.php",
 		"/C/Users/mc/AppData/Local/Temp/scp32433/home/dev-preprod/includes/config.php",
-		"/C/wamp/www/playtanque/app/models/ConcoursJoueurs.php",
 		"/C/Users/mc/Documents/invo/schemas/invo.sql",
 		"/C/wamp/www/playtanque/index.html",
 		"/C/Users/mc/Documents/phalcon/devtools/ide/1.3.4/Phalcon/Tag.php",
@@ -566,64 +661,7 @@
 		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/1.2.4/Phalcon/Mvc/Model.php",
 		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/0.5.0/Phalcon/Tag.php",
 		"/C/Users/mc/Documents/phalcon/app/controllers/IndexController.php",
-		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/1.3.4/Phalcon/Mvc/Model/Exception.php",
-		"/C/Users/mc/Documents/phalcon/public/.htaccess",
-		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/0.8.0/Phalcon/Tag.php",
-		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/2.0.0/Phalcon/Tag.php",
-		"/C/Users/mc/Documents/phalcon/composer.json",
-		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/composer.json",
-		"/C/Users/mc/Documents/phalcon/vendor/autoload.php",
-		"/C/wamp/bin/apache/apache2.4.9/bin/php.ini",
-		"/C/wamp/bin/php/php5.5.12/php.ini",
-		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/Entity/Gamme.php",
-		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/Resources/public/css/style.css",
-		"/C/Users/mc/Documents/symfony/app/config/config_dev.yml",
-		"/C/Users/mc/AppData/Roaming/Sublime Text 2/Packages/Emmet/Default (Windows).sublime-keymap",
-		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/Resources/config/routing.yml",
-		"/C/Users/mc/Documents/symfony/app/config/routing.yml",
-		"/C/Users/mc/Documents/symfony/app/Resources/views/base.html.twig",
-		"/C/Users/mc/Documents/symfony/composer.json",
-		"/C/Users/mc/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
-		"/C/Users/mc/AppData/Roaming/Sublime Text 2/Packages/Emmet/Emmet.sublime-settings",
-		"/C/Users/mc/Downloads/tmp/Avis de premier acompte - Impôt sur le revenu et ou prélèvements sociaux - 2015.html",
-		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/EnsTestBundle.php",
-		"/C/Users/mc/Documents/symfony/src/AppBundle/Controller/DefaultController.php",
-		"/C/wamp/logs/symfony-access.log",
-		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/Entity/ProductRepository.php",
-		"/C/Users/mc/Documents/symfony/app/config/parameters.yml",
-		"/C/wamp/logs/symfony-error.log",
-		"/C/wamp/www/s2/app/config/routing_dev.yml",
-		"/C/Users/mc/Documents/symfony/app/config/config.yml",
-		"/C/wamp/bin/mysql/mysql5.6.17/my.ini",
-		"/C/wamp/bin/apache/apache2.4.9/conf/httpd.conf",
-		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/t/Produit.php",
-		"/C/wamp/bin/mysql/mysql5.6.17/Produit.php",
-		"/C/wamp/wampmanager.conf",
-		"/C/Users/mc/Documents/symfony/src/Ens/TestBundle/Resources/views/Default/index.html.twig",
-		"/C/wamp/wampmanager.ini",
-		"/C/wamp/logs/apache_error.log",
-		"/C/Users/mc/AppData/Local/Temp/scp55382/home/giepssite/portefeuille/index_portefeuille.php",
-		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/ajax/ajax_elliance.php",
-		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/ajax/ajax.php",
-		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/adherent/backoffice/template/faq.html",
-		"/C/Users/mc/AppData/Local/Temp/scp15964/home/giepssite/modules/querybox/etats/courtier/gestionprojet/documents/generepdf.php",
-		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/ajax/onglet_elliance.php",
-		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/ajax/adhesion.php",
-		"/C/Users/mc/Documents/giepssite/Extranet/home/giepssite/includes/communication_courtier/nouveaux_tarifs_osalyssen.php",
-		"/C/Users/mc/AppData/Local/Temp/scp52962/home/dev-preprod/includes/communication_courtier/consultationSerenovaElliance.php",
-		"/C/Users/mc/Documents/giepssite/Extranet/home/giepssite/includes/communication_courtier/consultationSerenovaElliance.php",
-		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/includes/communication_courtier/focusTNS.php",
-		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/querybox/etats/courtier/courtier01/accueil.php",
-		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/includes/telecharger/telecharger_elliance.php",
-		"/C/Users/mc/Documents/giepssite/1.1.1-CoLas/home/giepssite/portefeuille/index_portefeuille.php",
-		"/C/Users/mc/Documents/giepssite/Extranet/home/giepssite/includes/communication_courtier/eSouscription.php",
-		"/C/Users/mc/AppData/Local/Temp/scp44074/home/dev-preprod/modules/querybox/etats/courtier/courtier01/initquerybox.txt",
-		"/C/Users/mc/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/classes/LatexToPdf.php",
-		"/C/Users/mc/AppData/Local/Temp/scp34312/home/dev-preprod/modules/querybox/etats/demo/gestionprojet/documents/generepdf.php",
-		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/querybox/etats/demo/gestionprojet/documents/generepdf.php",
-		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/modules/querybox/etats/courtier/gestionprojet/documents/generepdf.php",
-		"/C/Users/mc/Documents/giepssite/EXTRANET/home/giepssite/classes/Document.php"
+		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/1.3.4/Phalcon/Mvc/Model/Exception.php"
 	],
 	"find":
 	{
@@ -634,6 +672,7 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"C:\\wamp\\www\\playtanque",
 			"C:\\Users\\mc\\Documents\\invo",
 			"C:\\Users\\mc\\Documents\\invo, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif, -*.txt, -*.csv, -*.ps, -*.xml, -*.pak, -*.map",
 			"C:\\Users\\mc\\Documents\\giepssite\\EXTRANET\\home\\giepssite, -*.jpg, -*.png, -*.pdf, -*.swf, -*.gif, -*.csv, -*.ps, -*.xml, -*.pak, -*.map",
@@ -749,134 +788,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"Connexion",
-			"#connexion",
-			"S",
-			" ?>",
-			"array(",
-			"<?php echo Tag::textField",
-			"shadow",
-			"app-title",
-			"'",
-			"css",
-			"false",
-			"\"",
-			"main",
-			"}}",
-			"{{",
-			"Session",
+			"h2",
+			"0 auto",
+			"ROUND-BUTTON",
+			"label",
+			"concours",
+			".rounder",
+			"errorBox",
+			"$this->flash->",
+			"this->flash",
+			"!",
+			"pure-button",
+			"margin-right",
+			"pure-but",
+			"p",
+			"$this->flashSession->error",
+			"topRight",
+			"default",
+			"new",
+			"text",
+			"right",
+			"display:block",
+			"yellow",
+			"\n.",
+			"text-decoration",
+			".main",
+			":",
+			"text-decoration",
+			"; ",
+			"max-width:480px",
+			".aside",
+			"@media",
 			"session",
-			"successMessage",
-			"produit",
-			"td",
-			"Produit",
-			"rubrique",
-			"MktgProduit",
-			"MktgRubrique",
-			"mktg_rubrique",
-			"produit",
-			"$produit",
-			"produit",
-			"Produit::",
-			"produit",
-			"produit/",
-			"\");\n",
-			"rubrique",
-			"parent",
-			"protected",
-			"$produits",
-			"$produit",
-			"produit/",
-			"d",
-			"ORDRE",
-			"ordre",
-			"ORDRE",
-			"$position",
-			"string",
-			"protected",
-			"10",
-			";",
-			"bootstrap.min.css",
-			"phalcon",
-			"Phalcon\\Tag",
-			"email",
-			"user",
-			"Users",
-			"ci",
-			"$produitToRemove",
-			"$produitToRemove ",
-			");\n",
-			"data",
-			"request",
-			"ctrl+e",
-			"Expand",
-			"Expand Abbreviation",
-			"Jobeet",
-			"category",
-			"Name",
-			"Category",
-			"category",
-			"Category",
-			"category",
-			"Category",
-			"category",
-			"Category",
-			"category",
-			"product",
-			"Product",
-			"product",
-			"Product",
-			"product",
-			"Product",
-			"product",
-			"Product",
-			"int",
-			"\\",
-			"mysqld",
-			"\"C:\\mes progammes\\FirefoxPortable 28.0\\FirefoxPortable.exe\"",
-			"chrome",
-			"firefo",
-			"max_nesting_level",
-			"accelerato",
-			"xdebug.max_nesting_level",
-			"<Directory",
-			"httpd-vhosts",
-			"listen",
-			"affiche_obseque",
-			"is_gav",
-			"recup_infos_banque",
-			"variable pour savoir",
-			"CIIJH",
-			"keys",
-			"pdfToJoin",
-			"$code =",
-			"getCodeOption",
-			"nummdt",
-			"pdfToJoin",
-			"contratresp",
-			"Options IJH ",
-			"css",
-			"Output",
-			"ajouteFichier",
-			"elliance.js",
-			"ajax_elliance",
-			"AjaxElliance",
-			"__WSDL__",
-			"on montre",
-			"homepage_focusTNS",
-			"compteoptions",
-			"_extraction.php",
-			"josiane.php",
-			"supp_extraction",
-			"nouvelle",
-			"codePrestations",
-			"PDFDOCS",
-			" I V E A U",
-			"b{2cm}>{\\raggedleft} b{3cm}>{\\raggedleft} b{3cm}>{\\raggedleft} b{5.5cm}>",
-			"b{2cm}>{\\raggedleft} b{3cm}>{\\raggedleft}",
-			"b{2cm}>{\\raggedleft} b{3cm}>{\\raggedleft} b{3cm}>{\\raggedleft} b{5.5cm}>",
-			"index_marketing.html",
-			"file"
+			"button-",
+			"shadow",
+			"black",
+			"a:",
+			"grey",
+			"157, 163, 169",
+			"b-grey",
+			"51, 50, 55",
+			".shadow",
+			"button-info",
+			"button-warning",
+			"button-error",
+			"button-register",
+			"button-login",
+			"button-secondary",
+			"212, 28, 28",
+			"202, 60, 60",
+			"rounded",
+			".round",
+			"round",
+			"button-ter",
+			"button-bis",
+			"border-radius",
+			"color",
+			"dark-grey",
+			": ",
+			":",
+			"dropdown",
+			"tag",
+			"header",
+			"color",
+			"notification",
+			"yellow",
+			".shadow",
+			"dark",
+			"app-title",
+			"color",
+			".",
+			"tagline",
+			"color",
+			"button-secondary",
+			"\"",
+			"w20",
+			"wrap",
+			"concours.",
+			"clientAddress",
+			"concour",
+			"$concour ",
+			"concour",
+			"full",
+			"joueur",
+			"username",
+			"dropdown-trigger",
+			"getHeader",
+			"errorBox",
+			".shadow",
+			"box-shadow",
+			"a:hover",
+			"white",
+			".dark",
+			".shadow",
+			"text-shadow",
+			"box-shadow",
+			"#login",
+			"loginBox",
+			"h5",
+			"on-print",
+			"50%",
+			"mas",
+			".tour",
+			"grey",
+			"full",
+			"position: relative",
+			"position:relative",
+			"section",
+			"startConcours",
+			"consolante",
+			"content",
+			"Consolante",
+			"content-body",
+			".line",
+			"content",
+			"nbEquipes",
+			".application",
+			"datalist",
+			"application",
+			"display:table;",
+			"content",
+			"mod",
+			"flex-flow",
+			"box",
+			"flex",
+			"header",
+			"reduced",
+			"hide",
+			"navspan"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -884,6 +923,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"concours",
 			"Gamme",
 			"gamme",
 			"background_noel.jpg",
@@ -1010,8 +1050,7 @@
 			"^function$1\\n",
 			"amiliale",
 			"familiale",
-			"	",
-			"\\n	"
+			"	"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1022,29 +1061,28 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 9,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/config/config.php",
+					"file": "public/css/main.css",
 					"settings":
 					{
-						"buffer_size": 715,
+						"buffer_size": 14617,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								236,
-								236
+								14443,
+								14443
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
-							"auto_complete": false,
 							"bh_regions":
 							[
 								"bh_regex",
@@ -1092,34 +1130,33 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 10752.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/controllers/ControllerBase.php",
+					"file": "public/css/mobile.css",
 					"settings":
 					{
-						"buffer_size": 981,
+						"buffer_size": 214,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								738,
-								738
+								214,
+								214
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
-							"auto_complete": false,
 							"bh_regions":
 							[
 								"bh_regex",
@@ -1167,7 +1204,7 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1177,24 +1214,23 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/models/ConcoursJoueurs.php",
+					"file": "public/css/vendor/buttons.css",
 					"settings":
 					{
-						"buffer_size": 568,
+						"buffer_size": 1845,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								193,
-								193
+								282,
+								289
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
-							"auto_complete": false,
 							"bh_regions":
 							[
 								"bh_regex",
@@ -1242,7 +1278,7 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1252,24 +1288,23 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/models/Concours.php",
+					"file": "public/css/vendor/knacss.css",
 					"settings":
 					{
-						"buffer_size": 665,
+						"buffer_size": 16579,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								172,
-								172
+								12259,
+								12272
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
-							"auto_complete": false,
 							"bh_regions":
 							[
 								"bh_regex",
@@ -1317,7 +1352,7 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"syntax": "Packages/PHP/PHP.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1327,18 +1362,93 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/models/Joueur.php",
+					"file": "app/controllers/ConcoursController.php",
 					"settings":
 					{
-						"buffer_size": 563,
+						"buffer_size": 4439,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								453,
-								453
+								2021,
+								1931
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 351.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/JoueurController.php",
+					"settings":
+					{
+						"buffer_size": 4527,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								622,
+								622
 							]
 						],
 						"settings":
@@ -1401,94 +1511,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "app/views/index/index.volt",
-					"settings":
-					{
-						"buffer_size": 1368,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								861,
-								861
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 6,
-					"file": "app/controllers/ConnexionController.php",
+					"file": "app/models/Joueur.php",
 					"settings":
 					{
-						"buffer_size": 1380,
+						"buffer_size": 845,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								269,
-								269
+								231,
+								231
 							]
 						],
 						"settings":
@@ -1552,18 +1587,18 @@
 				},
 				{
 					"buffer": 7,
-					"file": "app/controllers/InscriptionController.php",
+					"file": "app/models/Concours.php",
 					"settings":
 					{
-						"buffer_size": 1382,
+						"buffer_size": 1361,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								285,
-								285
+								1358,
+								1358
 							]
 						],
 						"settings":
@@ -1627,23 +1662,24 @@
 				},
 				{
 					"buffer": 8,
-					"file": "public/css/main.css",
+					"file": "app/models/Club.php",
 					"settings":
 					{
-						"buffer_size": 7298,
+						"buffer_size": 452,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3541,
-								3541
+								449,
+								449
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
+							"auto_complete": false,
 							"bh_regions":
 							[
 								"bh_regex",
@@ -1691,28 +1727,104 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 2277.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 9,
-					"file": "app/views/index.volt",
+					"file": "app/controllers/SettingsController.php",
 					"settings":
 					{
-						"buffer_size": 614,
+						"buffer_size": 1027,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								519,
-								519
+								837,
+								837
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"auto_name": "SettingsController.php",
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/views/settings/index.volt",
+					"settings":
+					{
+						"buffer_size": 2038,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								2038
 							]
 						],
 						"settings":
@@ -1773,6 +1885,157 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/views/settings/club.volt",
+					"settings":
+					{
+						"buffer_size": 2038,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2038,
+								2038
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"auto_name": "club.volt",
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "app/plugins/SecurityPlugin.php",
+					"settings":
+					{
+						"buffer_size": 3088,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1225,
+								1225
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 156.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
 				}
 			]
 		}
@@ -1823,8 +2086,56 @@
 		"selected_items":
 		[
 			[
+				"show404",
+				"app/views/errors/show404.volt"
+			],
+			[
+				"sho",
+				"app/views/errors/show401.volt"
+			],
+			[
+				"toprigh",
+				"public/js/vendor/noty/layouts/topRight.js"
+			],
+			[
+				"knacss",
+				"public/css/vendor/knacss.css"
+			],
+			[
+				"loginindex",
+				"app/views/login/index.volt"
+			],
+			[
+				"butto",
+				"public/css/vendor/buttons.css"
+			],
+			[
+				"button",
+				"public/css/vendor/buttons.css"
+			],
+			[
 				"maincss",
 				"public/css/main.css"
+			],
+			[
+				"consola",
+				"public/js/consolante.js"
+			],
+			[
+				"playcontr",
+				"app/controllers/PlayController.php"
+			],
+			[
+				"users",
+				"app/models/Users.php"
+			],
+			[
+				"mainjs",
+				"public/js/main.js"
+			],
+			[
+				"header",
+				"app/library/Header.php"
 			],
 			[
 				"produitj",
@@ -2285,54 +2596,6 @@
 			[
 				"defaultie",
 				"home/giepssite/css/default_ie.css"
-			],
-			[
-				"defaultcs",
-				"home/giepssite/css/default.css"
-			],
-			[
-				"css/defaut",
-				"home/giepssite/adherent/css/default_acbs.css"
-			],
-			[
-				"defaul",
-				"home/giepssite/css/default.css"
-			],
-			[
-				"bxslider",
-				"home/giepssite/js/bxslider/jquery.bxslider.js"
-			],
-			[
-				"bxslid",
-				"home/giepssite/js/bxslider/jquery.bxslider.css"
-			],
-			[
-				"accueilheader",
-				"home/giepssite/modules/querybox/etats/accueil/header.html"
-			],
-			[
-				"livrai",
-				"home/giepssite/communication_adherent/livraison201412.sql"
-			],
-			[
-				"css/",
-				"home/giepssite/css/default.css"
-			],
-			[
-				"livraiso",
-				"home/giepssite/communication_adherent/livraison201409.sql"
-			],
-			[
-				"listeactualite",
-				"home/giepssite/adherent/liste_actualite.php"
-			],
-			[
-				"actualite",
-				"home/giepssite/adherent/actualite.php"
-			],
-			[
-				"setass",
-				"home/giepssite/includes/setassociation.php"
 			]
 		],
 		"width": 0.0
