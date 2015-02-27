@@ -74,14 +74,14 @@ class Elements extends Component
         if (!$auth) {
             return
             	'<div class="userbar">
-	            	<button class="pure-button username">Mode Hors Ligne</button>
-	            	'.$this->tag->linkTo('index', '<a class="pure-button settings" title="Retour à la page de connexion" href="index"><i class="fa fa-sign-in"></i></a>').'
+	            	<button class="pure-button b-lighter-gray username">Mode Hors Ligne</button>
+	            	'.$this->tag->linkTo(array('index', '<i class="fa fa-sign-in"></i>', 'class'=>'pure-button b-lighter-gray settings', 'title'=>'Retour à la page de connexion')).'
 				</div>';
         } else {
             return 
             	'<div class="userbar">
             		<div class="dropdown">
-		            	<button class="pure-button username dropdown-trigger" style="width:135px;">
+		            	<button class="pure-button username b-lighter-gray dropdown-trigger" style="width:135px;">
 		            		<span>'.$auth['username'].'</span> <i class="fa fa-caret-down right"></i><i class="fa fa-caret-up right"></i>
 		            	</button>
 		            	<ul id="usermenu" class="dropdown-menu">
@@ -91,7 +91,7 @@ class Elements extends Component
 						</ul>
 					</div>
             		<div class="dropdown">
-						<button class="pure-button settings dropdown-trigger"><i class="fa fa-cog" style="margin-right:4px;"></i><i class="fa fa-caret-down right"></i><i class="fa fa-caret-up right"></i></button>
+						<button class="pure-button settings b-lighter-gray dropdown-trigger"><i class="fa fa-cog" style="margin-right:4px;"></i><i class="fa fa-caret-down right"></i><i class="fa fa-caret-up right"></i></button>
 		            	<ul id="usermenu" class="dropdown-menu">
 							<li>'.$this->tag->linkTo(array('settings', '<i class="fa fa-wrench"></i>', 'title'=>'Mon compte', "class"=>"b-light-gray dark-gray")).'</li>
 							<li>'.$this->tag->linkTo(array('logout', '<i class="fa fa-sign-out"></i>', 'title'=>'Déconnexion', "class"=>"b-light-gray dark-gray")).'</li>

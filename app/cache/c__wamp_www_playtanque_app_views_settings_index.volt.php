@@ -33,8 +33,8 @@
 			
 			<div class="w100 mas">
 			    <h3 align="center">Mes options</h3>
-			    <?php echo $this->tag->hiddenField(array('id')); ?>
-				<?php echo $this->tag->form(array('settings/parameter', 'method' => 'post', 'class' => 'formstd')); ?>
+				<?php echo $this->tag->form(array('settings/parameter', 'method' => 'post')); ?>
+			    	<?php echo $this->tag->hiddenField(array('id')); ?>
 				    <label for="newsletter" class="bold mas">Recevoir la lettre d'informations</label>
 				    <?php echo $this->tag->checkField(array('newsletter', 'onclick' => '$(this).closest(\'form\').submit();')); ?>
 				<?php echo $this->tag->endForm(); ?>

@@ -244,14 +244,6 @@
 				"line_ending": "Unix",
 				"name": "club.volt"
 			}
-		},
-		{
-			"file": "app/plugins/SecurityPlugin.php",
-			"settings":
-			{
-				"buffer_size": 3088,
-				"line_ending": "Unix"
-			}
 		}
 	],
 	"build_system": "",
@@ -1061,7 +1053,7 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -1372,8 +1364,8 @@
 						"selection":
 						[
 							[
-								2021,
-								1931
+								1124,
+								1124
 							]
 						],
 						"settings":
@@ -1430,7 +1422,7 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 351.0,
+						"translation.y": 299.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1597,8 +1589,8 @@
 						"selection":
 						[
 							[
-								1358,
-								1358
+								1071,
+								1071
 							]
 						],
 						"settings":
@@ -1655,7 +1647,7 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 234.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1747,8 +1739,8 @@
 						"selection":
 						[
 							[
-								837,
-								837
+								357,
+								357
 							]
 						],
 						"settings":
@@ -1958,81 +1950,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "app/plugins/SecurityPlugin.php",
-					"settings":
-					{
-						"buffer_size": 3088,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1225,
-								1225
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_complete": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 156.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

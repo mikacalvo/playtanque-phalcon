@@ -24,7 +24,6 @@ class SecurityPlugin extends Plugin
 	 */
 	public function getAcl()
 	{
-		unset($this->persistent->acl);
 		if (!isset($this->persistent->acl)) {
 			$acl = new AclList();
 			$acl->setDefaultAction(Acl::DENY);
@@ -43,7 +42,6 @@ class SecurityPlugin extends Plugin
 				'concours'    => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
 				'joueur'      => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
 				'logout'      => array('index'),
-				'inscription' => array('index'),
 				'settings'    => array('index', 'parameter'),
 			);
 			foreach ($privateResources as $resource => $actions) {
@@ -55,6 +53,7 @@ class SecurityPlugin extends Plugin
 				'index'   => array('index'),
 				'login'   => array('index'),
 				'play'    => array('index'),
+				'inscription' => array('index'),
 				'errors'  => array('show401', 'show404', 'show500'),
 			);
 			foreach ($publicResources as $resource => $actions) {

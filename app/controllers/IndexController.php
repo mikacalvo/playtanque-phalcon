@@ -18,6 +18,9 @@ class IndexController extends ControllerBase
         if (!$auth) {
 	        $this->response->redirect("login");
 	        return $this->view->disable();
+	    } else {
+	        $this->response->redirect("logout");
+	        return $this->view->disable();
 	    }
     }
 

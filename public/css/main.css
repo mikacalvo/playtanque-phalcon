@@ -666,6 +666,14 @@ header>*, header div {
 .userbar .pure-button {
 	padding: 0 1em;
 }
+.userbar .pure-button {
+	height: 25px;
+	line-height: 25px;
+	vertical-align: middle;
+}
+.userbar .pure-button .fa {
+	margin-top: 5px;
+}
 /********************* HEADER *********************/
 
 
@@ -673,9 +681,6 @@ header>*, header div {
 .dropdown {
     position: relative;
     display: inline-block;
-}
-.dropdown button {
-	height: 100%;
 }
 .dropdown .dropdown-menu {
     position: absolute;
