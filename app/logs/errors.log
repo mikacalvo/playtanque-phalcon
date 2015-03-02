@@ -1,0 +1,2 @@
+[Fri, 27 Feb 15 22:26:26 +0100][ERROR] SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[Fri, 27 Feb 15 23:34:38 +0100][ERROR] Column 'options' isn't part of the column map

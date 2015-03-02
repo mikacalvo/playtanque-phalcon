@@ -1,5 +1,5 @@
 <?php
- 
+
 use Phalcon\Mvc\Model\Criteria;
 use Phalcon\Paginator\Adapter\Model as Paginator;
 
@@ -13,7 +13,7 @@ class ConcoursController extends ControllerBase
         parent::initialize();
         $this->view->setTemplateAfter('app');
     }
-    
+
     /**
      * Index action
      */
@@ -62,7 +62,7 @@ class ConcoursController extends ControllerBase
      */
     public function createAction()
     {
-        // if ($this->request->isPost()) {
+        if ($this->request->isPost()) {
 	        $concours = new Concours();
 			$concours->label = $this->request->getPost("label");
 			$concours->date  = $this->request->getPost("date");
@@ -77,10 +77,11 @@ class ConcoursController extends ControllerBase
 	        $this->response->redirect('concours/new');
 			$this->view->disable();
 			return;
-   //      } else {
-	  //       $this->response->redirect('concours/new');
-			// $this->view->disable();
-   //      }
+        } else {
+	        $this->response->redirect('concours/new');
+			$this->view->disable();
+            return;
+        }
     }
 
     /**
@@ -111,7 +112,7 @@ class ConcoursController extends ControllerBase
 		$concours->label   = $this->request->getPost("label");
 		$concours->date    = $this->request->getPost("date");
 		$concours->options = $this->request->getPost("options");
-        
+
 
         if (!$concours->save()) {
             foreach ($concours->getMessages() as $message) {

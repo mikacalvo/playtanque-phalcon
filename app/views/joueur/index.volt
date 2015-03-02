@@ -1,115 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <style>
+<article id="content" class="main flex flex-h wrap">
+  <div class="flex-start mas pas w200p">
+    {{ link_to("joueur/new", "<i class='fa fa-plus-circle fa-5x'></i>", "class":"light-blue glow-hover w100", "title":"Ajouter un joueur") }}
+  </div>
 
-  body {
-   font: 24px Helvetica;
-   background: #999999;
-  }
-
-  #main {
-   min-height: 800px;
-   margin: 0px;
-   padding: 0px;
-   display: -webkit-flex;
-   display:         flex;
-   -webkit-flex-flow: row;
-           flex-flow: row;
-   }
- 
-  #main > article {
-   margin: 4px;
-   padding: 5px;
-   border: 1px solid #cccc33;
-   border-radius: 7pt;
-   background: #dddd88;
-   -webkit-flex: 3 1 60%;
-           flex: 3 1 60%;
-   -webkit-order: 2;
-           order: 2;
-   }
-  
-  #main > nav {
-   margin: 4px;
-   padding: 5px;
-   border: 1px solid #8888bb;
-   border-radius: 7pt;
-   background: #ccccff;
-   -webkit-flex: 1 6 20%;
-           flex: 1 6 20%;
-   -webkit-order: 1;
-           order: 1;
-   }
-  
-  #main > aside {
-   margin: 4px;
-   padding: 5px;
-   border: 1px solid #8888bb;
-   border-radius: 7pt;
-   background: #ccccff;
-   -webkit-flex: 1 6 20%;
-           flex: 1 6 20%;
-   -webkit-order: 3;
-           order: 3;
-   }
- 
-  header, footer {
-   display: block;
-   margin: 4px;
-   padding: 5px;
-   min-height: 100px;
-   border: 1px solid #eebb55;
-   border-radius: 7pt;
-   background: #ffeebb;
-   }
- 
-  /* Too narrow to support three columns */
-  @media all and (max-width: 640px) {
-  
-   #main, #page {
-    -webkit-flex-flow: column;
-            flex-flow: column;
-            flex-direction: column;
-   }
-
-   #main > article, #main > nav, #main > aside {
-    /* Return them to document order */
-    -webkit-order: 0;
-            order: 0;
-   }
-  
-   #main > nav, #main > aside, header, footer {
-    min-height: 50px;
-    max-height: 50px;
-   }
-  }
-
- </style>
- <body>
- 	<div class="container">
-		<header class="b-dark-gray no-print mcenter">{{ elements.getHeader() }}</header>
- 		<aside class="aside w100p">
-			{{ link_to("concours", '<i class="fa fa-chevron-circle-left"></i> Retour', "class":"pure-button b-light-blue white mas") }}
-		</aside>
-		<article id="content" class="main">
-			{{ form("concours/create", "method":"post", "style": "width:100%") }}
-
-				{{ content() }}
-
-				<div align="center">
-				    <h1>Nouveau concours</h1>
-				    
-				    <label for="label" class="bold mas">Label</label>
-				    {{ text_field("label", "size" : 30) }}
-				    <br/><br/>
-				    <label for="date" class="bold mas">Date</label>
-				    {{ date_field("date") }}
-				    <br/><br/>
-				    {{ submit_button("OK", "class": "pure-button b-light-green white mas bold") }}
-				</div>
-
-			{{ end_form() }}
-		</article>
- 	</div>
- </body>
+  <div class="mas pas">
+    <table style="width:auto;">
+      {% for joueur in userJoueurs %}
+        <tr>
+          <td class="w200p">{{ joueur.joueur.nom }}</td>
+          <td>{{ joueur.joueur.getPoste() }}</td>
+          <td>{{ link_to("joueur/edit/" ~ joueur.joueur.id, '<i class="fa fa-pencil"></i>', "class":"pure-button b-light-green border rounder smaller", "style":"margin-right:3px;", "title":"Modifier le joueur") }}</td>
+          <td>{{ link_to("joueur/delete/" ~ joueur.joueur.id, '<i class="fa fa-trash"></i>', "class":"pure-button b-red border rounder smaller", "title":"Supprimer le joueur") }}</td>
+        </tr>
+      {% endfor  %}
+    </table>
+</article>

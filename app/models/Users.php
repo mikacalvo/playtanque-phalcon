@@ -72,11 +72,11 @@ class Users extends \Phalcon\Mvc\Model
     public function columnMap()
     {
         return array(
-            'id' => 'id', 
-            'username' => 'username', 
-            'password' => 'password', 
-            'email' => 'email', 
-            'date_creation' => 'date_creation', 
+            'id' => 'id',
+            'username' => 'username',
+            'password' => 'password',
+            'email' => 'email',
+            'date_creation' => 'date_creation',
             'is_actif' => 'is_actif'
         );
     }
@@ -84,5 +84,6 @@ class Users extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->hasMany("id", "UsersConcours", "user_id");
+        $this->hasMany("id", "UsersJoueurs", "user_id");
     }
 }

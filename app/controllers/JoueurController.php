@@ -1,5 +1,5 @@
 <?php
- 
+
 use Phalcon\Mvc\Model\Criteria;
 use Phalcon\Paginator\Adapter\Model as Paginator;
 
@@ -19,7 +19,7 @@ class JoueurController extends ControllerBase
     public function indexAction()
     {
         $user = Users::findFirstByid($this->session->get('auth')['id']);
-        $this->view->userConcours = $user->usersConcours;
+        $this->view->userJoueurs = $user->usersJoueurs;
     }
 
     /**
@@ -27,7 +27,28 @@ class JoueurController extends ControllerBase
      */
     public function newAction()
     {
+        if ($this->request->isPost()) {
+            $joueur = new Joueur();
 
+            $joueur->nom = $this->request->getPost("nom");
+            $joueur->options->poste = $this->request->getPost("poste");
+
+            if (!$joueur->save()) {
+                foreach ($joueur->getMessages() as $message) {
+                    $this->flashSession->error($message);
+                }
+
+                return $this->dispatcher->forward(array(
+                    "controller" => "joueur",
+                    "action" => "new"
+                ));
+            }
+
+            $this->flashSession->success("joueur créé");
+            $this->response->redirect('joueur');
+            $this->view->disable();
+            return;
+        }
     }
 
     /**
@@ -37,12 +58,10 @@ class JoueurController extends ControllerBase
      */
     public function editAction($id)
     {
-
         if (!$this->request->isPost()) {
-
             $joueur = Joueur::findFirstByid($id);
             if (!$joueur) {
-                $this->flash->error("joueur was not found");
+                $this->flashSession->error("joueur introuvable");
 
                 return $this->dispatcher->forward(array(
                     "controller" => "joueur",
@@ -53,9 +72,8 @@ class JoueurController extends ControllerBase
             $this->view->id = $joueur->id;
 
             $this->tag->setDefault("id", $joueur->id);
-            $this->tag->setDefault("label", $joueur->label);
-            $this->tag->setDefault("poste", $joueur->poste);
-            
+            $this->tag->setDefault("nom", $joueur->nom);
+            $this->tag->setDefault("poste", $joueur->options->poste);
         }
     }
 
@@ -64,7 +82,6 @@ class JoueurController extends ControllerBase
      */
     public function createAction()
     {
-
         if (!$this->request->isPost()) {
             return $this->dispatcher->forward(array(
                 "controller" => "joueur",
@@ -74,28 +91,29 @@ class JoueurController extends ControllerBase
 
         $joueur = new Joueur();
 
-        $joueur->label = $this->request->getPost("label");
-        $joueur->poste = $this->request->getPost("poste");
-        
+        $joueur->nom = $this->request->getPost("nom");
+        $joueur->options->poste = $this->request->getPost("poste");
 
         if (!$joueur->save()) {
             foreach ($joueur->getMessages() as $message) {
-                $this->flash->error($message);
+                $this->flashSession->error($message);
             }
 
             return $this->dispatcher->forward(array(
                 "controller" => "joueur",
                 "action" => "new"
             ));
+            $this->response->redirect('joueur/new');
+            $this->view->disable();
+            return;
         }
 
-        $this->flash->success("joueur was created successfully");
+        $this->flashSession->success("joueur créé");
 
         return $this->dispatcher->forward(array(
             "controller" => "joueur",
             "action" => "index"
         ));
-
     }
 
     /**
@@ -104,7 +122,6 @@ class JoueurController extends ControllerBase
      */
     public function saveAction()
     {
-
         if (!$this->request->isPost()) {
             return $this->dispatcher->forward(array(
                 "controller" => "joueur",
@@ -116,7 +133,7 @@ class JoueurController extends ControllerBase
 
         $joueur = Joueur::findFirstByid($id);
         if (!$joueur) {
-            $this->flash->error("joueur does not exist " . $id);
+            $this->flashSession->error("joueur does not exist " . $id);
 
             return $this->dispatcher->forward(array(
                 "controller" => "joueur",
@@ -124,14 +141,12 @@ class JoueurController extends ControllerBase
             ));
         }
 
-        $joueur->label = $this->request->getPost("label");
-        $joueur->poste = $this->request->getPost("poste");
-        
+        $joueur->nom = $this->request->getPost("nom");
+        $joueur->options->poste = $this->request->getPost("poste");
 
         if (!$joueur->save()) {
-
             foreach ($joueur->getMessages() as $message) {
-                $this->flash->error($message);
+                $this->flashSession->error($message);
             }
 
             return $this->dispatcher->forward(array(
@@ -141,13 +156,12 @@ class JoueurController extends ControllerBase
             ));
         }
 
-        $this->flash->success("joueur was updated successfully");
+        $this->flashSession->success("joueur was updated successfully");
 
         return $this->dispatcher->forward(array(
             "controller" => "joueur",
             "action" => "index"
         ));
-
     }
 
     /**
@@ -157,10 +171,9 @@ class JoueurController extends ControllerBase
      */
     public function deleteAction($id)
     {
-
         $joueur = Joueur::findFirstByid($id);
         if (!$joueur) {
-            $this->flash->error("joueur was not found");
+            $this->flashSession->error("joueur inconnu");
 
             return $this->dispatcher->forward(array(
                 "controller" => "joueur",
@@ -169,18 +182,17 @@ class JoueurController extends ControllerBase
         }
 
         if (!$joueur->delete()) {
-
             foreach ($joueur->getMessages() as $message) {
-                $this->flash->error($message);
+                $this->flashSession->error($message);
             }
 
             return $this->dispatcher->forward(array(
                 "controller" => "joueur",
-                "action" => "search"
+                "action" => "index"
             ));
         }
 
-        $this->flash->success("joueur was deleted successfully");
+        $this->flashSession->success("joueur supprimé");
 
         return $this->dispatcher->forward(array(
             "controller" => "joueur",

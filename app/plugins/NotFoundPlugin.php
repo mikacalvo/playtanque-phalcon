@@ -5,6 +5,7 @@ use Phalcon\Mvc\User\Plugin;
 use Phalcon\Dispatcher;
 use Phalcon\Mvc\Dispatcher\Exception as DispatcherException;
 use Phalcon\Mvc\Dispatcher as MvcDispatcher;
+use Phalcon\Logger\Adapter\File as FileAdapter;
 
 /**
  * NotFoundPlugin
@@ -32,6 +33,8 @@ class NotFoundPlugin extends Plugin
 					return false;
 			}
 		}
+		$logger = new FileAdapter($this->config->application->logsDir.'errors.log');
+		$logger->error($exception->getMessage());
 
 		$dispatcher->forward(array(
 			'controller' => 'errors',

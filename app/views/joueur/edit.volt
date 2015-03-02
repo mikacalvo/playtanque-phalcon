@@ -1,39 +1,26 @@
-{{ content() }}
-{{ form("joueur/save", "method":"post") }}
+<article id="content" class="main flex flex-h">
+    <nav class="w100p">
+        {{ link_to("joueur", '<i class="fa fa-chevron-circle-left"></i> Retour', "class":"pure-button b-light-blue white mas") }}
+    </nav>
+    {{ form("joueur/save", "method":"post", "style": "width:100%") }}
 
-<table width="100%">
-    <tr>
-        <td align="left">{{ link_to("joueur", "Go Back") }}</td>
-        <td align="right">{{ submit_button("Save") }}</td>
-    </tr>
-</table>
+        {{ content() }}
 
-<div align="center">
-    <h1>Edit joueur</h1>
-</div>
+        <div align="center">
+            <h1>Modifier le joueur</h1>
 
-<table>
-    <tr>
-        <td align="right">
-            <label for="label">Label</label>
-        </td>
-        <td align="left">
-            {{ text_field("label", "size" : 30) }}
-        </td>
-    </tr>
-    <tr>
-        <td align="right">
-            <label for="poste">Poste</label>
-        </td>
-        <td align="left">
-            {{ text_field("poste", "type" : "numeric") }}
-        </td>
-    </tr>
+            <label for="nom" class="bold mas">Nom</label>
+            {{ text_field("nom", "size" : 30) }}
+            <br/><br/>
+            {{ select_static('poste', [
+                '0' : 'Poste privilégié...',
+                '1' : 'Pointeur',
+                '2' : 'Milieu',
+                '3' : 'Tireur'
+            ]) }}
+            <br/><br/>
+            {{ submit_button("OK", "class": "pure-button b-light-green white mas bold") }}
+        </div>
 
-    <tr>
-        <td>{{ hidden_field("id") }}</td>
-        <td>{{ submit_button("Save") }}</td>
-    </tr>
-</table>
-
-</form>
+    {{ end_form() }}
+</article>
