@@ -151,7 +151,7 @@
 			"file": "public/css/main.css",
 			"settings":
 			{
-				"buffer_size": 14617,
+				"buffer_size": 14715,
 				"line_ending": "Windows"
 			}
 		},
@@ -168,6 +168,14 @@
 			"settings":
 			{
 				"buffer_size": 1845,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/library/Elements.php",
+			"settings":
+			{
+				"buffer_size": 4148,
 				"line_ending": "Unix"
 			}
 		},
@@ -212,6 +220,14 @@
 			}
 		},
 		{
+			"file": "dump.sql",
+			"settings":
+			{
+				"buffer_size": 4879,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "app/models/Club.php",
 			"settings":
 			{
@@ -244,14 +260,50 @@
 				"line_ending": "Unix",
 				"name": "club.volt"
 			}
+		},
+		{
+			"file": "app/controllers/IndexController.php",
+			"settings":
+			{
+				"buffer_size": 523,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/plugins/SecurityPlugin.php",
+			"settings":
+			{
+				"buffer_size": 3055,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/index.php",
+			"settings":
+			{
+				"buffer_size": 664,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/index.volt",
+			"settings":
+			{
+				"buffer_size": 2427,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 265.0,
+		"height": 150.0,
 		"selected_items":
 		[
+			[
+				"reg replace",
+				"Preferences: Reg Replace Settings – User"
+			],
 			[
 				"html",
 				"Set Syntax: HTML"
@@ -307,10 +359,6 @@
 			[
 				"cleanhtml",
 				"Reg Replace: Clean HTML"
-			],
-			[
-				"reg replace",
-				"Reg Replace: trailing"
 			],
 			[
 				"reg replace co",
@@ -526,6 +574,11 @@
 	},
 	"file_history":
 	[
+		"/C/wamp/www/playtanque/app/config/services.php",
+		"/C/wamp/www/playtanque/app/controllers/LoginController.php",
+		"/C/Users/mc/AppData/Roaming/Sublime Text 2/Packages/RegReplace/Default.sublime-commands",
+		"/C/Users/mc/AppData/Roaming/Sublime Text 2/Packages/RegReplace/reg_replace.sublime-settings",
+		"/C/Users/mc/AppData/Roaming/Sublime Text 2/Packages/User/reg_replace.sublime-settings",
 		"/C/wamp/www/playtanque/app/plugins/SecurityPlugin.php",
 		"/C/wamp/www/playtanque/app/views/errors/show404.volt",
 		"/C/wamp/www/playtanque/app/views/errors/show401.volt",
@@ -540,7 +593,6 @@
 		"/C/wamp/www/playtanque/app/views/index.volt",
 		"/C/wamp/www/playtanque/app/views/errors/show500.volt",
 		"/C/wamp/www/playtanque/app/views/layouts/errors.volt",
-		"/C/wamp/www/playtanque/app/config/services.php",
 		"/C/wamp/www/playtanque/public/js/vendor/noty/packaged/jquery.noty.packaged.js",
 		"/C/wamp/www/playtanque/public/js/vendor/noty/packaged/jquery.noty.packaged.min.js",
 		"/C/wamp/www/playtanque/public/js/vendor/noty/layouts/topRight.js",
@@ -554,7 +606,6 @@
 		"/C/wamp/www/playtanque/app/cache/c__wamp_www_playtanque_app_views_concours_index.volt.php",
 		"/C/wamp/www/playtanque/app/models/Concours.php",
 		"/C/wamp/www/playtanque/app/models/Users.php",
-		"/C/wamp/www/playtanque/app/controllers/LoginController.php",
 		"/C/wamp/www/playtanque/app/cache/c__wamp_www_playtanque_app_views_login_index.volt.php",
 		"/C/wamp/www/playtanque/app/models/UsersConcours.php",
 		"/C/wamp/www/playtanque/public/css/vendor/buttons.css",
@@ -650,10 +701,7 @@
 		"/C/Users/mc/Documents/phalcon/app/views/index/index.phtml",
 		"/C/Users/mc/Documents/phalcon/app/controllers/SignupController.php",
 		"/C/Users/mc/Documents/phalcon/app/views/signup/index.phtml",
-		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/1.2.4/Phalcon/Mvc/Model.php",
-		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/0.5.0/Phalcon/Tag.php",
-		"/C/Users/mc/Documents/phalcon/app/controllers/IndexController.php",
-		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/1.3.4/Phalcon/Mvc/Model/Exception.php"
+		"/C/Users/mc/Documents/phalcon/vendor/phalcon/devtools/ide/1.2.4/Phalcon/Mvc/Model.php"
 	],
 	"find":
 	{
@@ -780,6 +828,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pure-button",
+			"userbar",
 			"h2",
 			"0 auto",
 			"ROUND-BUTTON",
@@ -905,9 +955,7 @@
 			"box",
 			"flex",
 			"header",
-			"reduced",
-			"hide",
-			"navspan"
+			"reduced"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1053,7 +1101,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 17,
 			"sheets":
 			[
 				{
@@ -1061,15 +1109,15 @@
 					"file": "public/css/main.css",
 					"settings":
 					{
-						"buffer_size": 14617,
+						"buffer_size": 14715,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14443,
-								14443
+								11163,
+								11163
 							]
 						],
 						"settings":
@@ -1125,7 +1173,7 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 10752.0,
+						"translation.y": 8327.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1216,8 +1264,8 @@
 						"selection":
 						[
 							[
-								282,
-								289
+								1002,
+								1002
 							]
 						],
 						"settings":
@@ -1280,6 +1328,81 @@
 				},
 				{
 					"buffer": 3,
+					"file": "app/library/Elements.php",
+					"settings":
+					{
+						"buffer_size": 4148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2018,
+								2018
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 523.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "public/css/vendor/knacss.css",
 					"settings":
 					{
@@ -1353,7 +1476,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "app/controllers/ConcoursController.php",
 					"settings":
 					{
@@ -1364,8 +1487,8 @@
 						"selection":
 						[
 							[
-								1124,
-								1124
+								365,
+								365
 							]
 						],
 						"settings":
@@ -1422,13 +1545,13 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 299.0,
+						"translation.y": 13.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "app/controllers/JoueurController.php",
 					"settings":
 					{
@@ -1503,7 +1626,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "app/models/Joueur.php",
 					"settings":
 					{
@@ -1578,7 +1701,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "app/models/Concours.php",
 					"settings":
 					{
@@ -1589,8 +1712,8 @@
 						"selection":
 						[
 							[
-								1071,
-								1071
+								483,
+								483
 							]
 						],
 						"settings":
@@ -1653,7 +1776,81 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
+					"file": "dump.sql",
+					"settings":
+					{
+						"buffer_size": 4879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/SQL/SQL.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "app/models/Club.php",
 					"settings":
 					{
@@ -1728,7 +1925,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
 					"file": "app/controllers/SettingsController.php",
 					"settings":
 					{
@@ -1804,7 +2001,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 12,
 					"file": "app/views/settings/index.volt",
 					"settings":
 					{
@@ -1879,7 +2076,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 13,
 					"file": "app/views/settings/club.volt",
 					"settings":
 					{
@@ -1899,6 +2096,306 @@
 							"BracketHighlighterBusy": false,
 							"auto_complete": false,
 							"auto_name": "club.volt",
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "app/controllers/IndexController.php",
+					"settings":
+					{
+						"buffer_size": 523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								115,
+								115
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "app/plugins/SecurityPlugin.php",
+					"settings":
+					{
+						"buffer_size": 3055,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2485,
+								3049
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 651.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "public/index.php",
+					"settings":
+					{
+						"buffer_size": 664,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								634,
+								634
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "app/views/index.volt",
+					"settings":
+					{
+						"buffer_size": 2427,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1369,
+								1369
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
 							"bh_regions":
 							[
 								"bh_regex",

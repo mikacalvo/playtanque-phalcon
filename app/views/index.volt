@@ -6,6 +6,7 @@
 	    {{ get_title() }}
 	    <meta name="description" content="">
 	    <meta name="viewport" content="width=device-width">
+	    <link rel="icon" href="../../public/img/favicon.ico" />
         <?php $this->assets->outputCss() ?>
         <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Give You Glory' rel='stylesheet' type='text/css'>
