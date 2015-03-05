@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js scroll-v">
+<html class="no-js scroll-v wh100">
 	<head>
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -11,11 +11,11 @@
         <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Give You Glory' rel='stylesheet' type='text/css'>
 	</head>
-	<body>
+	<body class="wh100">
 		{{ content() }}
-		
+
         <?php $this->assets->outputJs() ?>
-        
+
         {% set errors = flashSession.getMessages('error'), success = flashSession.getMessages('success'), warnings = flashSession.getMessages('warning'), notices = flashSession.getMessages('notice') %}
 	    <script>
 	        $( document ).ready(function() {

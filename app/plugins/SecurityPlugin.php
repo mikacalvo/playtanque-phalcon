@@ -51,11 +51,11 @@ class SecurityPlugin extends Plugin
 
 			//Public area resources
 			$publicResources = array(
-				'index'   => array('index'),
-				'login'   => array('index'),
-				'play'    => array('index'),
+				'index'       => array('index'),
+				'login'       => array('index'),
+				'play'        => array('index', 'concours'),
 				'inscription' => array('index'),
-				'errors'  => array('show401', 'show404', 'show500'),
+				'errors'      => array('show401', 'show404', 'show500'),
 			);
 			foreach ($publicResources as $resource => $actions) {
 				$acl->addResource(new Resource($resource), $actions);
