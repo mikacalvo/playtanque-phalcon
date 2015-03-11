@@ -236,7 +236,7 @@ div.full {
 .pure-button.smaller {
 	padding: 5px;
 }
-.pure-button.border {
+.border, .pure-button.border {
 	border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -854,9 +854,10 @@ div.reduced .toolbar #show>* {
 	text-align: center;
 }
 .flex .right {
-	margin-left: auto;
+	/*margin-left: auto;*/
 }
 .wrap {
+	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 

@@ -8,6 +8,7 @@
     border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
     text-decoration: none;
     border-radius: 2px;
+    white-space: normal;
 }
 
 .pure-button-hover,
