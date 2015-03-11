@@ -43,7 +43,7 @@ class SecurityPlugin extends Plugin
 				'concours'    => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
 				'joueur'      => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
 				'logout'      => array('index'),
-				'settings'    => array('index', 'parameter', 'club'),
+				'settings'    => array('index', 'parameter', 'club', 'save'),
 			);
 			foreach ($privateResources as $resource => $actions) {
 				$acl->addResource(new Resource($resource), $actions);

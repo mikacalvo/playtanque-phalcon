@@ -1,7 +1,7 @@
 
 <article id="content" class="main flex flex-h">
 	<nav class="w200p">
-		{{ link_to("concours", '<i class="fa fa-chevron-circle-left"></i> Retour aux concours', "class":"pure-button b-light-blue white mas") }}
+		{{ link_to("concours", '<i class="fa fa-2x fa-chevron-circle-left"></i>', "class":"pure-button b-light-blue white mas", "title":"Retour aux concours") }}
 	</nav>
 	<section class="w100">
 		<div class="flex flex-v">

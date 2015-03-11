@@ -1,7 +1,7 @@
 
 <article id="content" class="main flex flex-h">
 	<nav class="w100p">
-		{{ link_to("concours", '<i class="fa fa-chevron-circle-left"></i> Retour', "class":"pure-button b-light-blue white mas") }}
+		{{ link_to("concours", '<i class="fa fa-2x fa-chevron-circle-left"></i>', "class":"pure-button b-light-blue white mas", "title":"Retour aux concours") }}
 	</nav>
 	{{ form("concours/create", "method":"post", "style": "width:100%") }}
 

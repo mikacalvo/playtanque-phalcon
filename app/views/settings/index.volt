@@ -1,16 +1,15 @@
 
 <article id="content" class="main flex flex-h">
 	<nav class="w200p">
-		{{ link_to("concours", '<i class="fa fa-chevron-circle-left"></i> Retour aux concours', "class":"pure-button b-light-blue white mas") }}
+		{{ link_to("concours", '<i class="fa fa-2x fa-chevron-circle-left"></i>', "class":"pure-button b-light-blue white mas", "title":"Retour aux concours") }}
 		<br/>
 		{{link_to("settings/club", 'Gérer mes clubs <i class="fa fa-chevron-circle-right"></i>', "class": "pure-button b-red white mas bold")}}
 	</nav>
 	<section class="w100">
 		<div class="flex flex-v">
-			{{ form("settings/save", "method":"post", "class": "formstd w100") }}
+			{{ form("settings", "method":"post", "class": "formstd w100") }}
 			    <h1 align="center">Modifier le profil</h1>
 			    <h3 align="center">Mes informations</h3>
-			    {{ hidden_field("id") }}
 			    <label for="username" class="bold mas">Nom d'utilisateur</label>
 			    {{ text_field("username", "size" : 30) }}
 			    <br/>
