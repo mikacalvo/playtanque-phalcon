@@ -16,7 +16,7 @@ Les clos de pétanque ont l'habitude d'organiser des concours entre sociétaires
 ## Technologies
 
 #### Version 1 - Hors Ligne
-100% javascript et jQuery pour gérer un tournoi en One Shot. Une fois la fenêtre rechargée ou fermée, tout est perdu
+100% javascript et jQuery pour gérer un tournoi en One Shot. Une fois la fenêtre rechargée ou fermée, tout est perdu.
 
 
 #### Version 2 - Connectée (en cours de développement)
@@ -32,7 +32,10 @@ Pour le moment, le site est plutôt conçu pour qu'un organisateur de concours (
 
 ## Besoins
 
-Améliorer le design !
+- Améliorer le design !
+- Idées de Fonctionnalités.
+- Technologie est mieux adaptée (MEAN stack, etc.)
+*n'hésitez pas à m'en faire part*
 
 ## Fiction
 
