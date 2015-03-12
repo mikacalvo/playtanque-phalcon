@@ -41,6 +41,7 @@ class SettingsController extends ControllerBase
 	            	}
 	            } else {
 	            	$this->flashSession->success("Changements sauvegardés.");
+	            	$this->_registerSession($user);
 	            }
 			}
         }
@@ -49,10 +50,26 @@ class SettingsController extends ControllerBase
 
         $this->tag->setDefault("username", $user->username);
         $this->tag->setDefault("date_creation", $user->date_creation);
+        $this->tag->setDefault("date_creation", $user->date_creation);
+        $this->view->options = $user->options;
     }
     
     public function parameterAction()
     {
+    	$user = Users::findFirstByid($this->session->get('auth')['id']);
+		if (!$user) {
+            $this->flashSession->error("Vous devez être connecté.");
+	        $this->response->redirect("index");
+	        return $this->view->disable();
+        }
+        $user->options = $this->request->getPost('options');
+        if (!$user->save() != false) {
+        	foreach ($user->getMessages() as $message) {
+            	$this->flashSession->error($message);
+        	}
+        } else {
+        	$this->flashSession->success("Changements sauvegardés.");
+        }
         $this->response->redirect('settings');
 		$this->view->disable();
 		return;
@@ -89,5 +106,14 @@ class SettingsController extends ControllerBase
             $this->tag->setDefault("date", $user->date);
             $this->tag->setDefault("options", $user->options);
         }
+    }
+    
+    private function _registerSession($user)
+    {
+        $this->session->set('auth', array(
+			'id'       => $user->id,
+			'username' => $user->username,
+			'email'    => $user->email
+        ));
     }
 }

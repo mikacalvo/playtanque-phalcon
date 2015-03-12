@@ -43,6 +43,12 @@ class Users extends \Phalcon\Mvc\Model
     public $is_actif;
 
     /**
+     *
+     * @var string
+     */
+    public $options;
+
+    /**
      * Validations and business logic
      */
     public function validation()
@@ -72,12 +78,13 @@ class Users extends \Phalcon\Mvc\Model
     public function columnMap()
     {
         return array(
-            'id' => 'id',
-            'username' => 'username',
-            'password' => 'password',
-            'email' => 'email',
-            'date_creation' => 'date_creation',
-            'is_actif' => 'is_actif'
+			'id'            => 'id',
+			'username'      => 'username',
+			'password'      => 'password',
+			'email'         => 'email',
+			'date_creation' => 'date_creation',
+			'is_actif'      => 'is_actif',
+			'options'       => 'options',
         );
     }
 
@@ -85,5 +92,17 @@ class Users extends \Phalcon\Mvc\Model
     {
         $this->hasMany("id", "UsersConcours", "user_id");
         $this->hasMany("id", "UsersJoueurs", "user_id");
+    }
+    
+    public function beforeSave()
+    {
+        //Convert the array into a string
+        $this->options = json_encode($this->options);
+    }
+
+    public function afterFetch()
+    {
+        //Convert the string to an array
+        $this->options = json_decode($this->options);
     }
 }

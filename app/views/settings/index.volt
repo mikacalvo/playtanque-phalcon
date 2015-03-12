@@ -33,9 +33,17 @@
 			<div class="w100 mas">
 			    <h3 align="center">Mes options</h3>
 				{{ form("settings/parameter", "method":"post") }}
-			    	{{ hidden_field("id") }}
 				    <label for="newsletter" class="bold mas">Recevoir la lettre d'informations</label>
-				    {{ check_field("newsletter", "onclick": "$(this).closest('form').submit();") }}
+				    <?php
+				    	echo Phalcon\Tag::checkField(
+				    		array_merge(
+				    			array(
+						    		"options[newsletter]",
+						    		"value" => "1",
+						    		"onclick" => "$(this).closest('form').submit();",
+							    ),
+						    	((isset($options->newsletter) && 1 == $options->newsletter) ? array("checked" => "") : array())
+				    	)); ?>
 				{{ end_form() }}
 			    <br/>
 			    <div class="txtcenter">
