@@ -64,6 +64,12 @@ $('.navspan').on('click', function(event) {
       $(this).removeClass('active');
     });
     $(this).addClass("active");
+    $.ajax({
+      url: "/concours/option",
+      context: document.body
+    }).done(function() {
+      $( this ).addClass( "done" );
+    });
   }
   $('#startConcours').trigger("click");
 });

@@ -7,8 +7,8 @@ class PlayController extends ControllerBase
      */
     public function initialize()
     {
+        parent::initialize();
         $this->assets
-            ->addJs('js/vendor/jquery-2.1.0.min.js', true)
             ->addJs('//code.jquery.com/ui/1.11.3/jquery-ui.js', false)
             ->addJs('js/vendor/jquery.tablesorter.js', true)
             ->addJs('js/consolante.js', true)
@@ -17,7 +17,6 @@ class PlayController extends ControllerBase
             ->addJs('js/match.js', true)
             ->addJs('js/concours.js', true)
             ->addJs('js/teams.js', true);
-        parent::initialize();
         $auth = $this->session->get('auth');
         if ($auth) {
         	// JS des enregistrements en BDD

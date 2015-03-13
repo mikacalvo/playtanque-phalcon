@@ -116,3 +116,14 @@ INSERT INTO `users_concours` (`user_id`, `concours_id`) VALUES
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+
+CREATE TABLE `users_joueurs` (
+  `user_id` int(10) unsigned NOT NULL,
+  `joueur_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`user_id`,`joueur_id`),
+  KEY `concours_fk2` (`joueur_id`),
+  CONSTRAINT `users_joueurs_fk` FOREIGN KEY (`joueur_id`) REFERENCES `joueur` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `users_joueurs_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='lie les concours aux utilisateurs';
+
+

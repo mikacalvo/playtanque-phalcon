@@ -1,6 +1,6 @@
 <div class="wh100">
     <article id="content" class="main flex flex-h wrap wh100">
-        <nav id="teamManagement" class="toolbar b-darker-gray light-gray top-border no-print" style="order: 1;">
+        <nav id="teamManagement" class="toolbar b-darker-gray light-gray top-border no-print txtleft" style="order: 1;">
             <a id="show" class="pas">
                 <i class="fa fa-chevron-right fa-2x inbl"></i>
             </a>
@@ -9,28 +9,28 @@
             </a>
             <div id="typeTournoi" class="col pals">
               <div class="mod">
-                <span id="Consolante" data-div="consolante" class="navspan h5-like restart">
-                  <i class="fa fa-sitemap mash"></i>
+                <span id="Consolante" data-div="consolante" data-option="Consolante" class="navspan h5-like restart">
+                  <i class="fa fa-sitemap mash" title="Consolante"></i>
                   <strong class="small-hidden tiny-hidden">Consolante</strong>
                 </span>
               </div>
               <div class="mod">
-                <span id="Inter" data-div="inter" class="navspan h5-like dynamic">
-                  <i class="fa fa-users mash"></i>
+                <span id="Melee" data-div="inter" data-option="Mêlée" class="navspan h5-like dynamic">
+                  <i class="fa fa-users mash" title="Mêlée"></i>
                   <strong class="small-hidden tiny-hidden">Mêlée</strong>
                 </span>
               </div>
               <div class="mod">
-                <span id="Point" data-div="inter" class="navspan h5-like">
-                  <i class="fa fa-flag mash"></i>
+                <span id="Point" data-div="inter" data-option="Tournoi à points" class="navspan h5-like">
+                  <i class="fa fa-flag mash" title="Tournoi à points"></i>
                   <strong class="small-hidden tiny-hidden">Points</strong>
                 </span>
               </div>
             </div>
             <div class="icon-input dark-gray mas" style="margin-bottom:0;">
-              <input type="text" id="teaminput" class="sharp inboxshadow b-dark-gray pas par" placeholder="Ajouter des joueurs" />
-              <i class="fa fa-plus fa-2x tiny-hidden" id="addteam"></i>
-              <i class="fa fa-plus fa-2x small-hidden medium-hidden large-hidden" id="addteam-mobile"></i>
+              <input type="text" id="teaminput" class="sharp inboxshadow b-dark-gray light-gray bold pas par" placeholder="Ajouter des joueurs" />
+              <i id="addteam" class="fa fa-plus fa-2x tiny-hidden light-gray" style="margin-right:5px;"></i>
+              <i id="addteam-mobile" class="fa fa-plus fa-2x small-hidden medium-hidden large-hidden" style="margin-right:5px;"></i>
             </div>
             <div class="row tiny-hidden">
               <span id="nbEquipes" class="bold right">0 <span>équipes</span></span>

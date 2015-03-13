@@ -164,8 +164,33 @@ class ConcoursController extends ControllerBase
 
         $this->flashSession->success("Concours supprimé");
         $this->response->redirect('concours');
-		$this->view->disable();
-		return;
+        $this->view->disable();
+        return;
+    }
+
+    /**
+     * Définit les options souhaitées
+     *
+     * @param string $id
+     */
+    public function settingsAction($id)
+    {
+        $concours = Concours::findFirstByid($id);
+        if (!$concours) {
+            $this->flashSession->error("Concours introuvable");
+
+            return $this->dispatcher->forward(array(
+                "controller" => "concours",
+                "action" => "index"
+            ));
+        }
+
+        $this->view->id = $concours->id;
+
+        $this->tag->setDefault("id", $concours->id);
+        $this->tag->setDefault("label", $concours->label);
+        $this->tag->setDefault("date", $concours->date);
+        $this->tag->setDefault("options", $concours->options);
     }
 
 }
