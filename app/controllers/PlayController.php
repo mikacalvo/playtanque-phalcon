@@ -16,6 +16,7 @@ class PlayController extends ControllerBase
             ->addJs('js/point.js', true)
             ->addJs('js/match.js', true)
             ->addJs('js/concours.js', true)
+            ->addJs('js/functions.js', true)
             ->addJs('js/teams.js', true);
         $auth = $this->session->get('auth');
         if ($auth) {

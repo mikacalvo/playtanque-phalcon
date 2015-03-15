@@ -1,52 +1,3 @@
-window.onbeforeunload = function(){
-  // return 'En quittant, vous perdrez toutes vos données.';
-};
-
-if(!Array.prototype.indexOf) {
-    Array.prototype.indexOf = function(what, i) {
-        i = i || 0;
-        var L = this.length;
-        while (i < L) {
-            if(this[i] === what) return i;
-            ++i;
-        }
-        return -1;
-    };
-}
-
-function copyArray(array) {
-  var newArray = array.map(function(arr) {
-    return arr.slice();
-  });
-  return newArray;
-}
-
-Array.prototype.removeVal = function() {
-    var what, a = arguments, L = a.length, ax;
-    while (L && this.length) {
-        what = a[--L];
-        while ((ax = this.indexOf(what)) !== -1) {
-            this.splice(ax, 1);
-        }
-    }
-    return this;
-};
-
-function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex ;
-  while (0 !== currentIndex) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue      = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex]  = temporaryValue;
-  }
-  return array;
-}
-
-function impaire(value) {
-  return (value & 1)==1;
-}
 
 function appendScoreList(element) {
   var $select = element.find(".0-13:not(.ok)");
@@ -57,19 +8,19 @@ function appendScoreList(element) {
   // $select.after('<input type="text" class="on-print w25p masc" val=""/>')
 };
 
+$(document).ready(function() {
+  $("#classementIS").tablesorter(
+    {
+      sortList: [[5,1]]
+    }
+  );
+});
+
 
 $('.navspan').on('click', function(event) {
   if(!$(this).hasClass("active")) {
-    $('.navspan').each(function() {
-      $(this).removeClass('active');
-    });
+    $('.navspan').removeClass('active');
     $(this).addClass("active");
-    $.ajax({
-      url: "/concours/option",
-      context: document.body
-    }).done(function() {
-      $( this ).addClass( "done" );
-    });
   }
   $('#startConcours').trigger("click");
 });
@@ -83,7 +34,6 @@ $('#startConcours').on('click', function (event) {
   } else {
     $(".concours").hide();
     $('#'+div).show();
-    console.log("ici");
     try {
       concours = window[Type.charAt(0).toLowerCase() + Type.slice(1)];
       concours.clear();
@@ -96,11 +46,11 @@ $('#startConcours').on('click', function (event) {
 });
 
 $('#hide').on('click', function (event) {
-  $('.container').addClass("reduced");
+  $('.application').addClass("reduced");
 });
 
 $('#show').on('click', function (event) {
-  $('.container').removeClass("reduced");
+  $('.application').removeClass("reduced");
 });
 
 $('#genereTeams').on('click', function (event) {
@@ -131,18 +81,40 @@ $('#genereTeams').on('click', function (event) {
   teams.add('Toussaint');
   teams.add('Gilles');
   teams.add('Marvin');
-  if(!$('#Melee').hasClass('active')) {
-    $('#Melee').click();
+
+  teams.add('bisCapo');teams.add('terCapo');teams.add('quatreCapo');
+  teams.add('bisArigucci');teams.add('terArigucci');teams.add('quatreArigucci');
+  teams.add('bisTiti');teams.add('terTiti');teams.add('quatreTiti');
+  teams.add('bisCaldari');teams.add('terCaldari');teams.add('quatreCaldari');
+  teams.add('bisJosé');teams.add('terJosé');teams.add('quatreJosé');
+  teams.add('bisJP');teams.add('terJP');teams.add('quatreJP');
+
+  teams.add('bisJacky');teams.add('terJacky');teams.add('quatreJacky');
+  teams.add('bisPatrick');teams.add('terPatrick');teams.add('quatrePatrick');
+  teams.add('bisSbicca');teams.add('terSbicca');teams.add('quatreSbicca');
+  teams.add('bisBruno');teams.add('terBruno');teams.add('quatreBruno');
+  teams.add('bisRichard');teams.add('terRichard');teams.add('quatreRichard');
+  teams.add('bisChristian');teams.add('terChristian');teams.add('quatreChristian');
+
+  teams.add('bisMika');teams.add('terMika');teams.add('quatreMika');
+  teams.add('bisPitcha');teams.add('terPitcha');teams.add('quatrePitcha');
+  teams.add('bisAnthony');teams.add('terAnthony');teams.add('quatreAnthony');
+  teams.add('bisLola');teams.add('terLola');teams.add('quatreLola');
+  teams.add('bisJean-Marc');teams.add('terJean-Marc');teams.add('quatreJean-Marc');
+  teams.add('bisRoger');teams.add('terRoger');teams.add('quatreRoger');
+
+  teams.add('bisPatricia');teams.add('terPatricia');teams.add('quatrePatricia');
+  teams.add('bisNicolas');teams.add('terNicolas');teams.add('quatreNicolas');
+  teams.add('bisCédric');teams.add('terCédric');teams.add('quatreCédric');
+  teams.add('bisToussaint');teams.add('terToussaint');teams.add('quatreToussaint');
+  teams.add('bisGilles');teams.add('terGilles');teams.add('quatreGilles');
+  teams.add('bisMarvin');teams.add('terMarvin');teams.add('quatreMarvin');
+  if(!$('#Inter').hasClass('active')) {
+    $('#Inter').click();
   }
 });
 
-$(document).ready(function() {
-    $("#classementIS").tablesorter(
-        {
-            sortList: [[5,1]]
-        }
-    );
-
+$(function() {
     var oldList, newList, item;
     $( "#tireurs, #milieux, #pointeurs" ).sortable({
       placeholder: "highlight",
@@ -153,9 +125,14 @@ $(document).ready(function() {
         oldIndex = ui.item.index();
       },
       stop: function(event, ui) {
-        console.log("Moved " + item.text() + " from " + oldList.attr('id')+"/"+oldIndex + " to " + newList.attr('id')+"/"+ui.item.index());
-        concours.add(newList.attr("id"), ui.item.index(), item.text());
-        concours.remove(oldList.attr("id"), oldIndex);
+        var newIndex = ui.item.index();
+        console.log("Moved " + item.find("span:last").text() + " from " + oldList.attr('id')+"/"+oldIndex + " to " + newList.attr('id')+"/"+ui.item.index());
+        if (newList != oldList) {
+          concours.add(newList.attr("id"), ui.item.index(), item.find("span:last").text());
+          concours.remove(oldList.attr("id"), oldIndex);
+        } else {
+          concours.move(oldList.attr("id"), oldIndex, newIndex);
+        }
         concours.paint();
       },
       change: function(event, ui) {
@@ -164,34 +141,5 @@ $(document).ready(function() {
       helper: 'clone',
       connectWith: '.sortable',
       distance: 5,
-    });
-
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-
-    $("#teaminput").autocomplete({
-      source: availableTags
     });
 });
