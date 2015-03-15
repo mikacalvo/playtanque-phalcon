@@ -96,13 +96,13 @@ function Inter($element)
     $ulM.html('');
     $ulP.html('');
     for (var i = 0, len = tireurs.length; i<len; i++) {
-        $ulT.append('<li><span style="background:hsl('+(320*i/len)+', 60%, 60%)">T'+i+'</span>'+tireurs[i]+'</li>');
+        $ulT.append('<li><span style="background:hsl('+(320*i/len)+', 60%, 60%)">T'+(i+1)+'</span><span>'+tireurs[i]+'</span></li>');
     }
     for (var i = 0, len = milieux.length; i<len; i++) {
-        $ulM.append('<li><span style="background:hsl('+(320*i/len)+', 60%, 60%)">M'+i+'</span>'+milieux[i]+'</li>');
+        $ulM.append('<li><span style="background:hsl('+(320*i/len)+', 60%, 60%)">M'+(i+1)+'</span><span>'+milieux[i]+'</span></li>');
     }
     for (var i = 0, len = pointeurs.length; i<len; i++) {
-        $ulP.append('<li><span style="background:hsl('+(320*i/len)+', 60%, 60%)">P'+i+'</span>'+pointeurs[i]+'</li>');
+        $ulP.append('<li><span style="background:hsl('+(320*i/len)+', 60%, 60%)">P'+(i+1)+'</span><span>'+pointeurs[i]+'</span></li>');
     }
   }
 
@@ -134,61 +134,77 @@ function Inter($element)
     var cumul = [];
     var nbEquipes = tireurs.length;
     var comb = combinaisons();
+    for (var j = 0; j < nbEquipes; j++) {
+      cumul[tireurs[j]] = [];
+      cumul[tireurs[j]]["partenaires"] = [];
+    };
     for (var i = 0; i < $tour; i++) {
       equipes[i] = [];
       cumul[i]   = []; // joueurs déjà utilisés pour ce tour.
-
+      shuffle(tireurs);
       for (var j = 0; j < nbEquipes; j++) {
         equipes[i][j] = [];
         equipes[i][j].push(tireurs[j]);
       };
-      if (0 == i) {
-        for (var j = 0; j < nbEquipes; j++) {
-          equipes[i][j].push(milieux[j]);
-          equipes[i][j].push(pointeurs[j]);
-          cumul[tireurs[j]] = [];
-          cumul[tireurs[j]]["partenaires"] = [milieux[j], pointeurs[j]];
-        };
-      } else {
-        var combTest = comb.slice(); // on duplique
-        for (var j = 0; j < nbEquipes; j++) { // pour chaque tireur
-          if(0 === comb.length) {
-            console.log("plus de combinaisons possibles, on recommence");
-            return getUniqueTeams();
-          }
-          var combExist = true;
-          while (combExist === true) { // on teste les combinaisons possibles
-            combIndex = Math.floor((Math.random() * combTest.length));
-            for (var l = 0; l < 2; l++) { // milieu et pointeur
-              if(
-                typeof combTest[combIndex] == 'undefined'
-                || cumul[tireurs[j]]["partenaires"].indexOf(combTest[combIndex][l]) != -1
-                || (typeof cumul[i] != 'undefined' && cumul[i].indexOf(combTest[combIndex][l]) != -1)
-              ) {
-                combExist = true;
-                combTest.splice(combIndex, 1);
-                if(0 === combTest.length) {
-                  console.log("plus de combinaisons possibles, on recommence");
-                  return getUniqueTeams();
-                }
-                break;
-              } else {
-                combExist = false;
+      var combTest = comb.slice(); // on duplique
+      for (var j = 0; j < nbEquipes; j++) { // pour chaque tireur
+        if(0 === comb.length) {
+          console.log("plus de combinaisons possibles, on recommence");
+          $seuilEquipes++;
+          return getUniqueTeams();
+        }
+        var combExist = true;
+        while (combExist === true) { // on teste les combinaisons possibles
+          combIndex = Math.floor((Math.random() * combTest.length));
+          for (var l = 0; l < 2; l++) { // milieu et pointeur
+            if(
+              typeof combTest[combIndex] == 'undefined'
+              || ( i < 3
+                && (
+                  cumul[tireurs[j]]["partenaires"].indexOf(combTest[combIndex][l]) != -1
+                  || (typeof cumul[i] != 'undefined' && cumul[i].indexOf(combTest[combIndex][l]) != -1)
+                )
+              )
+            ) {
+              combExist = true;
+              combTest.splice(combIndex, 1);
+              if(0 === combTest.length) {
+                console.log("plus de combinaisons possibles, on recommence");
+                $seuilEquipes++;
+                return getUniqueTeams();
               }
+              break;
+            } else {
+              combExist = false;
             }
           }
-          equipes[i][j].push(combTest[combIndex][0]);
-          equipes[i][j].push(combTest[combIndex][1]);
-          cumul[tireurs[j]]["partenaires"] = [milieux[j], pointeurs[j]];
-
-          cumul[i].push(combTest[combIndex][0]);
-          cumul[i].push(combTest[combIndex][1]);
-          comb.splice(comb.indexOf(combTest[combIndex]), 1);
-          if(equipes[i][j].length < 3) { return getUniqueTeams(); }
         }
+        equipes[i][j].push(combTest[combIndex][0]);
+        equipes[i][j].push(combTest[combIndex][1]);
+        cumul[tireurs[j]]["partenaires"].push(combTest[combIndex][0]);
+        cumul[tireurs[j]]["partenaires"].push(combTest[combIndex][1]);
+        cumul[i].push(combTest[combIndex][0]);
+        cumul[i].push(combTest[combIndex][1]);
+        comb.splice(comb.indexOf(combTest[combIndex]), 1);
+        if(equipes[i][j].length < 3) { return getUniqueTeams(); }
       }
     }
     return equipes;
+  }
+
+  function getMatchs(equipes) {
+    var matchs          = [];
+    var nbEquipesParTour = equipes[0].length;
+    var nbMatchsParTour = (equipes[0].length/2);
+    for (var i = 0; i < $tour; i++) {
+      matchs[i] = [];
+      for (var j = 0; j < nbMatchsParTour; j++) {
+        matchs[i][j] = [];
+        matchs[i][j].push(equipes[i][j]);
+        matchs[i][j].push(equipes[i][nbEquipesParTour-1-j]);
+      }
+    }
+    return matchs;
   }
 
   function getUniqueMatchs(equipes) {
@@ -405,6 +421,20 @@ function Inter($element)
         milieux.splice(milieux.indexOf(index), 1);
       } else if (pointeurs.indexOf(index) != -1) {
         pointeurs.splice(pointeurs.indexOf(index), 1);
+      }
+    }
+    self.paint();
+  };
+
+  this.move = function(type, oldIndex, newIndex)
+  {
+    if ("" != type) {
+      if ("tireurs" == type) {
+        tireurs.move(oldIndex, newIndex);
+      } else if ("milieux" == type) {
+        milieux.move(oldIndex, newIndex);
+      } else if ("pointeurs" == type) {
+        pointeurs.move(oldIndex, newIndex);
       }
     }
     self.paint();
