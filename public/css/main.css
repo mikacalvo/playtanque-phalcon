@@ -131,17 +131,6 @@ body {
   background: #fff;
   height: 100%;
 }
-body::after {
-	content: "";
-	background: url("http://www.masdesanguilles.com/site/images/normal/Fotolia_42982968_Subscription_XXL.jpg");
-	opacity: 0.3;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	position: absolute;
-	z-index: -1;
-}
 a {
   cursor: pointer;
   text-decoration: none;

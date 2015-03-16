@@ -31,6 +31,7 @@ class JoueurController extends ControllerBase
             $joueur = new Joueur();
 
             $joueur->nom = $this->request->getPost("nom");
+            $joueur->prenom = $this->request->getPost("prenom");
             $joueur->options->poste = $this->request->getPost("poste");
 
             if (!$joueur->save()) {
@@ -73,6 +74,7 @@ class JoueurController extends ControllerBase
 
             $this->tag->setDefault("id", $joueur->id);
             $this->tag->setDefault("nom", $joueur->nom);
+            $this->tag->setDefault("prenom", $joueur->prenom);
             $this->tag->setDefault("poste", $joueur->options->poste);
         }
     }
@@ -92,6 +94,7 @@ class JoueurController extends ControllerBase
         $joueur = new Joueur();
 
         $joueur->nom = $this->request->getPost("nom");
+        $joueur->prenom = $this->request->getPost("prenom");
         $joueur->options->poste = $this->request->getPost("poste");
 
         if (!$joueur->save()) {
@@ -133,7 +136,7 @@ class JoueurController extends ControllerBase
 
         $joueur = Joueur::findFirstByid($id);
         if (!$joueur) {
-            $this->flashSession->error("joueur does not exist " . $id);
+            $this->flashSession->error("joueur ".$id." introuvable");
 
             return $this->dispatcher->forward(array(
                 "controller" => "joueur",
@@ -142,6 +145,7 @@ class JoueurController extends ControllerBase
         }
 
         $joueur->nom = $this->request->getPost("nom");
+        $joueur->prenom = $this->request->getPost("prenom");
         $joueur->options->poste = $this->request->getPost("poste");
 
         if (!$joueur->save()) {
@@ -156,7 +160,7 @@ class JoueurController extends ControllerBase
             ));
         }
 
-        $this->flashSession->success("joueur was updated successfully");
+        $this->flashSession->success("joueur modifié");
 
         return $this->dispatcher->forward(array(
             "controller" => "joueur",

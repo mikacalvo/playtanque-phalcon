@@ -8,9 +8,13 @@
 
         <div align="center">
             <h1>Modifier le joueur</h1>
+            {{ hidden_field("id") }}
 
-            <label for="nom" class="bold mas">Nom</label>
-            {{ text_field("nom", "size" : 30) }}
+            <label for="nom" class="bold mas w100p">Nom</label>
+            {{ text_field("nom", "size" : 20) }}
+            <br/>
+            <label for="nom" class="bold mas w100p">Prénom</label>
+            {{ text_field("prenom", "size" : 20) }}
             <br/><br/>
             {{ select_static('poste', [
                 '0' : 'Poste privilégié...',

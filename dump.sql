@@ -67,6 +67,7 @@ DELETE FROM `concours_joueurs`;
 CREATE TABLE IF NOT EXISTS `joueur` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `nom` varchar(75) NOT NULL,
+  `prenom` VARCHAR(75) NOT NULL,
   `options` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -127,3 +128,23 @@ CREATE TABLE `users_joueurs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='lie les concours aux utilisateurs';
 
 
+
+-- Export de données de la table playtanque.joueur: ~0 rows (environ)
+/*!40000 ALTER TABLE `joueur` DISABLE KEYS */;
+INSERT INTO `joueur` (`id`, `nom`, `prenom`, `options`) VALUES
+	(1, 'Calvo', 'Michaël', '{"poste":"1"}'),
+	(2, 'Calvo', 'Lola', '{"poste":"1"}'),
+	(3, 'Ivaldi', 'Jean-Paul', '{"poste":"2"}'),
+	(4, 'Ivaldi', 'Anthony', '{"poste":"1"}'),
+	(5, 'Ivaldi', 'Patricia', '{"poste":"1"}'),
+	(6, 'Capoccetti', 'Michel', '{"poste":"3"}'),
+	(7, 'Caldari', 'Serge', '{"poste":"3"}'),
+	(8, 'Guily', 'Patrick', '{"poste":"3"}'),
+	(9, 'Sbicca', 'Serge', '{"poste":"2"}'),
+	(10, 'Plisson', 'Rémi', '{"poste":"1"}'),
+	(11, 'Grelier', 'Jean-Marc', '{"poste":"2"}'),
+	(12, 'Leboine', 'Stéphane', '{"poste":"3"}');
+/*!40000 ALTER TABLE `joueur` ENABLE KEYS */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

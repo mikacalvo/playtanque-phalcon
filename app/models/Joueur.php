@@ -18,6 +18,12 @@ class Joueur extends \Phalcon\Mvc\Model
      *
      * @var string
      */
+    public $prenom;
+
+    /**
+     *
+     * @var string
+     */
     public $options;
 
 
@@ -34,9 +40,10 @@ class Joueur extends \Phalcon\Mvc\Model
     public function columnMap()
     {
         return array(
-            'id'      => 'id',
-            'nom'     => 'nom',
-            'options' => 'options'
+			'id'      => 'id',
+			'nom'     => 'nom',
+			'prenom'  => 'prenom',
+			'options' => 'options'
         );
     }
 
