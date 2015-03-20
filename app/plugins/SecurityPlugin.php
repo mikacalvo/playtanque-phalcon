@@ -16,7 +16,6 @@ use Phalcon\Acl\Adapter\Memory as AclList;
  */
 class SecurityPlugin extends Plugin
 {
-
 	/**
 	 * Returns an existing or new access control list
 	 *

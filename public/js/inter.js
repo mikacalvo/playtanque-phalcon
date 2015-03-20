@@ -305,9 +305,9 @@ function Inter($element)
 
   function paintMatchs(matchs) {
     $("#liste").html('');
-    for (i = 0; i<matchs.length; i++) { // Chaque tour
+    for (i = 0; len = matchs.length; i<len; i++) { // Chaque tour
       $("#liste").append('<strong>Partie N°'+(i+1)+'</strong><br/>');
-      for (var j = 0; j < matchs[i].length; j++) { // Chaque match
+      for (var j = 0; leni = matchs[i].length; j<leni; j++) { // Chaque match
         var temp = matchs[i][j].slice();
         for (var k = 0; k < 2; k++) { // Chaque équipe
           if(impaire(k)) {
@@ -330,14 +330,14 @@ function Inter($element)
     var joueurs = [];
     joueurs.push(milieux);
     joueurs.push(pointeurs);
-    for (i = 0; i<joueurs.length; i++) {
+    for (i = 0; len = joueurs.length; i<len; i++) {
       indices[i] = 0;
       lengths[i] = joueurs[i].length;
     }
     var combinaisons = [];
     while (indices[0] < lengths[0]) {
       var row = [];
-      for (i = 0; i<indices.length; i++) {
+      for (i = 0; len = indices.length; i<len; i++) {
         row.push(joueurs[i][indices[i]]);
       }
       combinaisons.push(row);
@@ -355,7 +355,7 @@ function Inter($element)
   }
 
   function initScores(joueurs) {
-    for (var i = 0; i < joueurs.length; i++) {
+    for (var i = 0; len = joueurs.length; i<len; i++) {
       $scores[joueurs[i]] = [];
       $scores[joueurs[i]]["P"] = [];
       $scores[joueurs[i]]["C"] = [];

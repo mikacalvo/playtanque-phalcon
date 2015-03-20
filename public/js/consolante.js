@@ -46,7 +46,7 @@ function Consolante($element)
 
   function elimine(tournoi, tour, team) {
     currentTournoi = ("A" == tournoi) ? tournoiA : tournoiB;
-    for (var i = tour; i < currentTournoi.length; i++) {
+    for (var i = tour; len = currentTournoi.length; i < len; i++) {
       if(currentTournoi[i].length>0) {
         console.log('remove('+tournoi+','+i+','+team+')');
         self.remove(currentTournoi, i, team);

@@ -64,7 +64,7 @@ $di->set('view', function () use ($config) {
     $view->registerEngines(array(
         '.volt' => function ($view, $di) use ($config) {
 
-            $volt = new VoltEngine($view, $di);
+            $volt = new Phalcon\Mvc\View\Engine\Volt($view, $di);
 
             $volt->setOptions(array(
 				'compiledPath'      => $config->application->cacheDir,
