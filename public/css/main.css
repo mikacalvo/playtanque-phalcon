@@ -666,15 +666,12 @@ header>*, header div {
   height: 25px;
 }
 
-.navspan {
+.pointer {
   cursor: pointer;
-  margin: auto;
 }
-.navspan:hover {
-  color: #ffffff;
-}
-.navspan.active {
-  color: #ffffff;
+#typeTournoi .active {
+  color: #333;
+  background-color: #ddd;
 }
 
 .userbar {
@@ -848,9 +845,6 @@ div.reduced .toolbar #show>* {
 
 
 /********************* FLEX **********************/
-.flex>div {
-	text-align: center;
-}
 .flex .right {
 	/*margin-left: auto;*/
 }

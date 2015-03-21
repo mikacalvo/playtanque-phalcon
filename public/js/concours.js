@@ -17,31 +17,10 @@ $(document).ready(function() {
 });
 
 
-$('.navspan').on('click', function(event) {
+$('#typeTournoi>div').on('click', function(event) {
   if(!$(this).hasClass("active")) {
-    $('.navspan').removeClass('active');
+    $('#typeTournoi>div').removeClass('active');
     $(this).addClass("active");
-  }
-  $('#startConcours').trigger("click");
-});
-
-$('#startConcours').on('click', function (event) {
-  var Temp = function(){};
-  var Type = $(".navspan.active").attr("id");
-  var div = $(".navspan.active").data("div");
-  if(!Type) {
-    alert('Veuillez choisir un type de concours.');
-  } else {
-    $(".concours").hide();
-    $('#'+div).show();
-    try {
-      concours = window[Type.charAt(0).toLowerCase() + Type.slice(1)];
-      concours.clear();
-      concours.start(teams.length());
-    }
-    catch(err) {
-      console.log(err);
-    }
   }
 });
 

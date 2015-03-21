@@ -53,7 +53,35 @@ class ConcoursController extends ControllerBase
             $this->tag->setDefault("id", $concours->id);
             $this->tag->setDefault("label", $concours->label);
             $this->tag->setDefault("date", $concours->date);
-            $this->tag->setDefault("options", $concours->options);
+            $this->tag->setDefault("type", $concours->options->type);
+            $this->tag->setDefault("equipe", $concours->options->equipe);
+        } else {
+            $id = $this->request->getPost("id");
+
+            $concours = Concours::findFirstByid($id);
+            if (!$concours) {
+                $this->flashSession->error("Concours introuvable");
+
+                return $this->dispatcher->forward(array(
+                    "controller" => "concours",
+                    "action" => "index"
+                ));
+            }
+
+            $concours->label   = $this->request->getPost("label");
+            $concours->date    = $this->request->getPost("date");
+            $concours->options = array(
+                'type'   => $this->request->getPost("type"),
+                'equipe' => $this->request->getPost("equipe"),
+            );
+
+            if (!$concours->save()) {
+                foreach ($concours->getMessages() as $message) {
+                    $this->flashSession->error($message);
+                }
+            }
+
+            $this->flashSession->success("Paramètres sauvegardés");
         }
     }
 
@@ -110,9 +138,11 @@ class ConcoursController extends ControllerBase
         }
 
 		$concours->label   = $this->request->getPost("label");
-		$concours->date    = $this->request->getPost("date");
-		$concours->options = $this->request->getPost("options");
-
+        $concours->date    = $this->request->getPost("date");
+        $concours->options = array(
+            'type'   => $this->request->getPost("type"),
+            'equipe' => $this->request->getPost("equipe"),
+        );
 
         if (!$concours->save()) {
             foreach ($concours->getMessages() as $message) {
