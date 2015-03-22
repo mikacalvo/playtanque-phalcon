@@ -1,9 +1,9 @@
 <article id="content" class="main flex flex-h wrap mesjoueurs">
-	<div class="flex-start mas pas w200p">
-		{{ link_to("joueur/new", '<i class="fa fa-4x fa-plus-circle"></i>', "class":"pure-button b-light-blue white", "title":"Ajouter un concours") }}
+	<div class="flex-start mam">
+		{{ link_to("joueur/new", '<i class="fa fa-2x fa-plus-circle"></i>', "class":"pure-button b-light-blue white", "title":"Ajouter un concours") }}
 	</div>
-	
-	<table id="classementIS" class="striped tablesorter w50 mam" summary="Scores des joueurs" style="table-layout:auto;">
+
+	<table id="classementIS" class="striped tablesorter" summary="Scores des joueurs" style="table-layout:auto;">
 		<thead>
 			<tr>
 				<th scope="col" class="txtcenter" style="width: 5%"></th>

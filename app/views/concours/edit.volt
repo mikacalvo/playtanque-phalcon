@@ -25,20 +25,20 @@
             <label for="point">Points</label>
         </div>
         <div class="inbl txtleft">
-            {{ radio_field('equipe', 'value':'simple','id':'simple', 'required':'required') }}
-            <label for="simple">Simple</label>
+            {{ radio_field('equipe', 'value':'1','id':'1', 'required':'required') }}
+            <label for="1">Simple</label>
             <br>
-            {{ radio_field('equipe', 'value':'doublette','id':'doublette', 'required':'required') }}
-            <label for="doublette">Doublette</label>
+            {{ radio_field('equipe', 'value':'2','id':'2', 'required':'required') }}
+            <label for="2">Doublette</label>
             <br>
-            {{ radio_field('equipe', 'value':'triplette','id':'triplette', 'required':'required') }}
-            <label for="triplette">Triplette</label>
+            {{ radio_field('equipe', 'value':'3','id':'3', 'required':'required') }}
+            <label for="3">Triplette</label>
         </div>
         <br/>
         {{ submit_button("Sauvegarder", "class": "pure-button b-light-green white mam bold") }}
     </div>
 
     <nav class="flex-end">
-        {{ link_to("", '<i class="fa fa-2x fa-chevron-circle-right"></i>', "id":"linkParticipants", "class": "pure-button b-light-blue white mam", "title":"Gérer les participants", "onclick":"$(this).removeAttr('href'); $('#formConcours').submit();") }}
+        {{ link_to("concours/participants/"~id, '<i class="fa fa-2x fa-users mars"></i> Participants', "id":"linkParticipants", "class": "pure-button b-light-blue white mam", "title":"Gérer les participants") }}
     </nav>
 {{ end_form() }}

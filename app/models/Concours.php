@@ -25,16 +25,16 @@ class Concours extends \Phalcon\Mvc\Model
      * @var string
      */
     public $options;
- 
+
     /**
      * Independent Column Mapping.
      */
     public function columnMap()
     {
         return array(
-			'id'      => 'id', 
-			'label'   => 'label', 
-			'date'    => 'date', 
+			'id'      => 'id',
+			'label'   => 'label',
+			'date'    => 'date',
 			'options' => 'options'
         );
     }
@@ -43,8 +43,9 @@ class Concours extends \Phalcon\Mvc\Model
     {
         $this->hasMany("id", "UsersConcours", "concours_id");
         $this->hasMany("id", "ConcoursJoueurs", "concours_id");
+        $this->hasOne("id", "Consolante", "concours_id");
     }
-    
+
     public function afterCreate()
     {
     	$userConcours  = new UsersConcours ();
@@ -55,7 +56,7 @@ class Concours extends \Phalcon\Mvc\Model
 	    }
 	    return true;
     }
-    
+
     public function beforeSave()
     {
         //Convert the array into a string

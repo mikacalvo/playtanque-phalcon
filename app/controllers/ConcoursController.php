@@ -37,37 +37,16 @@ class ConcoursController extends ControllerBase
      */
     public function editAction($id)
     {
-        if (!$this->request->isPost()) {
-            $concours = Concours::findFirstByid($id);
-            if (!$concours) {
-                $this->flashSession->error("Concours introuvable");
+        $concours = Concours::findFirstByid($id);
+        if (!$concours) {
+            $this->flashSession->error("Concours introuvable");
 
-                return $this->dispatcher->forward(array(
-                    "controller" => "concours",
-                    "action" => "index"
-                ));
-            }
-
-            $this->view->id = $concours->id;
-
-            $this->tag->setDefault("id", $concours->id);
-            $this->tag->setDefault("label", $concours->label);
-            $this->tag->setDefault("date", $concours->date);
-            $this->tag->setDefault("type", $concours->options->type);
-            $this->tag->setDefault("equipe", $concours->options->equipe);
-        } else {
-            $id = $this->request->getPost("id");
-
-            $concours = Concours::findFirstByid($id);
-            if (!$concours) {
-                $this->flashSession->error("Concours introuvable");
-
-                return $this->dispatcher->forward(array(
-                    "controller" => "concours",
-                    "action" => "index"
-                ));
-            }
-
+            return $this->dispatcher->forward(array(
+                "controller" => "concours",
+                "action" => "index"
+            ));
+        }
+        if ($this->request->isPost()) {
             $concours->label   = $this->request->getPost("label");
             $concours->date    = $this->request->getPost("date");
             $concours->options = array(
@@ -82,7 +61,15 @@ class ConcoursController extends ControllerBase
             }
 
             $this->flashSession->success("Paramètres sauvegardés");
+            $concours->options = json_decode($concours->options);
         }
+        $this->view->id = $concours->id;
+
+        $this->tag->setDefault("id", $concours->id);
+        $this->tag->setDefault("label", $concours->label);
+        $this->tag->setDefault("date", $concours->date);
+        $this->tag->setDefault("type", $concours->options->type);
+        $this->tag->setDefault("equipe", $concours->options->equipe);
     }
 
     /**
@@ -223,4 +210,92 @@ class ConcoursController extends ControllerBase
         $this->tag->setDefault("options", $concours->options);
     }
 
+
+    /**
+     * Gère les participants
+     *
+     * @param string $id
+     */
+    public function participantsAction($id)
+    {
+        $this->view->concoursJoueurs = $user->concoursJoueurs;
+        if (!$this->request->isPost()) {
+            $concours = Concours::findFirstByid($id);
+            if (!$concours) {
+                $this->flashSession->error("Concours introuvable");
+
+                return $this->dispatcher->forward(array(
+                    "controller" => "concours",
+                    "action" => "index"
+                ));
+            }
+
+            $this->view->concours = $concours;
+
+            $this->tag->setDefault("id", $concours->id);
+            $this->tag->setDefault("label", $concours->label);
+            $this->tag->setDefault("date", $concours->date);
+            $this->tag->setDefault("type", $concours->options->type);
+            $this->tag->setDefault("equipe", $concours->options->equipe);
+        } else {
+            $id = $this->request->getPost("id");
+
+            $concours = Concours::findFirstByid($id);
+            if (!$concours) {
+                $this->flashSession->error("Concours introuvable");
+
+                return $this->dispatcher->forward(array(
+                    "controller" => "concours",
+                    "action" => "index"
+                ));
+            }
+
+            $concours->label   = $this->request->getPost("label");
+            $concours->date    = $this->request->getPost("date");
+            $concours->options = array(
+                'type'   => $this->request->getPost("type"),
+                'equipe' => $this->request->getPost("equipe"),
+            );
+
+            if (!$concours->save()) {
+                foreach ($concours->getMessages() as $message) {
+                    $this->flashSession->error($message);
+                }
+            }
+
+            $this->flashSession->success("Paramètres sauvegardés");
+        }
+    }
+
+
+    /**
+     * Ajoute à la consolante
+     */
+    public function addToConsolanteAjax()
+    {
+        if ($this->request->isPost()) {
+            $consolante = new Consolante();
+            $consolante->concours_id = $this->request->getPost("concours_id");
+            if (is_int($this->request->getPost("joueur1"))) {
+                $consolante->joueur1 =  $this->request->getPost("joueur1");
+            } else {
+                $consolante->joueur_tmp[] = $this->request->getPost("joueur1");
+            }
+            if (is_int($this->request->getPost("joueur2"))) {
+                $consolante->joueur2 =  $this->request->getPost("joueur2");
+            } else {
+                $consolante->joueur_tmp[] = $this->request->getPost("joueur2");
+            }
+            if (is_int($this->request->getPost("joueur3"))) {
+                $consolante->joueur3 =  $this->request->getPost("joueur3");
+            } else {
+                $consolante->joueur_tmp[] = $this->request->getPost("joueur3");
+            }
+            if (!$consolante->save()) {
+                return json_encode($consolante->getMessages());
+            } else {
+                return true;
+            }
+        }
+    }
 }

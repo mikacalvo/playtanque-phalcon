@@ -148,3 +148,22 @@ INSERT INTO `joueur` (`id`, `nom`, `prenom`, `options`) VALUES
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+
+
+CREATE TABLE `consolante` (
+  `equipe_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `joueur1` int(11) unsigned DEFAULT NULL,
+  `joueur2` int(11) unsigned DEFAULT NULL,
+  `joueur3` int(11) unsigned DEFAULT NULL,
+  `concours_id` int(11) unsigned NOT NULL,
+  `joueurs_tmp` text,
+  PRIMARY KEY (`equipe_id`),
+  KEY `joueur2_fk` (`joueur2`),
+  KEY `concours_id` (`concours_id`),
+  KEY `joueur1_fk` (`joueur1`),
+  KEY `joueur3_fk` (`joueur3`),
+  CONSTRAINT `concours_id` FOREIGN KEY (`concours_id`) REFERENCES `concours` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `joueur1_fk` FOREIGN KEY (`joueur1`) REFERENCES `joueur` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT `joueur2_fk` FOREIGN KEY (`joueur2`) REFERENCES `joueur` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT `joueur3_fk` FOREIGN KEY (`joueur3`) REFERENCES `joueur` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
