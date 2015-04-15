@@ -93,7 +93,7 @@ class Users extends \Phalcon\Mvc\Model
         $this->hasMany("id", "UsersConcours", "user_id");
         $this->hasMany("id", "UsersJoueurs", "user_id");
     }
-    
+
     public function beforeSave()
     {
         //Convert the array into a string

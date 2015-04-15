@@ -10,7 +10,7 @@ class ControllerBase extends Controller
     public function initialize()
     {
         $this->assets
-        	->addJs('js/vendor/jquery-2.1.0.min.js', true)
+        	->addJs('https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js', false)
         	->addJs('js/vendor/noty/packaged/jquery.noty.packaged.min.js', true)
         	->addJs('js/main.js', true)
         	->addCss('css/main.css', true)

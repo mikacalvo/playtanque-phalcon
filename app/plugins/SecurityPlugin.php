@@ -39,7 +39,7 @@ class SecurityPlugin extends Plugin
 
 			//Private area resources
 			$privateResources = array(
-				'concours'    => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete', 'settings', 'play', 'participants'),
+				'concours'    => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete', 'settings', 'play', 'participants', 'addEquipe', 'deleteEquipe'),
 				'joueur'      => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
 				'logout'      => array('index'),
 				'settings'    => array('index', 'parameter', 'club', 'save'),

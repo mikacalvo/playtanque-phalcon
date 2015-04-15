@@ -99,6 +99,10 @@ $di->set('modelsMetadata', function () {
     return new MetaDataAdapter();
 });
 
+$di->set('modelsManager', function() {
+    return new Phalcon\Mvc\Model\Manager();
+});
+
 /**
  * Start the session the first time some component request the session service
  */

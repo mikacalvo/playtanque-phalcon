@@ -50,12 +50,15 @@ class Joueur extends \Phalcon\Mvc\Model
     public function initialize()
     {
         $this->hasMany("id", "ConcoursJoueurs", "joueur_id");
+        $this->hasMany("id", "UsersJoueurs", "joueur_id");
+
         $this->postes = array(
             0 => '',
             1 => 'pointeur',
             2 => 'milieu',
             3 => 'tireur',
         );
+
     }
 
     public function afterCreate()

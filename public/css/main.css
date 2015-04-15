@@ -365,6 +365,9 @@ input.editable {
 .masc {
   margin: 0 10px 0 10px;
 }
+.pasc {
+  padding: 0 10px 0 10px;
+}
 .pass {
   padding: 5px;
 }
@@ -391,6 +394,11 @@ input.editable {
   position: absolute;
   right: 7px;
   top: 40%;
+}
+
+p.info {
+    margin-top: -25px;
+    margin-bottom: 25px;
 }
 
 .match label {

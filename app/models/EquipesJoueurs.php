@@ -1,12 +1,13 @@
 <?php
 
-class ConcoursJoueurs extends \Phalcon\Mvc\Model
+class EquipesJoueurs extends \Phalcon\Mvc\Model
 {
+
     /**
      *
      * @var integer
      */
-    public $concours_id;
+    public $equipe_id;
 
     /**
      *
@@ -20,14 +21,15 @@ class ConcoursJoueurs extends \Phalcon\Mvc\Model
     public function columnMap()
     {
         return array(
-            'concours_id' => 'concours_id', 
+            'equipe_id' => 'equipe_id',
             'joueur_id' => 'joueur_id'
         );
     }
 
     public function initialize()
     {
+        $this->belongsTo("equipe_id", "Equipe", "id");
         $this->belongsTo("joueur_id", "Joueur", "id");
-        $this->belongsTo("concours_id", "Concours", "id");
     }
+
 }

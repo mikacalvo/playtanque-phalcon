@@ -1,9 +1,10 @@
+<div>
+    {{ content() }}
+</div>
 {{ form("concours/edit/"~id, "method":"post", "id": "formConcours", "class": "main flex flex-h mcenter") }}
     <nav class="flex-start">
         {{ link_to("concours", '<i class="fa fa-2x fa-chevron-circle-left"></i>', "class":"pure-button b-red white mam", "title":"Retour aux concours") }}
     </nav>
-
-    {{ content() }}
 
     <div class="txtcenter mam">
         <h1>Modifier le concours</h1>

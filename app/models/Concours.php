@@ -43,7 +43,6 @@ class Concours extends \Phalcon\Mvc\Model
     {
         $this->hasMany("id", "UsersConcours", "concours_id");
         $this->hasMany("id", "ConcoursJoueurs", "concours_id");
-        $this->hasOne("id", "Consolante", "concours_id");
     }
 
     public function afterCreate()
