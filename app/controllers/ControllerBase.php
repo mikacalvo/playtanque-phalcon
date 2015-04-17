@@ -18,10 +18,8 @@ class ControllerBase extends Controller
         	->addCss('css/vendor/knacss.css', true)
         	->addCss('css/vendor/buttons-core.css', true)
         	->addCss('css/vendor/buttons.css', true)
-        	->addCss('css/vendor/font-awesome/css/font-awesome.min.css', true)
-        	->addCss('js/vendor/jquery-ui-1.11.2.custom/jquery-ui.min.css', true);
+        	->addCss('css/vendor/font-awesome/css/font-awesome.min.css', true);
 
-        // $this->view->setTemplateAfter('main');
         $this->tag->setTitle("Playtanque : organisez vos tournois de pétanque en un clic !");
     }
 }

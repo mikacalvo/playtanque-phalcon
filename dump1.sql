@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `concours` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Export de données de la table playtanque.concours: ~2 rows (environ)
+-- Export de données de la table playtanque.concours: ~1 rows (environ)
 /*!40000 ALTER TABLE `concours` DISABLE KEYS */;
 INSERT INTO `concours` (`id`, `label`, `date`, `options`) VALUES
 	(1, 'Mon premier concours', '2015-02-20', '{"type":"consolante","equipe":"3"}'),
@@ -54,12 +54,14 @@ CREATE TABLE IF NOT EXISTS `equipe` (
   PRIMARY KEY (`id`),
   KEY `consolante_concours_fk` (`concours_id`),
   CONSTRAINT `consolante_concours_fk` FOREIGN KEY (`concours_id`) REFERENCES `concours` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- Export de données de la table playtanque.equipe: ~1 rows (environ)
+-- Export de données de la table playtanque.equipe: ~3 rows (environ)
 /*!40000 ALTER TABLE `equipe` DISABLE KEYS */;
 INSERT INTO `equipe` (`id`, `concours_id`, `data`) VALUES
-	(4, 1, NULL);
+	(4, 1, NULL),
+	(5, 2, '{"1":[],"2":[],"3":[]}'),
+	(6, 1, NULL);
 /*!40000 ALTER TABLE `equipe` ENABLE KEYS */;
 
 
@@ -67,18 +69,29 @@ INSERT INTO `equipe` (`id`, `concours_id`, `data`) VALUES
 CREATE TABLE IF NOT EXISTS `equipes_joueurs` (
   `equipe_id` int(10) unsigned NOT NULL,
   `joueur_id` int(10) unsigned NOT NULL,
+  `poste` tinyint(1) unsigned DEFAULT NULL,
+  PRIMARY KEY (`equipe_id`,`joueur_id`),
   KEY `joueur_fk` (`joueur_id`),
-  KEY `equipe_fk` (`equipe_id`),
   CONSTRAINT `equipe_fk` FOREIGN KEY (`equipe_id`) REFERENCES `equipe` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `joueur_fk` FOREIGN KEY (`joueur_id`) REFERENCES `joueur` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Export de données de la table playtanque.equipes_joueurs: ~3 rows (environ)
+-- Export de données de la table playtanque.equipes_joueurs: ~13 rows (environ)
 /*!40000 ALTER TABLE `equipes_joueurs` DISABLE KEYS */;
-INSERT INTO `equipes_joueurs` (`equipe_id`, `joueur_id`) VALUES
-	(4, 1),
-	(4, 2),
-	(4, 3);
+INSERT INTO `equipes_joueurs` (`equipe_id`, `joueur_id`, `poste`) VALUES
+	(4, 1, NULL),
+	(4, 2, NULL),
+	(4, 3, NULL),
+	(5, 1, 3),
+	(5, 4, 3),
+	(5, 5, 2),
+	(5, 6, 2),
+	(5, 7, 2),
+	(5, 8, 1),
+	(5, 11, 1),
+	(6, 9, NULL),
+	(6, 10, NULL),
+	(6, 12, NULL);
 /*!40000 ALTER TABLE `equipes_joueurs` ENABLE KEYS */;
 
 
@@ -91,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `joueur` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
--- Export de données de la table playtanque.joueur: ~12 rows (environ)
+-- Export de données de la table playtanque.joueur: ~11 rows (environ)
 /*!40000 ALTER TABLE `joueur` DISABLE KEYS */;
 INSERT INTO `joueur` (`id`, `nom`, `prenom`, `options`) VALUES
 	(1, 'Calvo', 'Michaël', '{"poste":"1"}'),
@@ -139,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `users_concours` (
   CONSTRAINT `user_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='lie les concours aux utilisateurs';
 
--- Export de données de la table playtanque.users_concours: ~2 rows (environ)
+-- Export de données de la table playtanque.users_concours: ~1 rows (environ)
 /*!40000 ALTER TABLE `users_concours` DISABLE KEYS */;
 INSERT INTO `users_concours` (`user_id`, `concours_id`) VALUES
 	(4, 1),
@@ -157,7 +170,7 @@ CREATE TABLE IF NOT EXISTS `users_joueurs` (
   CONSTRAINT `users_joueurs_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='lie les concours aux utilisateurs';
 
--- Export de données de la table playtanque.users_joueurs: ~12 rows (environ)
+-- Export de données de la table playtanque.users_joueurs: ~11 rows (environ)
 /*!40000 ALTER TABLE `users_joueurs` DISABLE KEYS */;
 INSERT INTO `users_joueurs` (`user_id`, `joueur_id`) VALUES
 	(4, 1),

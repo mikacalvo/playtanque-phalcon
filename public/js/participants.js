@@ -22,4 +22,35 @@ $(document).ready(function(){
             $("#" + $(this).data('input')).val($(this).val());
         }
     });
+
+
+    var oldList, newList, item;
+    $( "#tireurs, #milieux, #pointeurs" ).sortable({
+        placeholder: "highlight",
+        forcePlaceholderSize: true,
+        start: function(event, ui) {
+            item = ui.item;
+            newList = oldList = ui.item.parent();
+            oldIndex = ui.item.index();
+        },
+        stop: function(event, ui) {
+            console.log({ equipe_id: newList.data("equipe"), joueur_id: ui.item.data("joueur"), poste: newList.data("poste") });
+            if (newList != oldList) {
+                $.ajax({
+                    url: "/concours/moveJoueur",
+                    method: "post",
+                    context: document.body,
+                    data: { equipe_id: newList.data("equipe"), joueur_id: ui.item.data("joueur"), poste: newList.data("poste") }
+                }).done(function() {
+                    $( this ).addClass( "done" );
+                });
+            }
+        },
+        change: function(event, ui) {
+            if(ui.sender) newList = ui.placeholder.parent();
+        },
+        helper: 'clone',
+        connectWith: '.sortable',
+        distance: 5,
+    });
 });

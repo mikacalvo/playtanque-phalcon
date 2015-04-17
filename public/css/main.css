@@ -299,6 +299,10 @@ i.fa {
   cursor: pointer;
 }
 
+ul.nostyle {
+    list-style-type: none;
+}
+
 #commands {
   text-align: center;
   margin-bottom: 10px;
@@ -327,6 +331,9 @@ input.editable {
   display: none;
 }
 
+.bold {
+    font-weight: bold;
+}
 .top-border {
   border-top: 1px solid #777;
 }
@@ -484,8 +491,7 @@ p.info {
   margin: 0 10px 0 5px;
 }
 
-.on-print
-{
+.on-print {
   display: none;
 }
 
@@ -497,13 +503,30 @@ p.info {
 	overflow: hidden;
 }
 
+
 .hover-a a {
-	display: none;
+    display: none;
 }
 .hover-a:hover a {
-	display: inline-block;
+    display: inline-block;
 }
 
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+* html .ui-autocomplete {
+    height: 100px;
+}
+
+table.joueurs th:last-child, table.joueurs td:last-child {
+    width: 76px;
+}
+table.joueurs th, table.joueurs td {
+    width: 76px;
+}
 
 /********************* BOX *********************/
 .centerBox {
@@ -663,11 +686,7 @@ p.info {
 
 /********************* HEADER *********************/
 header {
-  position: relative;
-  z-index: 9000;
-  /*height: 35px;*/
-  flex: 0 1 35px;
-  width: 100%;
+  height: 35px;
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
   overflow: visible;
@@ -795,19 +814,6 @@ div.reduced .toolbar #show>* {
 }
 /********************* TOOLBAR **********************/
 
-
-/********************* MEDIA **********************/
-@media all and (min-width: 600px) {
-  .aside { flex: 1 auto; }
-}
-
-@media all and (min-width: 800px) {
-  .main    { flex: 3 0px; }
-  .aside   { order: 1; }
-  .main    { order: 2; }
-}
-/********************* MEDIA **********************/
-
 /********************* PRINT **********************/
 @media print
 {
@@ -856,9 +862,6 @@ div.reduced .toolbar #show>* {
 
 
 /********************* FLEX **********************/
-.flex .right {
-	/*margin-left: auto;*/
-}
 .wrap {
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
@@ -924,3 +927,61 @@ div.reduced .toolbar #show>* {
 /********************* MES JOUEURS **********************/
 
 
+/********************* SURCHARGES KNACSS **********************/
+aside {
+    width: 20%;
+    height: 100%;
+    max-width: 200px;
+}
+#navigation a {
+    line-height: 28px;
+}
+#navigation ul li a {
+    width: 100%;
+}
+/********************* SURCHARGES KNACSS **********************/
+
+/********************* STACKTABLE **********************/
+.stacktable { width: 100%; }
+.st-head-row { padding-top: 1em; }
+.st-head-row.st-head-row-main { font-size: 1.5em; padding-top: 0; }
+.st-key { width: 49%; text-align: right; padding-right: 1%; font-weight: bold; }
+.st-val { width: 49%; padding-left: 1%; }
+th, td.sub { background-color: #eee }
+/* RESPONSIVE EXAMPLE */
+
+.stacktable.large-only { display: table; }
+.stacktable.small-only { display: none; }
+
+@media (max-width: 800px) {
+  .stacktable.large-only { display: none; }
+  .stacktable.small-only { display: table; }
+}
+/********************* STACKTABLE **********************/
+
+
+
+/********************* MEDIA **********************/
+@media (max-width: 480px) {
+    .hover-a a {
+        display: inline-block;
+    }
+}
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside   { order: 1; }
+  .main    { order: 2; }
+}
+@media (max-width: 480px) {
+    aside {
+        height: auto;
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+/********************* MEDIA **********************/

@@ -1,4 +1,7 @@
-<div class="container flex flex-v wh100">
-	<header class="b-dark-gray no-print mcenter">{{ elements.getHeader() }}</header>
-	{{ content() }}
+<header id="header" role="banner" class="line b-dark-gray no-print mcenter">
+    {{ elements.getHeader() }}
+</header>
+<div class="flex-container w100 pam">
+    {{ elements.getNav() }}
+    {{ content() }}
 </div>

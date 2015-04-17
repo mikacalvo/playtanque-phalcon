@@ -1,10 +1,4 @@
-
-<article id="content" class="main flex flex-h">
-	<nav class="w200p">
-		{{ link_to("concours", '<i class="fa fa-2x fa-chevron-circle-left"></i>', "class":"pure-button b-light-blue white mas", "title":"Retour aux concours") }}
-		<br/>
-		{{link_to("settings/club", 'Gérer mes clubs <i class="fa fa-chevron-circle-right"></i>', "class": "pure-button b-red white mas bold")}}
-	</nav>
+<div id="main" role="main" class="flex-item-fluid pam ptn">
 	<section class="w100">
 		<div class="flex flex-v">
 			{{ form("settings", "method":"post", "class": "formstd w100") }}
@@ -29,8 +23,8 @@
 			    	{{ submit_button("OK", "class": "pure-button b-light-green white mas bold", "align": "center") }}
 			    </div>
 			{{ end_form() }}
-			
-			<div class="w100 mas">
+
+			<div class="w100 mts">
 			    <h3 align="center">Mes options</h3>
 				{{ form("settings/parameter", "method":"post") }}
 				    <label for="newsletter" class="bold mas">Recevoir la lettre d'informations</label>
@@ -52,4 +46,4 @@
 			</div>
 		</div>
 	</section>
-</article>
+</div>

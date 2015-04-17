@@ -16,13 +16,20 @@ class EquipesJoueurs extends \Phalcon\Mvc\Model
     public $joueur_id;
 
     /**
+     *
+     * @var string
+     */
+    public $poste;
+
+    /**
      * Independent Column Mapping.
      */
     public function columnMap()
     {
         return array(
             'equipe_id' => 'equipe_id',
-            'joueur_id' => 'joueur_id'
+            'joueur_id' => 'joueur_id',
+            'poste'     => 'poste',
         );
     }
 

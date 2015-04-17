@@ -20,6 +20,9 @@ class JoueurController extends ControllerBase
     {
         $user = Users::findFirstByid($this->session->get('auth')['id']);
         $this->view->userJoueurs = $user->usersJoueurs;
+        $this->assets
+            ->addJs('js/vendor/stacktable.js', true)
+            ->addJs('js/joueur.js', true);
     }
 
     /**

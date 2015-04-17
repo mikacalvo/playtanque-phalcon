@@ -4,8 +4,8 @@
 		<h3 class="tagline dark-gray">
 			Vrai site de boules.
 		</h3>
-		<section class="grid pam" style="margin:0 auto; padding-bottom:0; width: 80%;">
-			<div class="grid2">
+		<section class="grid pam" style="margin:0 auto; padding-bottom:0; width:80%;">
+			<div class="grid-2">
 				<div id="start" class="activate" style="border-right: 1px solid #ccc;">
 					{{ link_to("play", '<i class="fa fa-bolt" style="margin-right: 10px;"></i> Version Hors Ligne', 'class': 'pure-button black b-yellow bold', 'style': 'margin-top:45px; padding-top:10px;') }}
 					<button class="pure-button b-light-blue bold" onclick="$('#inscriptionForm').hide(); $('#connexionForm').show();">

@@ -1,29 +1,30 @@
-<article id="content" class="main flex flex-h wrap mesjoueurs">
-	<div class="flex-start mam">
-		{{ link_to("joueur/new", '<i class="fa fa-2x fa-plus-circle"></i>', "class":"pure-button b-light-blue white", "title":"Ajouter un concours") }}
-	</div>
-
-	<table id="classementIS" class="striped tablesorter" summary="Scores des joueurs" style="table-layout:auto;">
-		<thead>
-			<tr>
-				<th scope="col" class="txtcenter" style="width: 5%"></th>
-				<th scope="col" class="txtcenter" style="width: 20%">Prénom</th>
-				<th scope="col" class="txtcenter" style="width: 20%">Nom</th>
-				<th scope="col" class="txtcenter" style="width: 10%">Poste</th>
-			</tr>
-		</thead>
-		<tbody class="datas">
-			{% for joueur in userJoueurs %}
-				<tr>
-					<td>
-						{{ link_to("joueur/delete/" ~ joueur.joueur.id, '<i class="fa fa-trash"></i>', "class":"pure-button b-red border rounder smaller", "title":"Supprimer le joueur") }}
-						{{ link_to("joueur/edit/" ~ joueur.joueur.id, '<i class="fa fa-pencil"></i>', "class":"pure-button b-light-green border rounder smaller", "style":"margin-right:3px;", "title":"Modifier le joueur") }}
-					</td>
-					<td>{{ joueur.joueur.prenom }}</td>
-					<td>{{ joueur.joueur.nom }}</td>
-					<td>{{ joueur.joueur.getPoste() }}</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
-</article>
+<div class="pam ptn">
+    {{ link_to("joueur/new", '<i class="fa fa-plus-circle" style="font-size:4.5em;"></i>', "class":"pure-button b-light-blue white white-hover shadow-hover large-inbl medium-inbl tiny-visible", "title":"Ajouter un joueur") }}
+</div>
+<div id="main" role="main" class="flex-item-fluid ptn">
+    <table id="tableJoueurs" class="table" style="max-width:700px" summary="Scores des joueurs">
+        <thead>
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Poste</th>
+                <th width="76px"></th>
+            </tr>
+        </thead>
+        <tbody class="datas">
+            {% for joueur in userJoueurs %}
+                <tr>
+                    <td>{{ joueur.joueur.prenom }}</td>
+                    <td>{{ joueur.joueur.nom }}</td>
+                    <td>{{ joueur.joueur.getPoste() }}</td>
+                    <td>
+                        <div>
+                            {{ link_to("joueur/edit/" ~ joueur.joueur.id, '<i class="fa fa-pencil"></i>', "class":"pure-button b-light-green border rounder smaller", "title":"Modifier le joueur") }}
+                            {{ link_to("joueur/delete/" ~ joueur.joueur.id, '<i class="fa fa-trash"></i>', "class":"pure-button b-red border rounder smaller", "title":"Supprimer le joueur") }}
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

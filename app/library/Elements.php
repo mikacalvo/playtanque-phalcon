@@ -9,41 +9,30 @@ use Phalcon\Mvc\User\Component;
  */
 class Elements extends Component
 {
-
-    private $_headerMenu = array(
-        'navbar-left' => array(
-            'produit' => array(
-                'caption' => 'Nos Produits',
-                'action' => 'index'
-            ),
-            'mktg' => array(
-                'caption' => 'Marketing',
-                'action' => 'index'
-            ),
+    private $_nav = array(
+        'Concours' => array(
+            'controller' => 'concours',
+            'action'     => 'index',
+            'any'        => true,
+            'title'      => 'Mes concours',
+            'icon'       => 'trophy',
+            'color'      => 'red',
         ),
-        'navbar-right' => array(
-            'session' => array(
-                'caption' => 'Log In/Sign Up',
-                'action' => 'index'
-            ),
-        )
-    );
-
-    private $_tabs = array(
-        'Commande' => array(
-            'controller' => 'mktg',
-            'action' => 'index',
-            'any' => false
+        'Joueur' => array(
+            'controller' => 'joueur',
+            'action'     => 'index',
+            'any'        => true,
+            'title'      => 'Mes joueurs',
+            'icon'       => 'users',
+            'color'      => 'blue',
         ),
-        'Rubriques' => array(
-            'controller' => 'mktg_rubrique',
-            'action' => 'index',
-            'any' => true
-        ),
-        'Produits' => array(
-            'controller' => 'mktg_produit',
-            'action' => 'index',
-            'any' => true
+        'Historique' => array(
+            'controller' => 'historique',
+            'action'     => 'index',
+            'any'        => true,
+            'title'      => 'Mon historique',
+            'icon'       => 'bar-chart',
+            'color'      => 'green',
         ),
     );
 
@@ -54,11 +43,11 @@ class Elements extends Component
      */
     public function getHeader()
     {
-    	echo 
-			'<nav class="left tiny-hidden">
-        	    <h1 id="genereTeams" class="h5-like app-title white" style="padding-top:10px; line-height:0;">Playtanque</h1>
+    	echo
+			'<nav class="inbl">
+        	    <h1 id="genereTeams" class="h5-like app-title white inbl">Playtanque</h1>
 			</nav>
-			<nav class="right" style="margin-right: 10px;">
+			<nav class="fr" style="margin-right: 10px;">
 				'.$this->getUserBar().'
 			</nav>';
     }
@@ -73,32 +62,47 @@ class Elements extends Component
         $auth = $this->session->get('auth');
         if (!$auth) {
             return
-            	'<div class="userbar">
-	            	<button class="pure-button b-lighter-gray username">Mode Hors Ligne</button>
-	            	'.$this->tag->linkTo(array('index', '<i class="fa fa-sign-in"></i>', 'class'=>'pure-button b-lighter-gray settings', 'title'=>'Retour à la page de connexion')).'
-				</div>';
+                '<div class="userbar">
+                    <button class="pure-button b-lighter-gray username">Mode Hors Ligne</button>
+                    '.$this->tag->linkTo(array('index', '<i class="fa fa-sign-in"></i>', 'class'=>'pure-button b-lighter-gray settings', 'title'=>'Retour à la page de connexion')).'
+                </div>';
         } else {
-            return 
-            	'<div class="userbar">
-            		<div class="dropdown">
-		            	<button class="pure-button username b-lighter-gray dropdown-trigger" style="width:135px;">
-		            		<span>'.$auth['username'].'</span> <i class="fa fa-caret-down right"></i><i class="fa fa-caret-up right"></i>
-		            	</button>
-		            	<ul id="usermenu" class="dropdown-menu">
-							<li>'.$this->tag->linkTo(array('concours', 'Mes concours', "class"=>"b-light-gray dark-gray")).'</li>
-							<li>'.$this->tag->linkTo(array('joueur', 'Mes joueurs', "class"=>"b-light-gray dark-gray")).'</li>
-							<li>'.$this->tag->linkTo(array('historique', 'Historique', "class"=>"b-light-gray dark-gray")).'</li>
-						</ul>
-					</div>
-            		<div class="dropdown">
-						<button class="pure-button settings b-lighter-gray dropdown-trigger"><i class="fa fa-cog" style="margin-right:4px;"></i><i class="fa fa-caret-down right"></i><i class="fa fa-caret-up right"></i></button>
-		            	<ul id="usermenu" class="dropdown-menu">
-							<li>'.$this->tag->linkTo(array('settings', '<i class="fa fa-wrench"></i>', 'title'=>'Mon compte', "class"=>"b-light-gray dark-gray")).'</li>
-							<li>'.$this->tag->linkTo(array('logout', '<i class="fa fa-sign-out"></i>', 'title'=>'Déconnexion', "class"=>"b-light-gray dark-gray")).'</li>
-						</ul>
-					</div>
-				</div>';
+            return
+                '<div class="userbar">
+                    <div class="dropdown">
+                        <button class="pure-button username b-lighter-gray">
+                            <span>'.$auth['username'].'</span>
+                        </button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="pure-button settings b-lighter-gray dropdown-trigger"><i class="fa fa-cog" style="margin-right:4px;"></i><i class="fa fa-caret-down right"></i><i class="fa fa-caret-up right"></i></button>
+                        <ul id="usermenu" class="dropdown-menu">
+                            <li>'.$this->tag->linkTo(array('settings', '<i class="fa fa-wrench"></i>', 'title'=>'Mon compte', "class"=>"b-light-gray dark-gray")).'</li>
+                            <li>'.$this->tag->linkTo(array('logout', '<i class="fa fa-sign-out"></i>', 'title'=>'Déconnexion', "class"=>"b-light-gray dark-gray")).'</li>
+                        </ul>
+                    </div>
+                </div>';
         }
+    }
+
+    /**
+     * Builds header menu with left and right items
+     *
+     * @return string
+     */
+    public function getNav()
+    {
+        $return = '<aside class="flex-item-first">
+                <nav id="navigation" role="navigation">
+                    <ul class="nostyle pan">';
+        foreach ($this->_nav as $ctrl => $param) {
+            $return .= '<li class="mbs">
+                            '.$this->tag->linkTo(array($param['controller'], '<i class="fa fa-2x fa-'.$param['icon'].' fl"></i><span class="mls small-hidden">'.$param['title'].'</span>', "class"=>"pure-button b-".$param['color']." white white-hover shadow-hover")).'
+                        </li>';
+        }
+        return $return . '</ul>
+                </nav>
+            </aside>';
     }
 
     /**
@@ -118,6 +122,43 @@ class Elements extends Component
             echo $this->tag->linkTo($option['controller'] . '/' . $option['action'], $caption), '<li>';
         }
         echo '</ul>';
+    }
+
+    /**
+     * Builds header menu with left and right items
+     *
+     * @return string
+     */
+    public function getMenu()
+    {
+
+        $auth = $this->session->get('auth');
+        if ($auth) {
+            $this->_headerMenu['navbar-right']['session'] = array(
+                'caption' => 'Log Out',
+                'action' => 'end'
+            );
+        } else {
+            unset($this->_headerMenu['navbar-left']['invoices']);
+        }
+
+        $controllerName = $this->view->getControllerName();
+        foreach ($this->_headerMenu as $position => $menu) {
+            echo '<div class="nav-collapse">';
+            echo '<ul class="nav navbar-nav ', $position, '">';
+            foreach ($menu as $controller => $option) {
+                if ($controllerName == $controller) {
+                    echo '<li class="active">';
+                } else {
+                    echo '<li>';
+                }
+                echo $this->tag->linkTo($controller . '/' . $option['action'], $option['caption']);
+                echo '</li>';
+            }
+            echo '</ul>';
+            echo '</div>';
+        }
+
     }
 }
 

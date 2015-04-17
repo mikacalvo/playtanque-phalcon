@@ -1,7 +1,4 @@
-<article id="content" class="main flex flex-h">
-    <nav class="w100p">
-        {{ link_to("joueur", '<i class="fa fa-2x fa-chevron-circle-left"></i>', "class":"pure-button b-light-blue white mas", "title":"Retour aux joueurs") }}
-    </nav>
+<div id="main" role="main" class="flex-item-fluid pam ptn">
     {{ form("joueur/new", "method":"post", "style": "width:100%") }}
 
         {{ content() }}
@@ -26,4 +23,4 @@
         </div>
 
     {{ end_form() }}
-</article>
+</div>

@@ -31,6 +31,10 @@ class ConcoursController extends ControllerBase
      */
     public function newAction()
     {
+        $this->view->setTemplateAfter('concours');
+        $this->assets
+            ->addJs('js/vendor/modernizr.custom.js', true)
+            ->addJs('js/date.js', true);
     }
 
     /**
@@ -40,6 +44,11 @@ class ConcoursController extends ControllerBase
      */
     public function editAction($id)
     {
+        $this->assets
+            ->addJs('js/vendor/modernizr.custom.js', true)
+            ->addJs('js/date.js', true)
+            ->addJs('js/participants.js', true);
+
         $concours = Concours::findFirstByid($id);
         if (!$concours) {
             $this->flashSession->error("Concours introuvable");
@@ -67,15 +76,25 @@ class ConcoursController extends ControllerBase
 
             $concours->options = json_decode($concours->options);
         }
+        $this->view->concours = $concours;
         $this->view->id = $concours->id;
+
+        $equipes = Equipe::find(array("concours_id = ".$id));
+        $this->view->equipes = ("melee"==$concours->options->type) ? $equipes->getFirst() : $equipes;
+        $this->view->nbEquipes = $equipes->count();
+
+        $sql = "SELECT j.id, j.nom, j.prenom, j.options FROM joueur j INNER JOIN users_joueurs uj on uj.joueur_id = j.id
+            WHERE uj.user_id = ".$this->session->get('auth')['id']." AND j.id not in (SELECT ej.joueur_id FROM equipes_joueurs ej INNER JOIN equipe e on e.id = ej.equipe_id WHERE e.concours_id = " . $id . ")";
+        $result_set = $this->db->query($sql);
+        $result_set->setFetchMode(Phalcon\Db::FETCH_OBJ);
+        $this->view->availableJoueurs = $result_set->fetchAll($result_set);
 
         $this->tag->setDefault("id", $concours->id);
         $this->tag->setDefault("label", $concours->label);
         $this->tag->setDefault("date", $concours->date);
-        if ($concours->options) {
-            $this->tag->setDefault("type", $concours->options->type);
-            $this->tag->setDefault("equipe", $concours->options->equipe);
-        }
+        $this->tag->setDefault("type", $concours->options->type);
+        $this->tag->setDefault("equipe", $concours->options->equipe);
+        $this->tag->setDefault("tailleEquipe", $concours->options->equipe);
     }
 
     /**
@@ -95,7 +114,7 @@ class ConcoursController extends ControllerBase
 	        } else {
 	        	$this->flashSession->success('Concours ajouté');
 	        }
-	        $this->response->redirect('concours/new');
+	        $this->response->redirect('concours/edit/'.$concours->id);
 			$this->view->disable();
 			return;
         } else {
@@ -103,58 +122,6 @@ class ConcoursController extends ControllerBase
 			$this->view->disable();
             return;
         }
-    }
-
-    /**
-     * Saves a concours edited
-     *
-     */
-    public function saveAction()
-    {
-        if (!$this->request->isPost()) {
-            return $this->dispatcher->forward(array(
-                "controller" => "concours",
-                "action" => "index"
-            ));
-        }
-
-        $id = $this->request->getPost("id");
-
-        $concours = Concours::findFirstByid($id);
-        if (!$concours) {
-            $this->flashSession->error("Concours introuvable");
-
-            return $this->dispatcher->forward(array(
-                "controller" => "concours",
-                "action" => "index"
-            ));
-        }
-
-		$concours->label   = $this->request->getPost("label");
-        $concours->date    = $this->request->getPost("date");
-        $concours->options = array(
-            'type'   => $this->request->getPost("type"),
-            'equipe' => $this->request->getPost("equipe"),
-        );
-
-        if (!$concours->save()) {
-            foreach ($concours->getMessages() as $message) {
-                $this->flashSession->error($message);
-            }
-
-            return $this->dispatcher->forward(array(
-                "controller" => "concours",
-                "action" => "edit",
-                "params" => array($concours->id)
-            ));
-        }
-
-        $this->flashSession->success("Concours modifié");
-
-        return $this->dispatcher->forward(array(
-            "controller" => "concours",
-            "action" => "index"
-        ));
     }
 
     /**
@@ -216,45 +183,6 @@ class ConcoursController extends ControllerBase
         $this->tag->setDefault("options", $concours->options);
     }
 
-
-    /**
-     * Gère les participants
-     *
-     * @param string $id
-     */
-    public function participantsAction($id)
-    {
-        $this->assets->addJs('js/participants.js', true);
-        $concours = Concours::findFirstByid($id);
-        if (!$concours) {
-            $this->flashSession->error("Concours introuvable");
-
-            return $this->dispatcher->forward(array(
-                "controller" => "concours",
-                "action" => "index"
-            ));
-        }
-
-        $this->view->concours = $concours;
-        $equipes = Equipe::find(array("concours_id = ".$id));
-
-        $this->view->equipes   = $equipes;
-        $this->view->nbEquipes = $equipes->count();
-
-        $sql = "SELECT j.id, j.nom, j.prenom, j.options FROM joueur j INNER JOIN users_joueurs uj on uj.joueur_id = j.id
-            WHERE uj.user_id = ".$this->session->get('auth')['id']." AND j.id not in (SELECT ej.joueur_id FROM equipes_joueurs ej inner join equipe e on e.concours_id = " . $id . ")";
-        $result_set = $this->db->query($sql);
-        $result_set->setFetchMode(Phalcon\Db::FETCH_OBJ);
-        $this->view->availableJoueurs = $result_set->fetchAll($result_set);
-
-        $this->tag->setDefault("id", $concours->id);
-        $this->tag->setDefault("label", $concours->label);
-        $this->tag->setDefault("date", $concours->date);
-        $this->tag->setDefault("type", $concours->options->type);
-        $this->tag->setDefault("tailleEquipe", $concours->options->equipe);
-    }
-
-
     /**
      * Ajoute à la consolante
      */
@@ -284,11 +212,11 @@ class ConcoursController extends ControllerBase
                         }
                     }
                     if (filter_input(INPUT_POST, "joueur", FILTER_VALIDATE_INT)) {
-                        if (!$this->addJoueur($equipe->id, $this->request->getPost("joueur"))) {
+                        if (!$this->addJoueur($equipe->id, $this->request->getPost("joueur"), $this->request->getPost("poste"))) {
                             throw new Exception();
                         }
                     } else {
-                        $equipe->data[$this->request->getPost("poste")] = $this->request->getPost("joueur");
+                        $equipe->data[$this->request->getPost("poste")][] = $this->request->getPost("joueur");
                         if (!$equipe->save()) {
                             foreach ($equipe->getMessages() as $message) {
                                 $this->flashSession->error($message);
@@ -333,15 +261,15 @@ class ConcoursController extends ControllerBase
         return;
     }
 
-
     /**
      * Ajoute à la mêlée
      */
-    public function addJoueur($equipeId, $joueurId)
+    public function addJoueur($equipeId, $joueurId, $poste=null)
     {
         $joueur = new EquipesJoueurs();
         $joueur->equipe_id = $equipeId;
         $joueur->joueur_id = $joueurId;
+        $joueur->poste     = $poste;
         if (!$joueur->save()) {
             foreach ($joueur->getMessages() as $message) {
                 $this->flashSession->error($message);
@@ -349,6 +277,31 @@ class ConcoursController extends ControllerBase
             }
         }
         return true;
+    }
+
+    /**
+     * Déplace d'une colonne à une autre
+     */
+    public function moveJoueurAction()
+    {
+        if ($this->request->isAjax()) {
+            $joueur = EquipesJoueurs::findFirst(array(
+                'conditions' => "equipe_id = ?0 AND joueur_id = ?1",
+                'bind'       => array($this->request->getPost("equipe_id"), $this->request->getPost("joueur_id"))
+            ));
+            if ($joueur) {
+                $joueur->poste = $this->request->getPost("poste");
+                if (!$joueur->update()) {
+                    foreach ($joueur->getMessages() as $message) {
+                        $this->flashSession->error($message);
+                        return false;
+                    }
+                }
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 
     /**
