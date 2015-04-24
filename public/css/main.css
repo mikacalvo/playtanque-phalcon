@@ -299,10 +299,6 @@ i.fa {
   cursor: pointer;
 }
 
-ul.nostyle {
-    list-style-type: none;
-}
-
 #commands {
   text-align: center;
   margin-bottom: 10px;

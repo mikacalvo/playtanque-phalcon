@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js scroll-v wh100">
+<html class="no-js scroll-v wh100" ng-app="myapp">
 	<head>
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">

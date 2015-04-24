@@ -42,19 +42,20 @@ class SecurityPlugin extends Plugin
 				'concours'    => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete', 'settings', 'play', 'participants', 'addEquipe', 'deleteEquipe', 'moveJoueur'),
 				'joueur'      => array('index', 'search', 'new', 'edit', 'save', 'create', 'delete'),
 				'logout'      => array('index'),
-				'settings'    => array('index', 'parameter', 'club', 'save'),
-			);
-			foreach ($privateResources as $resource => $actions) {
-				$acl->addResource(new Resource($resource), $actions);
-			}
+                'settings'    => array('index', 'parameter', 'club', 'save'),
+            );
+            foreach ($privateResources as $resource => $actions) {
+                $acl->addResource(new Resource($resource), $actions);
+            }
 
-			//Public area resources
-			$publicResources = array(
-				'index'       => array('index'),
-				'login'       => array('index'),
-				'play'        => array('index', 'concours'),
-				'inscription' => array('index'),
-				'errors'      => array('show401', 'show404', 'show500'),
+            //Public area resources
+            $publicResources = array(
+                'index'       => array('index'),
+                'login'       => array('index'),
+                'play'        => array('index', 'concours'),
+                'inscription' => array('index'),
+                'errors'      => array('show401', 'show404', 'show500'),
+				'historique'  => array('index'),
 			);
 			foreach ($publicResources as $resource => $actions) {
 				$acl->addResource(new Resource($resource), $actions);

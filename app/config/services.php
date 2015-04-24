@@ -24,22 +24,22 @@ $di = new FactoryDefault();
  */
 $di->set('dispatcher', function() use ($di) {
 
-	$eventsManager = new EventsManager;
+    $eventsManager = new EventsManager;
 
-	/**
-	 * Check if the user is allowed to access certain action using the SecurityPlugin
-	 */
-	$eventsManager->attach('dispatch:beforeDispatch', new SecurityPlugin);
+    /**
+     * Check if the user is allowed to access certain action using the SecurityPlugin
+     */
+    $eventsManager->attach('dispatch:beforeDispatch', new SecurityPlugin);
 
-	/**
-	 * Handle exceptions and not-found exceptions using NotFoundPlugin
-	 */
-	$eventsManager->attach('dispatch:beforeException', new NotFoundPlugin);
+    /**
+     * Handle exceptions and not-found exceptions using NotFoundPlugin
+     */
+    $eventsManager->attach('dispatch:beforeException', new NotFoundPlugin);
 
-	$dispatcher = new Dispatcher;
-	$dispatcher->setEventsManager($eventsManager);
+    $dispatcher = new Dispatcher;
+    $dispatcher->setEventsManager($eventsManager);
 
-	return $dispatcher;
+    return $dispatcher;
 });
 
 /**
@@ -67,8 +67,8 @@ $di->set('view', function () use ($config) {
             $volt = new Phalcon\Mvc\View\Engine\Volt($view, $di);
 
             $volt->setOptions(array(
-				'compiledPath'      => $config->application->cacheDir,
-				'compiledSeparator' => '_'
+                'compiledPath'      => $config->application->cacheDir,
+                'compiledSeparator' => '_'
             ));
 
             return $volt;
@@ -84,11 +84,11 @@ $di->set('view', function () use ($config) {
  */
 $di->set('db', function () use ($config) {
     return new DbAdapter(array(
-		'host'     => $config->database->host,
-		'username' => $config->database->username,
-		'password' => $config->database->password,
-		'dbname'   => $config->database->dbname,
-		"charset"  => $config->database->charset
+        'host'     => $config->database->host,
+        'username' => $config->database->username,
+        'password' => $config->database->password,
+        'dbname'   => $config->database->dbname,
+        "charset"  => $config->database->charset
     ));
 });
 
@@ -118,27 +118,27 @@ $di->set('session', function () {
  * Register the flash service with custom CSS classes
  */
 $di->set('flash', function(){
-	return new FlashDirect(array(
-		'error'   => 'alert alert-danger',
-		'success' => 'alert alert-success',
-		'notice'  => 'alert alert-info',
-		'warning'  => 'alert alert-warning',
-	));
+    return new FlashDirect(array(
+        'error'   => 'alert alert-danger',
+        'success' => 'alert alert-success',
+        'notice'  => 'alert alert-info',
+        'warning'  => 'alert alert-warning',
+    ));
 });
 $di->set('flashSession', function(){
-	return new FlashSession(array(
-		'error'   => 'alert alert-danger',
-		'success' => 'alert alert-success',
-		'notice'  => 'alert alert-info',
-		'warning'  => 'alert alert-warning',
-	));
+    return new FlashSession(array(
+        'error'   => 'alert alert-danger',
+        'success' => 'alert alert-success',
+        'notice'  => 'alert alert-info',
+        'warning'  => 'alert alert-warning',
+    ));
 });
 
 /**
  * Register a user component
  */
 $di->set('elements', function(){
-	return new Elements();
+    return new Elements();
 });
 
 $di->set('config', function () use ($config) {

@@ -45,7 +45,7 @@ class Elements extends Component
     {
     	echo
 			'<nav class="inbl">
-        	    <h1 id="genereTeams" class="h5-like app-title white inbl">Playtanque</h1>
+        	    <!--h1 id="genereTeams" class="h5-like app-title white inbl">Playtanque</h1-->
 			</nav>
 			<nav class="fr" style="margin-right: 10px;">
 				'.$this->getUserBar().'
@@ -94,7 +94,7 @@ class Elements extends Component
     {
         $return = '<aside class="flex-item-first">
                 <nav id="navigation" role="navigation">
-                    <ul class="nostyle pan">';
+                    <ul class="unstyled pan">';
         foreach ($this->_nav as $ctrl => $param) {
             $return .= '<li class="mbs">
                             '.$this->tag->linkTo(array($param['controller'], '<i class="fa fa-2x fa-'.$param['icon'].' fl"></i><span class="mls small-hidden">'.$param['title'].'</span>', "class"=>"pure-button b-".$param['color']." white white-hover shadow-hover")).'
